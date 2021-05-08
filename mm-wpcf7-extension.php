@@ -39,7 +39,6 @@ if(! class_exists( 'MM_WPCF7_Extension_Plugin' )) {
          * Konstruktor
          */
         public function __construct() {
-            register_activation_hook(__FILE__, "MM_WPCF7_Extension_Plugin::check_required_plugins");
             add_action("update_option_active_plugins", "MM_WPCF7_Extension_Plugin::check_required_plugins_silent");
             add_action("plugins_loaded", array($this, "load_textdomain"));
             //add_filter("rest_authentication_errors", array($this, "restrict_access"));
@@ -91,3 +90,4 @@ if(! class_exists( 'MM_WPCF7_Extension_Plugin' )) {
 }
 
 MM_WPCF7_Extension_Plugin::getInstance();
+register_activation_hook(__FILE__, "MM_WPCF7_Extension_Plugin::check_required_plugins");
