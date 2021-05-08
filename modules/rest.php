@@ -56,7 +56,7 @@ class Flamingo_REST_Module {
                 )
             );
         } catch (Exception $error) {
-            return new WP_Error(500, __("Internal server error"));
+            return new WP_Error(500, __("Internal server error"), $error->getMessage());
         }
         
     }
