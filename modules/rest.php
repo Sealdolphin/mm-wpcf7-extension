@@ -33,23 +33,21 @@ class Flamingo_REST_Module {
 
     function get_flamingo_messages( WP_REST_Request $request, $filter = NULL )
     {
-        if($this->functions_exist()) {
-            //Return with all messages
-
+        try {
             $posts = get_posts(
                 array(
                     "post_type" => "flamingo_inbound"
                 )
             );
-
+    
             if($filter) {
                 $posts = array_filter($posts, function($p) use($filter) {
                     return ($p->post_title === $filter);
                 });
             }
-
+    
             $messages = array_map(array($this, "convert_post"), $posts);
-
+    
             return new WP_REST_Response(
                 array(
                     "status" => 200,
@@ -57,10 +55,10 @@ class Flamingo_REST_Module {
                     "body_response" => $messages
                 )
             );
-        } else {
-            //Return with Error
-            return new WP_Error(404, __("Not found"), __("Flamingo plugin is not installed"));
+        } catch (Exception $error) {
+            return new WP_Error(500, __("Internal server error"));
         }
+        
     }
 
     function get_flamingo_messages_filtered( WP_REST_Request $request ) {
@@ -69,15 +67,22 @@ class Flamingo_REST_Module {
 
     private function convert_post($post)
     {
-        return array(
-            "ID" => $post->ID,
-            "post_date" => $post->post_date,
-            "form_title" => $post->post_title
-        );
-    }
+        if (class_exists("Flamingo_Inbound_Message")) {
+            $flamingo = new Flamingo_Inbound_Message($post);
 
-    function functions_exist() {
-        return true;
+            $message_array = array(
+                "ID" => $flamingo->id(),
+                "form_title" => $flamingo->subject,
+                "timestamp" => $post->post_date,
+                "name" => $flamingo->from_name,
+                "email" => $flamingo->from_email,
+                "response" => $flamingo->fields
+            );
+    
+            return $message_array;
+        } else {
+            throw new Exception("Flamingo is not installed", 1);
+        }
     }
 
 }
