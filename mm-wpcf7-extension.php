@@ -8,6 +8,7 @@
  * Version: 1.1
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Domain Path: /Languages
  */
 
 require_once dirname(__FILE__) . "/modules/optimization.php";
@@ -40,10 +41,20 @@ if(! class_exists( 'MM_WPCF7_Extension_Plugin' )) {
         public function __construct() {
             register_activation_hook(__FILE__, "MM_WPCF7_Extension_Plugin::check_required_plugins");
             add_action("update_option_active_plugins", "MM_WPCF7_Extension_Plugin::check_required_plugins_silent");
+            add_action("plugins_loaded", array($this, "load_textdomain"));
             //add_filter("rest_authentication_errors", array($this, "restrict_access"));
             $this->opt = new OptimizationModule();
         }
     
+        function load_textdomain() {
+            // modified slightly from https://gist.github.com/grappler/7060277#file-plugin-name-php
+        
+            $domain = self::TEXT_DOMAIN;
+            $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+            
+            load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
+            load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/lang/' );
+        }
         
         // private function restrict_access($errors) {
     
