@@ -9,9 +9,11 @@
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path: /Languages
+ * Text Domain: wpcf7-extension
  */
 
 require_once dirname(__FILE__) . "/modules/optimization.php";
+require_once dirname(__FILE__) . "/modules/rest.php";
 
 if(! class_exists( 'MM_WPCF7_Extension_Plugin' )) {
     class MM_WPCF7_Extension_Plugin {
@@ -21,8 +23,8 @@ if(! class_exists( 'MM_WPCF7_Extension_Plugin' )) {
          */
         private static $instance;
 
+        private static $TEXT_DOMAIN = "wpcf7-extension";
         private static $wpcf7_plugin = "contact-form-7/wp-contact-form-7.php";
-        private static $flamingo_plugin = "flamingo/flamingo.php";
     
         /**
          * Példány getter
@@ -43,12 +45,13 @@ if(! class_exists( 'MM_WPCF7_Extension_Plugin' )) {
             add_action("plugins_loaded", array($this, "load_textdomain"));
             //add_filter("rest_authentication_errors", array($this, "restrict_access"));
             $this->opt = new OptimizationModule();
+            $this->rest = new Flamingo_REST_Module();
         }
     
         function load_textdomain() {
             // modified slightly from https://gist.github.com/grappler/7060277#file-plugin-name-php
         
-            $domain = self::TEXT_DOMAIN;
+            $domain = self::$TEXT_DOMAIN;
             $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
             
             load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
