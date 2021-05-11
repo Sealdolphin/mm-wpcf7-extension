@@ -11,7 +11,7 @@ class Custom_Validation {
 
     function apply_phone_validation( $result, $tag )
     {
-        $phone_number = isset ( $_POST['phone_number'] ) ? trim( $_POST['phone_number'] ) : "";
+        $phone_number = isset ( $_POST[$tag->name] ) ? trim( $_POST[$tag->name] ) : "";
 
         if(!preg_match(self::$phone_regex, $phone_number)) {
             $result->invalidate($tag, "Kérlek kövesd a formátumot!");
