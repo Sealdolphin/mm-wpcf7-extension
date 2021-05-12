@@ -34,9 +34,21 @@ class Flamingo_REST_Module {
     function get_flamingo_messages( WP_REST_Request $request, $filter = NULL )
     {
         try {
+            $params = $request->get_query_params();
+            $per_page = array_key_exists("per_page", $params) ? $params["per_page"] : 0;
+            $page = array_key_exists("page", $params) ? $params["page"] : 0;
+            $order = array_key_exists("order", $params) ? $params["order"] : "DESC";
+            $orderby = array_key_exists("orderby", $params) ? $params["orderby"] : "date";
+            $nopaging = $per_page === 0;
+
             $posts = get_posts(
                 array(
-                    "post_type" => "flamingo_inbound"
+                    "post_type" => "flamingo_inbound",
+                    "numberposts" => $per_page,
+                    "nopaging" => $nopaging,
+                    "order" => $order,
+                    "orderby" => $orderby,
+                    "page" => $page
                 )
             );
     
@@ -47,11 +59,13 @@ class Flamingo_REST_Module {
             }
     
             $messages = array_map(array($this, "convert_post"), $posts);
+
     
             return new WP_REST_Response(
                 array(
                     "status" => 200,
                     "response" => __("OK"),
+                    "retreived" => count($messages),
                     "body_response" => $messages
                 )
             );
@@ -74,6 +88,7 @@ class Flamingo_REST_Module {
                 "ID" => $flamingo->id(),
                 "form_title" => $flamingo->subject,
                 "timestamp" => $post->post_date,
+                "last_edit" => $post->post_modified,
                 "name" => $flamingo->from_name,
                 "email" => $flamingo->from_email,
                 "response" => $flamingo->fields
