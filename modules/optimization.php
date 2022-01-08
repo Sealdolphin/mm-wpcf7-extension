@@ -1,5 +1,8 @@
 <?php 
-
+/**
+ * Enables or disables JavaScript and CSS loading on your pages.
+ * This way you can make your website load faster.
+ */
 class OptimizationModule {
 
     private static $option_group = "ext4wpcf7_ext_scripts";
@@ -9,6 +12,9 @@ class OptimizationModule {
     private static $setting_enable_css = "ext4wpcf7_enable_css";
     private static $setting_enabled_pages = "ext4wpcf7_enabled_pages";
 
+    /**
+     * Constructor
+     */
     public function __construct() {
         //Init actions and filters for settings API
         add_action( 'admin_init', array( $this, 'create_settings'));
@@ -17,6 +23,9 @@ class OptimizationModule {
         add_action( 'wp_enqueue_scripts', array( $this, 'enable_scripts' ));
     }
 
+    /**
+     * This is the way to enable / disable script load
+     */
     public function regulate_script_load()
     {
         if(!get_option( self::$setting_enable_css )) {
@@ -27,6 +36,9 @@ class OptimizationModule {
         }
     }
 
+    /**
+     * Create settings menu
+     */
     function create_settings()
     {
         $this->register_settings();

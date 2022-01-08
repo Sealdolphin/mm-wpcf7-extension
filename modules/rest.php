@@ -1,4 +1,7 @@
 <?php
+/**
+ * Makes Flamingo responses accessible via Wordpress API
+ */
 class Flamingo_REST_Module {
 
     private static $flamingo_plugin = "flamingo/flamingo.php";
@@ -31,6 +34,9 @@ class Flamingo_REST_Module {
         ));
     }
 
+    /**
+     * Filters for all pages, that Flamingo made. Pagination enabled.
+     */
     function get_flamingo_messages( WP_REST_Request $request, $filter = NULL )
     {
         try {
