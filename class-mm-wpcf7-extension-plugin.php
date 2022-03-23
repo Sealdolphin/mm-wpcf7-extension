@@ -18,9 +18,9 @@
  * Text Domain: wpcf7-extension
  */
 
-require_once dirname( __FILE__ ) . '/modules/optimization.php';
-require_once dirname( __FILE__ ) . '/modules/rest.php';
-require_once dirname( __FILE__ ) . '/modules/custom-validation.php';
+require_once dirname( __FILE__ ) . '/modules/class-optimization-module.php';
+require_once dirname( __FILE__ ) . '/modules/class-flamingo-rest-module.php';
+require_once dirname( __FILE__ ) . '/modules/class-custom-validation.php';
 
 if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 	/**
