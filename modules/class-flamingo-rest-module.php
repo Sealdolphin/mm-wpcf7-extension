@@ -135,7 +135,7 @@ class Flamingo_REST_Module {
 			$message_array = array(
 				'ID'         => $flamingo->id(),
 				'form_title' => $flamingo->subject,
-				'remote_ip'  => get_post_meta( $flamingo->id(), 'remote_ip', true ),
+				'remote_ip'  => $flamingo->meta['remote_ip'],
 				'timestamp'  => $post->post_date,
 				'last_edit'  => $post->post_modified,
 				'name'       => $flamingo->from_name,
