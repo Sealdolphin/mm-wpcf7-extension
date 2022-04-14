@@ -16,19 +16,21 @@ class Custom_Validation {
 	 *
 	 * @var phone_regex_hun
 	 */
-	private static $phone_regex_hun = '/\\+36-\\d{2}-\\d{3}-\\d{4}/';
+	private static $phone_regex_hun = '/\\+36-\\d{2}-\\d{3}-\\d{4}\$/';
 
 	/**
-	 * Creates phone validation field
+	 * Registering special validation fields
 	 */
 	public function __construct() {
 		if ( class_exists( 'WPCF7_Validation' ) ) {
 			add_filter( 'wpcf7_validate_tel*', array( $this, 'apply_phone_validation' ), 20, 2 );
+			add_filter( 'wpcf7_validate_custom_list*', array( $this, 'apply_custom_list_validation' ), 20, 2 );
 		}
 	}
 
 	/**
-	 * Applies regular expression
+	 * This functions validates the special phone field type.
+	 * Applies a regular expression and evaluates it.
 	 *
 	 * @param object $result the result being checked.
 	 * @param array  $tag any applied tags.
@@ -38,7 +40,7 @@ class Custom_Validation {
 		$phone_number = isset( $_POST[ $tag->name ] ) ? trim( sanitize_text_field( wp_unslash( $_POST[ $tag->name ] ) ) ) : '';
 
 		if ( ! preg_match( self::$phone_regex_hun, $phone_number ) ) {
-			$result->invalidate( $tag, 'Kérlek kövesd a formátumot!' );
+			$result->invalidate( $tag, __( 'Kérlek kövesd a formátumot!' ) );
 		}
 
 		return $result;

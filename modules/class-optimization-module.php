@@ -76,45 +76,45 @@ class Optimization_Module {
 
 		add_settings_section(
 			$section_enable_all,
-			'Enable JavaScript and CSS scripts on all pages',
+			__( 'Enable JavaScript and CSS scripts on all pages' ),
 			'',
 			self::$option_page_name
 		);
 
 		add_settings_field(
 			self::$setting_enable_js,
-			'Javascript is enabled in all pages',
+			__( 'Javascript is enabled in all pages' ),
 			array( $this, 'render_checkbox' ),
 			self::$option_page_name,
 			$section_enable_all,
 			array(
-				'label' => 'Javascript is enabled',
+				'label' => __( 'Javascript is enabled' ),
 				'id'    => self::$setting_enable_js,
 			)
 		);
 
 		add_settings_field(
 			self::$setting_enable_css,
-			'CSS is enabled in all pages',
+			__( 'CSS is enabled in all pages' ),
 			array( $this, 'render_checkbox' ),
 			self::$option_page_name,
 			$section_enable_all,
 			array(
-				'label' => 'CSS is enabled',
+				'label' => __( 'CSS is enabled' ),
 				'id'    => self::$setting_enable_css,
 			)
 		);
 
 		add_settings_section(
 			$section_enabled_pages,
-			'Enable JavaScript and CSS scripts on chosen pages',
+			__( 'Enable JavaScript and CSS scripts on chosen pages' ),
 			'',
 			self::$option_page_name
 		);
 
 		add_settings_field(
 			self::$setting_enable_css,
-			'Select pages to enable JS and CSS',
+			__( 'Select pages to enable JS and CSS' ),
 			array( $this, 'render_enabled_pages' ),
 			self::$option_page_name,
 			$section_enabled_pages
@@ -160,10 +160,9 @@ class Optimization_Module {
 	 */
 	public function create_options_page() {
 
-		$page_title = __( 'Script optimization' );
 		?>
 		<div class='wrap'>
-			<h1><?php _esc_attr_e( $page_title ); ?></h1>
+			<h1><?php esc_attr_e( 'Script optimization' ); ?></h1>
 			<form method='post' action='options.php'>
 		<?php
 		settings_fields( self::$option_group );
@@ -201,8 +200,8 @@ class Optimization_Module {
 		$checked      = get_option( $option_id );
 
 		?>
-		<input type='checkbox' name=<?php _esc_attr_e( $option_id ); ?> id=<?php _esc_attr_e( $option_id ); ?> <?php _esc_attr_e( $checked ? 'checked' : '' ); ?>/>
-		<label for=<?php _esc_attr_e( $option_id ); ?>><?php _esc_attr_e( $option_label ); ?></label>
+		<input type='checkbox' name=<?php echo( esc_attr( $option_id ) ); ?> id=<?php echo( esc_attr( $option_id ) ); ?> <?php echo( esc_attr( $checked ? 'checked' : '' ) ); ?>/>
+		<label for=<?php echo( esc_attr( $option_id ) ); ?>><?php echo( esc_attr( $option_label ) ); ?></label>
 		<?php
 	}
 
@@ -214,9 +213,9 @@ class Optimization_Module {
 		<table>
 			<thead>
 				<tr>
-					<th><?php _esc_attr_e( __( 'Page id' ) ); ?></th>
-					<th><?php _esc_attr_e( __( 'Page title' ) ); ?></th>
-					<th><?php _esc_attr_e( __( 'Scripts enabled' ) ); ?></th>
+					<th><?php esc_attr_e( 'Page id' ); ?></th>
+					<th><?php esc_attr_e( 'Page title' ); ?></th>
+					<th><?php esc_attr_e( 'Scripts enabled' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -246,9 +245,9 @@ class Optimization_Module {
 
 		?>
 		<tr>
-			<td><?php _esc_attr_e( $page_id ); ?></td>
-			<td><?php _esc_attr_e( $title ); ?></td>
-			<td><input type='checkbox' name=<?php _esc_attr_e( self::$setting_enabled_pages . '[' . $page_id . ']' ); ?> id=<?php _esc_attr_e( $page_id ); ?> <?php _esc_attr_e( $checked ? 'checked' : '' ); ?>/></td>
+			<td><?php echo( esc_attr( $page_id ) ); ?></td>
+			<td><?php echo( esc_attr( $title ) ); ?></td>
+			<td><input type='checkbox' name=<?php echo( esc_attr( self::$setting_enabled_pages . '[' . $page_id . ']' ) ); ?> id=<?php echo( esc_attr( $page_id ) ); ?> <?php echo( esc_attr( $checked ? 'checked' : '' ) ); ?>/></td>
 		</tr>
 		<?php
 	}
