@@ -71,6 +71,7 @@ if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 			$this->opt        = new Optimization_Module();
 			$this->rest       = new Flamingo_REST_Module();
 			$this->validation = new Custom_Validation();
+			$this->load_modules();
 		}
 
 		/**
