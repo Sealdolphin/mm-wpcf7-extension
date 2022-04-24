@@ -1,0 +1,2794 @@
+{
+    "values" : [
+        {
+          "id": 27264,
+          "name": "Szent Mór Katolikus Óvoda, Általános Iskola, Alapfokú Művészeti Iskola és Gimnázium",
+          "other": "Pécs"
+        },
+        {
+          "id": 27396,
+          "name": "Ciszterci Rend Nagy Lajos Gimnáziuma és Kollégiuma",
+          "other": "Pécs"
+        },
+        {
+          "id": 27397,
+          "name": "Pécsi Leőwey Klára Gimnázium",
+          "other": "Pécs"
+        },
+        {
+          "id": 27398,
+          "name": "Pécsi Kodály Zoltán Gimnázium",
+          "other": "Pécs"
+        },
+        {
+          "id": 27399,
+          "name": "Pécsi Apáczai Csere János Általános Iskola, Gimnázium, Kollégium, Alapfokú Művészeti Iskola",
+          "other": "Pécs"
+        },
+        {
+          "id": 27401,
+          "name": "Mohácsi Kisfaludy Károly Gimnázium",
+          "other": "Mohács"
+        },
+        {
+          "id": 27402,
+          "name": "Siklósi Táncsics Mihály Gimnázium, Általános Iskola és Alapfokú Művészeti Iskola",
+          "other": "Siklós"
+        },
+        {
+          "id": 27406,
+          "name": "Pécsi Tudományegyetem Gyakorló Általános Iskola, Gimnázium és Óvoda",
+          "other": "Pécs"
+        },
+        {
+          "id": 27407,
+          "name": "Pécsi Janus Pannonius Gimnázium",
+          "other": "Pécs"
+        },
+        {
+          "id": 27413,
+          "name": "Pécsi Református Kollégium Gimnáziuma, Általános Iskolája, Óvodája és Alapfokú Művészeti Iskolája",
+          "other": "Pécs"
+        },
+        {
+          "id": 27415,
+          "name": "Gandhi Gimnázium, Kollégium, Általános Iskola és Alapfokú Művészeti Iskola",
+          "other": "Pécs"
+        },
+        {
+          "id": 27417,
+          "name": "Baptista Szeretetszolgálat EJSZ Széchenyi István Gimnáziuma és Technikuma",
+          "other": "Pécs"
+        },
+        {
+          "id": 27425,
+          "name": "Pécsi Művészeti Gimnázium, Szakgimnázium és Technikum",
+          "other": "Pécs"
+        },
+        {
+          "id": 27743,
+          "name": "Nagyasszonyunk Katolikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Kalocsa"
+        },
+        {
+          "id": 27816,
+          "name": "Tiszakécskei Református Általános Iskola és Gimnázium",
+          "other": "Tiszakécske"
+        },
+        {
+          "id": 27873,
+          "name": "Dunavecsei Református Kollégium - Óvoda, Általános Iskola, Középiskola, és Kollégium",
+          "other": "Dunavecse"
+        },
+        {
+          "id": 27938,
+          "name": "Bajai III. Béla Gimnázium",
+          "other": "Baja"
+        },
+        {
+          "id": 27939,
+          "name": "Magyarországi Németek Általános Művelődési Központja",
+          "other": "Baja"
+        },
+        {
+          "id": 27940,
+          "name": "Bácsalmási Hunyadi János Gimnázium",
+          "other": "Bácsalmás"
+        },
+        {
+          "id": 27942,
+          "name": "Kalocsai Szent István Gimnázium",
+          "other": "Kalocsa"
+        },
+        {
+          "id": 27943,
+          "name": "Kecskeméti Bányai Júlia Gimnázium",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 27944,
+          "name": "Kecskeméti Katona József Gimnázium",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 27945,
+          "name": "Kecskeméti Bolyai János Gimnázium",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 27946,
+          "name": "Kiskunfélegyházi Móra Ferenc Gimnázium",
+          "other": "Kiskunfélegyháza"
+        },
+        {
+          "id": 27948,
+          "name": "Baksay Sándor Református Gimnázium és Általános Iskola",
+          "other": "Kunszentmiklós"
+        },
+        {
+          "id": 27949,
+          "name": "Piarista Gimnázium, Kollégium, Általános Iskola és Óvoda",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 27951,
+          "name": "Kiskunhalasi Bibó István Gimnázium",
+          "other": "Kiskunhalas"
+        },
+        {
+          "id": 27953,
+          "name": "Kecskeméti Református Gimnázium",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 27955,
+          "name": "Tiszakécskei Móricz Zsigmond Általános Iskola, Gimnázium, Kollégium és Alapfokú Művészeti Iskola",
+          "other": "Tiszakécske"
+        },
+        {
+          "id": 27956,
+          "name": "Kiskunhalasi Református Kollégium Szilády Áron Gimnázium és Kollégium",
+          "other": "Kiskunhalas"
+        },
+        {
+          "id": 27959,
+          "name": "Szent László Általános Művelődési Központ",
+          "other": "Baja"
+        },
+        {
+          "id": 28279,
+          "name": "Orosházi Táncsics Mihály Gimnázium és Kollégium",
+          "other": "Orosháza"
+        },
+        {
+          "id": 28280,
+          "name": "Székács József Evangélikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Orosháza"
+        },
+        {
+          "id": 28300,
+          "name": "Szent Gellért Katolikus Általános Iskola és Gimnázium",
+          "other": "Gyomaendrőd"
+        },
+        {
+          "id": 28374,
+          "name": "Békéscsabai Andrássy Gyula Gimnázium és Kollégium",
+          "other": "Békéscsaba"
+        },
+        {
+          "id": 28375,
+          "name": "Mezőberényi Petőfi Sándor Evangélikus Gimnázium, Kollégium és Általános Iskola",
+          "other": "Mezőberény"
+        },
+        {
+          "id": 28376,
+          "name": "Mezőkovácsházi Hunyadi János Általános Iskola, Gimnázium és Kollégium",
+          "other": "Mezőkovácsháza"
+        },
+        {
+          "id": 28380,
+          "name": "Gyulai Erkel Ferenc Gimnázium és Kollégium",
+          "other": "Gyula"
+        },
+        {
+          "id": 28382,
+          "name": "Ady Endre-Bay Zoltán Gimnázium és Kollégium",
+          "other": "Sarkad"
+        },
+        {
+          "id": 28387,
+          "name": "NICOLAE BĂLCESCU ROMÁN GIMNÁZIUM, ÁLTALÁNOS ISKOLA ÉS KOLLÉGIUM",
+          "other": "Gyula"
+        },
+        {
+          "id": 28388,
+          "name": "Gyulai Római Katolikus Gimnázium, Általános Iskola, Óvoda és Kollégium",
+          "other": "Gyula"
+        },
+        {
+          "id": 28393,
+          "name": "Békéscsabai Belvárosi Általános Iskola és Gimnázium",
+          "other": "Békéscsaba"
+        },
+        {
+          "id": 28395,
+          "name": "Szeberényi Gusztáv Adolf Evangélikus Gimnázium, Technikum, Szakgimnázium, Általános Iskola, Óvoda, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Békéscsaba"
+        },
+        {
+          "id": 28396,
+          "name": "Jankó János Általános Iskola és Gimnázium",
+          "other": "Tótkomlós"
+        },
+        {
+          "id": 28456,
+          "name": "Szegedi Kis István Református Gimnázium, Technikum, Általános Iskola, Óvoda és Kollégium",
+          "other": "Békés"
+        },
+        {
+          "id": 28992,
+          "name": "Fráter György Katolikus Gimnázium és Kollégium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 28993,
+          "name": "Hámori Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Miskolc"
+        },
+        {
+          "id": 28994,
+          "name": "Nebuló Általános Iskola és Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29261,
+          "name": "Miskolci Herman Ottó Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29262,
+          "name": "Diósgyőri Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29263,
+          "name": "Miskolci Zrínyi Ilona Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29264,
+          "name": "Avasi Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29265,
+          "name": "Tiszaújvárosi Eötvös József Gimnázium és Kollégium",
+          "other": "Tiszaújváros"
+        },
+        {
+          "id": 29280,
+          "name": "Sárospataki Árpád Vezér Gimnázium és Kollégium",
+          "other": "Sárospatak"
+        },
+        {
+          "id": 29281,
+          "name": "Lévay József Református Gimnázium és Diákotthon",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29379,
+          "name": "Földes Ferenc Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 29736,
+          "name": "Bethlen Gábor Református Gimnázium és Szathmáry Kollégium",
+          "other": "Hódmezővásárhely"
+        },
+        {
+          "id": 29737,
+          "name": "Horváth Mihály Gimnázium",
+          "other": "Szentes"
+        },
+        {
+          "id": 29742,
+          "name": "Szegedi Tudományegyetem Gyakorló Gimnázium és Általános Iskola",
+          "other": "Szeged"
+        },
+        {
+          "id": 29743,
+          "name": "Szegedi Radnóti Miklós Kísérleti Gimnázium",
+          "other": "Szeged"
+        },
+        {
+          "id": 29744,
+          "name": "Szegedi Deák Ferenc Gimnázium",
+          "other": "Szeged"
+        },
+        {
+          "id": 29745,
+          "name": "Makói József Attila Gimnázium",
+          "other": "Makó"
+        },
+        {
+          "id": 29747,
+          "name": "Szegedi Tömörkény István Gimnázium, Művészeti Szakgimnázium és Technikum",
+          "other": "Szeged"
+        },
+        {
+          "id": 29752,
+          "name": "Dugonics András Piarista Gimnázium, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Szeged"
+        },
+        {
+          "id": 30046,
+          "name": "Székesfehérvári Kodály Zoltán Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30066,
+          "name": "Comenius Angol-Magyar Két Tanítási Nyelvű Gimnázium, Általános Iskola, Óvoda és Technikum",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30070,
+          "name": "Szent Imre Gimnázium, Általános Iskola és Óvoda",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30081,
+          "name": "Chernel István Általános Iskola és Gimnázium",
+          "other": "Gárdony"
+        },
+        {
+          "id": 30175,
+          "name": "Kápolnásnyéki Vörösmarty Mihály Általános Iskola és Gimnázium",
+          "other": "Kápolnásnyék"
+        },
+        {
+          "id": 30179,
+          "name": "Dunaújvárosi Rosti Pál Gimnázium és Általános Iskola",
+          "other": "Dunaújváros"
+        },
+        {
+          "id": 30180,
+          "name": "Dunaújvárosi Széchenyi István Gimnázium",
+          "other": "Dunaújváros"
+        },
+        {
+          "id": 30181,
+          "name": "Móri Táncsics Mihály Gimnázium",
+          "other": "Mór"
+        },
+        {
+          "id": 30182,
+          "name": "Ciszterci Szent István Gimnázium",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30183,
+          "name": "Tóparti Gimnázium és Művészeti Szakgimnázium",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30186,
+          "name": "Sárbogárdi Petőfi Sándor Gimnázium",
+          "other": "Sárbogárd"
+        },
+        {
+          "id": 30192,
+          "name": "Székesfehérvári Teleki Blanka Gimnázium és Általános Iskola",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30194,
+          "name": "Lánczos Kornél Gimnázium",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30228,
+          "name": "Kodolányi János Gimnázium",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 30491,
+          "name": "Páli Szent Vince Katolikus Gimnázium, Általános Iskola és Óvoda",
+          "other": "Kapuvár"
+        },
+        {
+          "id": 30502,
+          "name": "Piarista Gimnázium, Általános Iskola és Óvoda",
+          "other": "Mosonmagyaróvár"
+        },
+        {
+          "id": 30531,
+          "name": "Szabadhegyi Magyar-Német Két Tanítási Nyelvű Általános Iskola és Gimnázium",
+          "other": "Győr"
+        },
+        {
+          "id": 30546,
+          "name": "Péterfy Sándor Evangélikus Gimnázium, Általános Iskola, Óvoda, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Győr"
+        },
+        {
+          "id": 30549,
+          "name": "Prohászka Ottokár Orsolyita Gimnázium, Általános Iskola és Óvoda",
+          "other": "Győr"
+        },
+        {
+          "id": 30693,
+          "name": "Berzsenyi Dániel Evangélikus (Líceum) Gimnázium és Kollégium",
+          "other": "Sopron"
+        },
+        {
+          "id": 30694,
+          "name": "Soproni Széchenyi István Gimnázium",
+          "other": "Sopron"
+        },
+        {
+          "id": 30695,
+          "name": "Révai Miklós Gimnázium és Kollégium",
+          "other": "Győr"
+        },
+        {
+          "id": 30696,
+          "name": "Kazinczy Ferenc Gimnázium és Kollégium",
+          "other": "Győr"
+        },
+        {
+          "id": 30697,
+          "name": "Pannonhalmi Bencés Gimnázium és Szakkollégium",
+          "other": "Pannonhalma"
+        },
+        {
+          "id": 30698,
+          "name": "Czuczor Gergely Bencés Gimnázium és Kollégium",
+          "other": "Győr"
+        },
+        {
+          "id": 30701,
+          "name": "Mosonmagyaróvári Kossuth Lajos Gimnázium és Kollégium",
+          "other": "Mosonmagyaróvár"
+        },
+        {
+          "id": 30705,
+          "name": "Eötvös József Evangélikus Gimnázium, Egészségügyi Technikum és Művészeti Szakgimnázium",
+          "other": "Sopron"
+        },
+        {
+          "id": 30711,
+          "name": "Szent Orsolya Római Katolikus Gimnázium, Általános Iskola, Óvoda és Kollégium",
+          "other": "Sopron"
+        },
+        {
+          "id": 30712,
+          "name": "Apor Vilmos Római Katolikus Óvoda, Általános Iskola, Alapfokú Művészeti Iskola, Gimnázium és Kollégium",
+          "other": "Győr"
+        },
+        {
+          "id": 31107,
+          "name": "Svetits Katolikus Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31114,
+          "name": "Napraforgó Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31150,
+          "name": "II. Rákóczi Ferenc Általános Iskola, Gimnázium, Szakképző Iskola, Alapfokú Művészeti Iskola és Óvoda",
+          "other": "Hajdúsámson"
+        },
+        {
+          "id": 31197,
+          "name": "Debreceni Csokonai Vitéz Mihály Gimnázium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31198,
+          "name": "Debreceni Fazekas Mihály Gimnázium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31199,
+          "name": "Tóth Árpád Gimnázium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31200,
+          "name": "Debreceni Egyetem Kossuth Lajos Gyakorló Gimnáziuma és Általános Iskolája",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31201,
+          "name": "Debreceni Ady Endre Gimnázium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31202,
+          "name": "Medgyessy Ferenc Gimnázium, Művészeti Szakgimnázium és Technikum",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31203,
+          "name": "Derecskei I. Rákóczi György Gimnázium,Technikum és Kollégium",
+          "other": "Derecske"
+        },
+        {
+          "id": 31204,
+          "name": "Hajdúböszörményi Bocskai István Gimnázium",
+          "other": "Hajdúböszörmény"
+        },
+        {
+          "id": 31205,
+          "name": "Hőgyes Endre Gimnázium",
+          "other": "Hajdúszoboszló"
+        },
+        {
+          "id": 31208,
+          "name": "Debreceni Református Kollégium Gimnáziuma és Diákotthona",
+          "other": "Debrecen"
+        },
+        {
+          "id": 31597,
+          "name": "Gyöngyösi Berze Nagy János Gimnázium",
+          "other": "Gyöngyös"
+        },
+        {
+          "id": 31598,
+          "name": "Egri Szilágyi Erzsébet Gimnázium és Kollégium",
+          "other": "Eger"
+        },
+        {
+          "id": 31599,
+          "name": "Egri Dobó István Gimnázium",
+          "other": "Eger"
+        },
+        {
+          "id": 31603,
+          "name": "Neumann János Gimnázium, Technikum és Kollégium",
+          "other": "Eger"
+        },
+        {
+          "id": 31607,
+          "name": "Egri Pásztorvölgyi Általános Iskola és Gimnázium",
+          "other": "Eger"
+        },
+        {
+          "id": 31610,
+          "name": "Gárdonyi Géza Ciszterci Gimnázium és Kollégium",
+          "other": "Eger"
+        },
+        {
+          "id": 31838,
+          "name": "Színes Iskola - Személyközpontú Óvoda, Általános Iskola és Gimnázium",
+          "other": "Tata"
+        },
+        {
+          "id": 31856,
+          "name": "Szent Margit Gimnázium és Általános Iskola",
+          "other": "Tatabánya"
+        },
+        {
+          "id": 31862,
+          "name": "Kisbéri Táncsics Mihály Gimnázium és Általános Iskola",
+          "other": "Kisbér"
+        },
+        {
+          "id": 31931,
+          "name": "Komáromi Jókai Mór Gimnázium",
+          "other": "Komárom"
+        },
+        {
+          "id": 31932,
+          "name": "Hamvas Béla Gimnázium",
+          "other": "Oroszlány"
+        },
+        {
+          "id": 31934,
+          "name": "Temesvári Pelbárt Ferences Gimnázium és Kollégium",
+          "other": "Esztergom"
+        },
+        {
+          "id": 31936,
+          "name": "Tatabányai Árpád Gimnázium",
+          "other": "Tatabánya"
+        },
+        {
+          "id": 31937,
+          "name": "Esztergomi Dobó Katalin Gimnázium",
+          "other": "Esztergom"
+        },
+        {
+          "id": 31960,
+          "name": "Árpád-házi Szent Erzsébet Gimnázium, Óvoda és Általános Iskola",
+          "other": "Esztergom"
+        },
+        {
+          "id": 32284,
+          "name": "Balassagyarmati Balassi Bálint Gimnázium",
+          "other": "Balassagyarmat"
+        },
+        {
+          "id": 32285,
+          "name": "Nógrád Megyei Váci Mihály Gimnázium",
+          "other": "Bátonyterenye"
+        },
+        {
+          "id": 32286,
+          "name": "Salgótarjáni Bolyai János Gimnázium",
+          "other": "Salgótarján"
+        },
+        {
+          "id": 32289,
+          "name": "Mikszáth Kálmán Gimnázium és Kollégium",
+          "other": "Pásztó"
+        },
+        {
+          "id": 32292,
+          "name": "Szent Imre Katolikus Általános Iskola és Gimnázium",
+          "other": "Balassagyarmat"
+        },
+        {
+          "id": 32295,
+          "name": "Salgótarjáni Madách Imre Gimnázium",
+          "other": "Salgótarján"
+        },
+        {
+          "id": 32378,
+          "name": "Péceli Integrált Oktatási Központ Általános Iskola és Gimnázium",
+          "other": "Pécel"
+        },
+        {
+          "id": 32402,
+          "name": "Sashegyi Sándor Általános Iskola és Gimnázium",
+          "other": "Pomáz"
+        },
+        {
+          "id": 32450,
+          "name": "Páduai Szent Antal Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Piliscsaba"
+        },
+        {
+          "id": 32460,
+          "name": "Prohászka Ottokár Katolikus Gimnázium",
+          "other": "Budakeszi"
+        },
+        {
+          "id": 32464,
+          "name": "Zsámbéki Premontrei Keresztelő Szent János Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Zsámbék"
+        },
+        {
+          "id": 32548,
+          "name": "Budakeszi Nagy Sándor József Gimnázium",
+          "other": "Budakeszi"
+        },
+        {
+          "id": 32549,
+          "name": "Ceglédi Kossuth Lajos Gimnázium",
+          "other": "Cegléd"
+        },
+        {
+          "id": 32550,
+          "name": "Dunakeszi Radnóti Miklós Gimnázium",
+          "other": "Dunakeszi"
+        },
+        {
+          "id": 32551,
+          "name": "Érdi Vörösmarty Mihály Gimnázium",
+          "other": "Érd"
+        },
+        {
+          "id": 32552,
+          "name": "Ócsai Bolyai János Gimnázium",
+          "other": "Ócsa"
+        },
+        {
+          "id": 32554,
+          "name": "Ráckevei Ady Endre Gimnázium",
+          "other": "Ráckeve"
+        },
+        {
+          "id": 32555,
+          "name": "Szentendrei Móricz Zsigmond Gimnázium",
+          "other": "Szentendre"
+        },
+        {
+          "id": 32557,
+          "name": "Váci Madách Imre Gimnázium",
+          "other": "Vác"
+        },
+        {
+          "id": 32560,
+          "name": "Dabasi Táncsics Mihály Gimnázium",
+          "other": "Dabas"
+        },
+        {
+          "id": 32561,
+          "name": "Gödöllői Török Ignác Gimnázium",
+          "other": "Gödöllő"
+        },
+        {
+          "id": 32562,
+          "name": "József Attila Gimnázium és Közgazdasági Szakgimnázium",
+          "other": "Monor"
+        },
+        {
+          "id": 32563,
+          "name": "Damjanich János Gimnázium és Mezőgazdasági Technikum",
+          "other": "Nagykáta"
+        },
+        {
+          "id": 32564,
+          "name": "Arany János Református Gimnázium, Technikum és Kollégium",
+          "other": "Nagykőrös"
+        },
+        {
+          "id": 32568,
+          "name": "Baktay Ervin Gimnázium",
+          "other": "Dunaharaszti"
+        },
+        {
+          "id": 32569,
+          "name": "Szigetszentmiklósi Batthyány Kázmér Gimnázium",
+          "other": "Szigetszentmiklós"
+        },
+        {
+          "id": 32571,
+          "name": "Piarista Gimnázium és Kollégium",
+          "other": "Vác"
+        },
+        {
+          "id": 32575,
+          "name": "Gödöllői Református Líceum Gimnázium",
+          "other": "Gödöllő"
+        },
+        {
+          "id": 32579,
+          "name": "Szent László Gimnázium, Technikum, Szakképző Iskola és Kollégium",
+          "other": "Szob"
+        },
+        {
+          "id": 32580,
+          "name": "Szentendrei II. Rákóczi Ferenc Általános Iskola és Gimnázium",
+          "other": "Szentendre"
+        },
+        {
+          "id": 32582,
+          "name": "Aszódi Evangélikus Petőfi Gimnázium, Általános Iskola és Kollégium",
+          "other": "Aszód"
+        },
+        {
+          "id": 32583,
+          "name": "Teleki László Gimnázium",
+          "other": "Gyömrő"
+        },
+        {
+          "id": 32585,
+          "name": "Százhalombattai Arany János Általános Iskola és Gimnázium",
+          "other": "Százhalombatta"
+        },
+        {
+          "id": 32600,
+          "name": "Fóti Népművészeti Szakgimnázium és Gimnázium",
+          "other": "Fót"
+        },
+        {
+          "id": 32614,
+          "name": "Bocskai István Református Oktatási Központ - Óvoda, Általános Iskola, Gimnázium, Technikum, Szakgimnázium, Szakképző Iskola, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Halásztelek"
+        },
+        {
+          "id": 32616,
+          "name": "Bálint Márton Általános Iskola és Középiskola",
+          "other": "Törökbálint"
+        },
+        {
+          "id": 32618,
+          "name": "Kinizsi Pál Gimnázium",
+          "other": "Abony"
+        },
+        {
+          "id": 32630,
+          "name": "Gábor Dénes Óvoda, Általános Iskola, Gimnázium és Technikum",
+          "other": "Isaszeg"
+        },
+        {
+          "id": 32680,
+          "name": "Budakalász Gimnázium",
+          "other": "Budakalász"
+        },
+        {
+          "id": 33387,
+          "name": "Várday Kata Református Általános Iskola, Gimnázium és Kollégium",
+          "other": "Kisvárda"
+        },
+        {
+          "id": 33431,
+          "name": "Waldorf Óvoda, Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33645,
+          "name": "Demecseri Oktatási Centrum Gimnázium, Általános Iskola, Alapfokú Művészeti Iskola",
+          "other": "Demecser"
+        },
+        {
+          "id": 33646,
+          "name": "Fehérgyarmati Deák Ferenc Általános Iskola, Gimnázium és Kollégium",
+          "other": "Fehérgyarmat"
+        },
+        {
+          "id": 33648,
+          "name": "Kisvárdai Bessenyei György Gimnázium és Kollégium",
+          "other": "Kisvárda"
+        },
+        {
+          "id": 33649,
+          "name": "Korányi Frigyes Görögkatolikus Általános Iskola, Gimnázium és Kollégium",
+          "other": "Nagykálló"
+        },
+        {
+          "id": 33650,
+          "name": "Nyíregyházi Evangélikus Kossuth Lajos Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33651,
+          "name": "Nyíregyházi Krúdy Gyula Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33652,
+          "name": "Nyíregyházi Zrínyi Ilona Gimnázium és Kollégium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33653,
+          "name": "Nyíregyházi Kölcsey Ferenc Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33654,
+          "name": "Nyíregyházi Vasvári Pál Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33657,
+          "name": "Vásárosnaményi II. Rákóczi Ferenc Gimnázium",
+          "other": "Vásárosnamény"
+        },
+        {
+          "id": 33659,
+          "name": "Mátészalkai Esze Tamás Gimnázium",
+          "other": "Mátészalka"
+        },
+        {
+          "id": 33660,
+          "name": "Báthory István Katolikus Óvoda, Két Tanítási Nyelvű Általános Iskola és Gimnázium",
+          "other": "Nyírbátor"
+        },
+        {
+          "id": 33661,
+          "name": "Szent László Katolikus Gimnázium, Technikum, Két Tanítási Nyelvű Általános Iskola, Kollégium és Óvoda",
+          "other": "Kisvárda"
+        },
+        {
+          "id": 33665,
+          "name": "Szent Imre Katolikus Gimnázium, Két Tanítási Nyelvű Általános Iskola, Kollégium, Óvoda és Alapfokú Művészeti Iskola",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33666,
+          "name": "Nyíregyházi Arany János Gimnázium, Általános Iskola és Kollégium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33667,
+          "name": "Nyíregyházi Egyetem Eötvös József Gyakorló Általános Iskola és Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 33668,
+          "name": "Ecsedi Báthori István Református Általános Iskola és Gimnázium",
+          "other": "Nagyecsed"
+        },
+        {
+          "id": 33981,
+          "name": "Lorántffy Zsuzsanna Református Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Kaposvár"
+        },
+        {
+          "id": 34141,
+          "name": "Kaposvári Táncsics Mihály Gimnázium",
+          "other": "Kaposvár"
+        },
+        {
+          "id": 34143,
+          "name": "Kaposvári Csokonai Vitéz Mihály Általános Iskola, Gimnázium és Szakgimnázium",
+          "other": "Kaposvár"
+        },
+        {
+          "id": 34145,
+          "name": "Mátyás Király Gimnázium",
+          "other": "Fonyód"
+        },
+        {
+          "id": 34146,
+          "name": "Marcali Berzsenyi Dániel Gimnázium",
+          "other": "Marcali"
+        },
+        {
+          "id": 34148,
+          "name": "Kaposvári Munkácsy Mihály Gimnázium",
+          "other": "Kaposvár"
+        },
+        {
+          "id": 34149,
+          "name": "Siófoki Perczel Mór Gimnázium és Kollégium",
+          "other": "Siófok"
+        },
+        {
+          "id": 34155,
+          "name": "Nagyboldogasszony Római Katolikus Gimnázium, Általános Iskola és Alapfokú Művészeti Iskola",
+          "other": "Kaposvár"
+        },
+        {
+          "id": 34156,
+          "name": "Csokonai Vitéz Mihály Református Gimnázium, Általános Iskola és Kollégium",
+          "other": "Csurgó"
+        },
+        {
+          "id": 34796,
+          "name": "Szent II. János Pál Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 34799,
+          "name": "Csik Ferenc Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 34802,
+          "name": "Budenz József Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 34836,
+          "name": "Budapest III. Kerületi Kerék Általános Iskola és Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 34851,
+          "name": "Szent József Katolikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 34853,
+          "name": "Óbudai Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 34863,
+          "name": "Újpesti Károlyi István Általános Iskola és Gimnázium",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 34866,
+          "name": "Újpesti Bródy Imre Gimnázium és Általános Iskola",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 34877,
+          "name": "Újpesti Csokonai Vitéz Mihály Általános Iskola és Gimnázium",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 34883,
+          "name": "Deák Diák Ének-zenei Általános Iskola és Gimnázium",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 34894,
+          "name": "Budapesti Ward Mária Általános Iskola, Gimnázium és Zeneművészeti Szakgimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 34905,
+          "name": "Lauder Javne Zsidó Közösségi Óvoda, Általános Iskola, Gimnázium és Zenei Alapfokú Művészeti Iskola",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 34949,
+          "name": "Lónyay Utcai Református Gimnázium és Kollégium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 34982,
+          "name": "Újbudai József Attila Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 35018,
+          "name": "Greater Grace Nemzetközi Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 35019,
+          "name": "Budapesti Nemzetközi Iskola-International School of Budapest és Magyar-Angol Két Tanítási Nyelvű Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 35072,
+          "name": "Budapest XV. Kerületi László Gyula Gimnázium és Általános Iskola",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 35101,
+          "name": "Bornemisza Péter Gimnázium, Általános Iskola, Alapfokú Művészeti Iskola, Óvoda és Sportiskola",
+          "other": "Budapest X. kerület"
+        },
+        {
+          "id": 35115,
+          "name": "Pál Apostol Katolikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest XVII. kerület"
+        },
+        {
+          "id": 35152,
+          "name": "Kispesti Waldorf Óvoda, Általános Iskola, Alapfokú Művészeti Iskola és Gimnázium",
+          "other": "Budapest XIX. kerület"
+        },
+        {
+          "id": 35187,
+          "name": "Burattino Általános és Középiskola, Gyermekotthon",
+          "other": "Budapest XXI. kerület"
+        },
+        {
+          "id": 35200,
+          "name": "Rózsakerti Demjén István Református Általános Iskola és Gimnázium",
+          "other": "Budapest XXII. kerület"
+        },
+        {
+          "id": 35206,
+          "name": "Fővárosi Iskolaszanatórium Általános Iskola és Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 35218,
+          "name": "Budapest I. Kerületi Petőfi Sándor Gimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35219,
+          "name": "Budapest I. Kerületi Szilágyi Erzsébet Gimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35220,
+          "name": "Budapest I. Kerületi Toldy Ferenc Gimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35222,
+          "name": "Budapest II. Kerületi II. Rákóczi Ferenc Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35223,
+          "name": "Óbudai Árpád Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 35225,
+          "name": "Óbudai Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 35226,
+          "name": "Békásmegyeri Veres Péter Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 35227,
+          "name": "Újpesti Könyves Kálmán Gimnázium",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 35228,
+          "name": "Újpesti Babits Mihály Gimnázium",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 35229,
+          "name": "ELTE Apáczai Csere János Gyakorló Gimnázium és Kollégium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35230,
+          "name": "Budapest V. Kerületi Eötvös József Gimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35231,
+          "name": "Veres Pálné Gimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35232,
+          "name": "Budapest VI. Kerületi Kölcsey Ferenc Gimnázium",
+          "other": "Budapest VI. kerület"
+        },
+        {
+          "id": 35233,
+          "name": "VII. Kerületi Madách Imre Gimnázium",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 35234,
+          "name": "Budapest VIII. Kerületi Vörösmarty Mihály Gimnázium",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 35235,
+          "name": "Budapest IX. Kerületi Leövey Klára Gimnázium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 35236,
+          "name": "Kőbányai Szent László Gimnázium",
+          "other": "Budapest X. kerület"
+        },
+        {
+          "id": 35237,
+          "name": "Budapest X. Kerületi Zrínyi Miklós Gimnázium",
+          "other": "Budapest X. kerület"
+        },
+        {
+          "id": 35239,
+          "name": "Szent Margit Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 35242,
+          "name": "Városmajori Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 35243,
+          "name": "Berzsenyi Dániel Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 35244,
+          "name": "Németh László Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 35245,
+          "name": "Budapest XIII. Kerületi Ady Endre Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 35246,
+          "name": "Szent István Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 35247,
+          "name": "Budapest XIV. Kerületi Teleki Blanka Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 35248,
+          "name": "Budapest XV. Kerületi Dózsa György Gimnázium és Táncművészeti Szakgimnázium",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 35249,
+          "name": "Budapest XVI. Kerületi Szerb Antal Gimnázium",
+          "other": "Budapest XVI. kerület"
+        },
+        {
+          "id": 35250,
+          "name": "Budapest XVII. Kerületi Balassi Bálint Nyolcévfolyamos Gimnázium",
+          "other": "Budapest XVII. kerület"
+        },
+        {
+          "id": 35252,
+          "name": "Karinthy Frigyes Gimnázium",
+          "other": "Budapest XVIII. kerület"
+        },
+        {
+          "id": 35253,
+          "name": "Kispesti Deák Ferenc Gimnázium",
+          "other": "Budapest XIX. kerület"
+        },
+        {
+          "id": 35254,
+          "name": "Kispesti Károlyi Mihály Magyar-Spanyol Tannyelvű Gimnázium",
+          "other": "Budapest XIX. kerület"
+        },
+        {
+          "id": 35255,
+          "name": "Jedlik Ányos Gimnázium",
+          "other": "Budapest XXI. kerület"
+        },
+        {
+          "id": 35256,
+          "name": "Budapest XXII. Kerületi Budai Nagy Antal Gimnázium",
+          "other": "Budapest XXII. kerület"
+        },
+        {
+          "id": 35257,
+          "name": "Kempelen Farkas Gimnázium",
+          "other": "Budapest XXII. kerület"
+        },
+        {
+          "id": 35259,
+          "name": "Piarista Gimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35260,
+          "name": "Patrona Hungariae Óvoda, Általános Iskola, Gimnázium, Kollégium és Alapfokú Művészeti Iskola",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 35261,
+          "name": "Budapest-Fasori Evangélikus Gimnázium",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 35265,
+          "name": "Magyar Táncművészeti Egyetem Nádasi Ferenc Gimnáziuma és Kollégiuma",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 35266,
+          "name": "Budapest VI. Kerületi Szinyei Merse Pál Gimnázium",
+          "other": "Budapest VI. kerület"
+        },
+        {
+          "id": 35271,
+          "name": "Nikola Tesla Szerb Tanítási Nyelvű Óvoda, Általános Iskola, Gimnázium, Kollégium és Könyvtár",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 35277,
+          "name": "Budapesti Fazekas Mihály Gyakorló Általános Iskola és Gimnázium",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 35278,
+          "name": "Szlovák Tanítási Nyelvű Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 35279,
+          "name": "ELTE Trefort Ágoston Gyakorló Gimnázium",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 35281,
+          "name": "Corvin Mátyás Gimnázium",
+          "other": "Budapest XVI. kerület"
+        },
+        {
+          "id": 35282,
+          "name": "Budapest IX. Kerületi Szent-Györgyi Albert Általános Iskola és Gimnázium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 35283,
+          "name": "Ferencvárosi Sport Általános Iskola és Gimnázium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 35284,
+          "name": "Budapest IX. Kerületi Weöres Sándor Általános Iskola és Gimnázium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 35288,
+          "name": "Tamási Áron Általános Iskola, Gimnázium és Német Nemzetiségi Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 35289,
+          "name": "Sashegyi Arany János Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 35302,
+          "name": "Budapesti Osztrák Iskola - Osztrák Felsőreál Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 35304,
+          "name": "Német Nemzetiségi Gimnázium és Kollégium",
+          "other": "Budapest XX. kerület"
+        },
+        {
+          "id": 35305,
+          "name": "Baár-Madas Református Gimnázium, Általános Iskola és Kollégium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35307,
+          "name": "Kodály Zoltán Magyar Kórusiskola Katolikus Általános Iskola, Gimnázium, Alapfokú Művészeti Iskola és Szakgimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35310,
+          "name": "Budapest XVI. Kerületi Táncsics Mihály Általános Iskola és Gimnázium",
+          "other": "Budapest XVI. kerület"
+        },
+        {
+          "id": 35312,
+          "name": "Jerikó Keresztény Humán Gimnázium és Pedagógiai Szakgimnázium",
+          "other": "Budapest XIX. kerület"
+        },
+        {
+          "id": 35313,
+          "name": "Európa Alapítvány Középfokú Intézet (EAKI)Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 35314,
+          "name": "Álmos Vezér Gimnázium, Pedagógiai Szakgimnázium és Általános Iskola",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 35315,
+          "name": "Budenz József Alapítványi Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35316,
+          "name": "Kürt Alapítványi Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 35319,
+          "name": "Budapest XVII. Kerületi Kőrösi Csoma Sándor Általános Iskola és Gimnázium",
+          "other": "Budapest XVII. kerület"
+        },
+        {
+          "id": 35321,
+          "name": "Deák Téri Evangélikus Gimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35322,
+          "name": "Budapest XVIII. Kerületi Vörösmarty Mihály Ének-zenei, Nyelvi Általános Iskola és Gimnázium",
+          "other": "Budapest XVIII. kerület"
+        },
+        {
+          "id": 35323,
+          "name": "Budapest XX. Kerületi Kossuth Lajos Gimnázium",
+          "other": "Budapest XX. kerület"
+        },
+        {
+          "id": 35324,
+          "name": "Budapest XX. Kerületi Nagy László Általános Iskola és Gimnázium",
+          "other": "Budapest XX. kerület"
+        },
+        {
+          "id": 35326,
+          "name": "Horvát Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 35327,
+          "name": "Klebelsberg Kuno Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35328,
+          "name": "Bethlen Gábor Általános Iskola és Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 35339,
+          "name": "Kontyfa Általános Iskola és Gimnázium",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 35343,
+          "name": "Pasaréti Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35344,
+          "name": "Budapest I. Kerületi Kosztolányi Dezső Gimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35346,
+          "name": "Pesthidegkúti Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35348,
+          "name": "Pasaréti Szabó Lőrinc Magyar-Angol Két Tanítási Nyelvű Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35349,
+          "name": "BME által alapított Két Tanítási Nyelvű Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 35356,
+          "name": "Gustave Eiffel Francia Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35357,
+          "name": "Budapesti Egyetemi Katolikus Gimnázium és Kollégium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35358,
+          "name": "Szent Gellért Katolikus Általános Iskola és Gimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 35360,
+          "name": "Kodály Zoltán Ének-zenei Általános Iskola, Gimnázium és Zenei Alapfokú Művészeti Iskola",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35362,
+          "name": "Budai Ciszterci Szent Imre Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 35454,
+          "name": "Alternatív Közgazdasági Gimnázium, Szakgimnázium és Általános Iskola",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 35464,
+          "name": "Közgazdasági Politechnikum Alternatív Gimnázium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 35468,
+          "name": "Budapest Baptista Gimnázium,Technikum és Sportiskola",
+          "other": "Budapest XX. kerület"
+        },
+        {
+          "id": 35483,
+          "name": "Xántus János Két Tanítási Nyelvű Gimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35506,
+          "name": "Európa 2000 Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 35562,
+          "name": "ADDETUR Baptista Gimnázium, Technikum és Szakiskola",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 35606,
+          "name": "Pestszentlőrinc-Pestszentimrei Felnőttek Általános Iskolája és Gimnáziuma",
+          "other": "Budapest XVIII. kerület"
+        },
+        {
+          "id": 35625,
+          "name": "Belvárosi Tanoda Alapítványi Gimnázium",
+          "other": "Budapest V. kerület"
+        },
+        {
+          "id": 35843,
+          "name": "Szent István Sport Általános Iskola és Gimnázium",
+          "other": "Jászberény"
+        },
+        {
+          "id": 35844,
+          "name": "Jászberényi Nagyboldogasszony Katolikus Óvoda, Kéttannyelvű Általános Iskola és Gimnázium",
+          "other": "Jászberény"
+        },
+        {
+          "id": 35890,
+          "name": "Aranyos Szeglet Waldorf Óvoda, Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Szolnok"
+        },
+        {
+          "id": 35987,
+          "name": "Deák Ferenc Gimnázium, Közgazdasági és Informatikai Szakgimnázium",
+          "other": "Jászárokszállás"
+        },
+        {
+          "id": 35990,
+          "name": "Varga Katalin Gimnázium",
+          "other": "Szolnok"
+        },
+        {
+          "id": 35992,
+          "name": "Verseghy Ferenc Gimnázium",
+          "other": "Szolnok"
+        },
+        {
+          "id": 35994,
+          "name": "Szolnoki Széchenyi István Gimnázium és Művészeti Szakgimnázium",
+          "other": "Szolnok"
+        },
+        {
+          "id": 36007,
+          "name": "Mezőtúri Református Kollégium, Gimnázium, Technikum, Általános Iskola és Óvoda",
+          "other": "Mezőtúr"
+        },
+        {
+          "id": 36009,
+          "name": "Humán Intézet Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 36014,
+          "name": "Kossuth Lajos Gimnázium és Általános Iskola",
+          "other": "Tiszafüred"
+        },
+        {
+          "id": 36263,
+          "name": "Bonyhádi Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Bonyhád"
+        },
+        {
+          "id": 36276,
+          "name": "Paksi Balogh Antal Katolikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Paks"
+        },
+        {
+          "id": 36360,
+          "name": "Hőgyészi Hegyhát Általános Iskola, Gimnázium és Kollégium",
+          "other": "Hőgyész"
+        },
+        {
+          "id": 36371,
+          "name": "Vak Bottyán Általános Iskola és Gimnázium",
+          "other": "Simontornya"
+        },
+        {
+          "id": 36378,
+          "name": "Bonyhádi Petőfi Sándor Evangélikus Gimnázium, Kollégium, Általános Iskola és Alapfokú Művészeti Iskola",
+          "other": "Bonyhád"
+        },
+        {
+          "id": 36379,
+          "name": "Dombóvári Illyés Gyula Gimnázium",
+          "other": "Dombóvár"
+        },
+        {
+          "id": 36384,
+          "name": "Szekszárdi Garay János Gimnázium",
+          "other": "Szekszárd"
+        },
+        {
+          "id": 36385,
+          "name": "Tolnai Szent István Katolikus Gimnázium",
+          "other": "Tolna"
+        },
+        {
+          "id": 36391,
+          "name": "Paksi Vak Bottyán Gimnázium",
+          "other": "Paks"
+        },
+        {
+          "id": 36394,
+          "name": "Szekszárdi I. Béla Gimnázium, Kollégium és Általános Iskola",
+          "other": "Szekszárd"
+        },
+        {
+          "id": 36416,
+          "name": "Szekszárdi Kolping Katolikus Szakképző Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Szekszárd"
+        },
+        {
+          "id": 36598,
+          "name": "Árpád-házi Szent Margit Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Kőszeg"
+        },
+        {
+          "id": 36626,
+          "name": "Boldog Brenner János Általános Iskola, Gimnázium és Kollégium",
+          "other": "Szombathely"
+        },
+        {
+          "id": 36723,
+          "name": "Celldömölki Berzsenyi Dániel Gimnázium",
+          "other": "Celldömölk"
+        },
+        {
+          "id": 36724,
+          "name": "Körmendi Kölcsey Ferenc Gimnázium",
+          "other": "Körmend"
+        },
+        {
+          "id": 36725,
+          "name": "Jurisich Miklós Gimnázium és Kollégium",
+          "other": "Kőszeg"
+        },
+        {
+          "id": 36728,
+          "name": "Szombathelyi Nagy Lajos Gimnázium",
+          "other": "Szombathely"
+        },
+        {
+          "id": 36729,
+          "name": "Szombathelyi Kanizsai Dorottya Gimnázium",
+          "other": "Szombathely"
+        },
+        {
+          "id": 36732,
+          "name": "Premontrei Rendi Szent Norbert Gimnázium",
+          "other": "Szombathely"
+        },
+        {
+          "id": 36733,
+          "name": "ELTE Bolyai János Gyakorló Általános Iskola és Gimnázium",
+          "other": "Szombathely"
+        },
+        {
+          "id": 37165,
+          "name": "Magyar-Angol Tannyelvű Gimnázium és Kollégium",
+          "other": "Balatonalmádi"
+        },
+        {
+          "id": 37166,
+          "name": "Lóczy Lajos Gimnázium",
+          "other": "Balatonfüred"
+        },
+        {
+          "id": 37167,
+          "name": "Kisfaludy Sándor Gimnázium, Kollégium és Alapfokú Művészeti Iskola",
+          "other": "Sümeg"
+        },
+        {
+          "id": 37169,
+          "name": "Lovassy László Gimnázium",
+          "other": "Veszprém"
+        },
+        {
+          "id": 37170,
+          "name": "Vetési Albert Gimnázium",
+          "other": "Veszprém"
+        },
+        {
+          "id": 37171,
+          "name": "III. Béla Gimnázium, Művészeti Szakgimnázium és Alapfokú Művészeti Iskola",
+          "other": "Zirc"
+        },
+        {
+          "id": 37172,
+          "name": "Pápai Petőfi Sándor Gimnázium",
+          "other": "Pápa"
+        },
+        {
+          "id": 37178,
+          "name": "Pápai Református Kollégium Gimnáziuma, Művészeti Szakgimnáziuma és Diákotthona",
+          "other": "Pápa"
+        },
+        {
+          "id": 37181,
+          "name": "Ajkai Bródy Imre Gimnázium",
+          "other": "Ajka"
+        },
+        {
+          "id": 37185,
+          "name": "Türr István Gimnázium és Kollégium",
+          "other": "Pápa"
+        },
+        {
+          "id": 37206,
+          "name": "Noszlopy Gáspár Gimnázium és Kollégium",
+          "other": "Veszprém"
+        },
+        {
+          "id": 37234,
+          "name": "Batsányi János Gimnázium és Kollégium",
+          "other": "Tapolca"
+        },
+        {
+          "id": 37320,
+          "name": "Érdi Gárdonyi Géza Általános Iskola és Gimnázium",
+          "other": "Érd"
+        },
+        {
+          "id": 37326,
+          "name": "Marianum Német Nemzetiségi Nyelvoktató Általános Iskola és Gimnázium",
+          "other": "Érd"
+        },
+        {
+          "id": 37513,
+          "name": "Piarista Általános Iskola, Gimnázium, Kollégium és Boldog Donáti Celesztina Óvoda",
+          "other": "Nagykanizsa"
+        },
+        {
+          "id": 37526,
+          "name": "Mindszenty József Általános Iskola, Gimnázium és Kollégium",
+          "other": "Zalaegerszeg"
+        },
+        {
+          "id": 37630,
+          "name": "Zalaegerszegi Kölcsey Ferenc Gimnázium",
+          "other": "Zalaegerszeg"
+        },
+        {
+          "id": 37631,
+          "name": "Gönczi Ferenc Gimnázium",
+          "other": "Lenti"
+        },
+        {
+          "id": 37632,
+          "name": "Zalaegerszegi Zrínyi Miklós Gimnázium",
+          "other": "Zalaegerszeg"
+        },
+        {
+          "id": 37634,
+          "name": "Keszthelyi Vajda János Gimnázium",
+          "other": "Keszthely"
+        },
+        {
+          "id": 37635,
+          "name": "Batthyány Lajos Gimnázium",
+          "other": "Nagykanizsa"
+        },
+        {
+          "id": 37636,
+          "name": "Dr. Mező Ferenc Gimnázium",
+          "other": "Nagykanizsa"
+        },
+        {
+          "id": 37640,
+          "name": "Hévízi Bibó István Gimnázium és Kollégium",
+          "other": "Hévíz"
+        },
+        {
+          "id": 37641,
+          "name": "Zalaegerszegi Ady Endre Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Zalaegerszeg"
+        },
+        {
+          "id": 37730,
+          "name": "Ferences Gimnázium",
+          "other": "Szentendre"
+        },
+        {
+          "id": 37742,
+          "name": "Budaörsi Illyés Gyula Gimnázium, Szakgimnázium és Technikum",
+          "other": "Budaörs"
+        },
+        {
+          "id": 37775,
+          "name": "Budapest II. Kerületi Móricz Zsigmond Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 37802,
+          "name": "ELTE Radnóti Miklós Gyakorló Általános Iskola és Gyakorló Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 37828,
+          "name": "Péter András Gimnázium és Kollégium",
+          "other": "Szeghalom"
+        },
+        {
+          "id": 37857,
+          "name": "Székesfehérvári Vasvári Pál Gimnázium",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 37878,
+          "name": "Szent József Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 37882,
+          "name": "Dorogi Zsigmondy Vilmos Magyar-Angol Két Tanítási Nyelvű Gimnázium",
+          "other": "Dorog"
+        },
+        {
+          "id": 37923,
+          "name": "Hajnóczy József Gimnázium, Humán Szakgimnázium és Kollégium",
+          "other": "Tiszaföldvár"
+        },
+        {
+          "id": 37935,
+          "name": "Thuri György Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Várpalota"
+        },
+        {
+          "id": 38071,
+          "name": "Thomas Mann Gymnasium-Deutsche Schule Budapest, Budapesti Német Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 38090,
+          "name": "Fényi Gyula Jezsuita Gimnázium, Kollégium és Óvoda",
+          "other": "Miskolc"
+        },
+        {
+          "id": 38115,
+          "name": "Bárdos László Gimnázium",
+          "other": "Tatabánya"
+        },
+        {
+          "id": 38127,
+          "name": "Premontrei Szent Norbert Gimnázium, Egyházzenei Szakgimnázium, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Gödöllő"
+        },
+        {
+          "id": 38139,
+          "name": "Lehel Vezér Gimnázium",
+          "other": "Jászberény"
+        },
+        {
+          "id": 38156,
+          "name": "Padányi Biró Márton Római Katolikus Gimnázium, Technikum és Általános Iskola",
+          "other": "Veszprém"
+        },
+        {
+          "id": 38267,
+          "name": "Pentelei Mentálhigiénés Általános Iskola, Szakképző Iskola és Gimnázium",
+          "other": "Dunaújváros"
+        },
+        {
+          "id": 38425,
+          "name": "Mozgásjavító Óvoda, Általános Iskola, Gimnázium, Kollégium, Egységes Gyógypedagógiai Módszertani Intézmény",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 39227,
+          "name": "Sárospataki Református Kollégium Gimnáziuma, Általános Iskolája és Diákotthona",
+          "other": "Sárospatak"
+        },
+        {
+          "id": 39907,
+          "name": "Rajkó-Talentum Alapfokú Művészeti Iskola és Középiskola",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 40234,
+          "name": "Hang-Szín-Tér Művészeti Gimnázium, Művészeti Szakgimnázium, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Bodajk"
+        },
+        {
+          "id": 40365,
+          "name": "Karolina Óvoda, Általános Iskola, Gimnázium, Alapfokú Művészeti Iskola és Kollégium",
+          "other": "Szeged"
+        },
+        {
+          "id": 62576,
+          "name": "Trívium Alapítványi Gimnázium",
+          "other": "Gyöngyös"
+        },
+        {
+          "id": 63879,
+          "name": "Constantinum Katolikus Óvoda, Általános Iskola, Gimnázium, Technikum, Kollégium",
+          "other": "Kiskunfélegyháza"
+        },
+        {
+          "id": 64329,
+          "name": "SEK Budapest Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 64887,
+          "name": "Budapesti Zsidó Hitközség Scheiber Sándor Gimnázium és Általános Iskola",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 100510,
+          "name": "Fóti Szabad Waldorf Óvoda, Általános Iskola, Alapfokú Művészeti Iskola és Gimnázium",
+          "other": "Fót"
+        },
+        {
+          "id": 100523,
+          "name": "Dombrádi Móra Ferenc Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Dombrád"
+        },
+        {
+          "id": 100527,
+          "name": "Kardos István Általános Iskola, Gimnázium és Szakgimnázium",
+          "other": "Szigetszentmiklós"
+        },
+        {
+          "id": 100528,
+          "name": "Budapesti Nemzetközi Keresztyén Óvoda, Általános Iskola és Gimnázium",
+          "other": "Diósd"
+        },
+        {
+          "id": 100534,
+          "name": "Innovációs Gimnázium",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 100537,
+          "name": "Kovács Pál Baptista Gimnázium",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 100539,
+          "name": "Katedra Általános Iskola, Gimnázium, Informatikai és Művészeti Technikum, Szakgimnázium és Kollégium",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 100565,
+          "name": "Szent Angéla Ferences Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 100566,
+          "name": "Alsóerdősori Bárdos Lajos Általános Iskola és Gimnázium",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 100569,
+          "name": "Comenius Szakközépiskola, Szakgimnázium, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest XIX. kerület"
+        },
+        {
+          "id": 100573,
+          "name": "EURO Baptista Két Tanítási Nyelvű Gimnázium és Technikum",
+          "other": "Debrecen"
+        },
+        {
+          "id": 101138,
+          "name": "Sylvester János Református Gimnázium és Technikum",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 101433,
+          "name": "Szentendrei Református Gimnázium",
+          "other": "Szentendre"
+        },
+        {
+          "id": 101488,
+          "name": "Atalanta Gimnázium",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 101496,
+          "name": "Gimnázium, Informatikai, Közgazdasági, Nyomdaipari Technikum és Szakképző Iskola",
+          "other": "Eger"
+        },
+        {
+          "id": 101497,
+          "name": "Európai Üzleti Gimnázium",
+          "other": "Eger"
+        },
+        {
+          "id": 101503,
+          "name": "Forrás Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Győr"
+        },
+        {
+          "id": 101508,
+          "name": "Gyermekház Iskola",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 101641,
+          "name": "Fészek Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Solymár"
+        },
+        {
+          "id": 101671,
+          "name": "Zöld Kakas Líceum Mentálhigiénés Szakgimnázium, Gimnázium és Általános Iskola",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 102290,
+          "name": "Magyar Műhely Általános Művelődési Központ",
+          "other": "Mezőörs"
+        },
+        {
+          "id": 102334,
+          "name": "Kalyi Jag Roma Nemzetiségi Általános Iskola, Gimnázium, Szakképző Intézmény, Alapfokú Művészeti Iskola és Felnőttoktatási Intézmény",
+          "other": "Budapest VI. kerület"
+        },
+        {
+          "id": 102350,
+          "name": "Britannica Angolnyelvű Nemzetközi Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 102492,
+          "name": "Budapesti Amerikai Nemzetközi Iskola",
+          "other": "Nagykovácsi"
+        },
+        {
+          "id": 102648,
+          "name": "Kőrösi Csoma Sándor Két Tanítási Nyelvű Baptista Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 102677,
+          "name": "Perintparti Szó-Fogadó Szombathelyi Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Szombathely"
+        },
+        {
+          "id": 102703,
+          "name": "Abigél Általános Iskola, Alapfokú Művészeti Iskola, Szakgimnázium, Gimnázium, Kollégium, Technikum és Szakképző Iskola",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 102731,
+          "name": "Szabad Waldorf Általános Iskola és Gimnázium, Alapfokú Művészeti Iskola",
+          "other": "Szeged"
+        },
+        {
+          "id": 102759,
+          "name": "Aranykéz Gimnázium, Technikum és Szakképző Iskola",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 102783,
+          "name": "Boldog Adolf Kolping Katolikus Általános Iskola, Gimnázium és Sportgimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 102794,
+          "name": "Újbudai Széchenyi István Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 200002,
+          "name": "Kossuth Lajos Evangélikus Óvoda, Általános Iskola, Gimnázium és Pedagógiai Szakgimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 200047,
+          "name": "Zafféry Károly Szalézi Középiskola",
+          "other": "Nyergesújfalu"
+        },
+        {
+          "id": 200052,
+          "name": "Balassi Bálint Gimnázium",
+          "other": "Kál"
+        },
+        {
+          "id": 200078,
+          "name": "Altisz Alapítványi Gimnázium",
+          "other": "Budapest X. kerület"
+        },
+        {
+          "id": 200185,
+          "name": "Patkós Irma Művészeti Iskola, Gimnázium, Szakgimnázium és AMI",
+          "other": "Cegléd"
+        },
+        {
+          "id": 200188,
+          "name": "HARMÓNIA Alapfokú Művészeti Iskola, Általános Iskola és Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 200202,
+          "name": "British International School Alapítványi Óvoda, Általános- és Középiskola",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 200203,
+          "name": "Debreceni Református Kollégium Dóczy Gimnáziuma",
+          "other": "Debrecen"
+        },
+        {
+          "id": 200207,
+          "name": "Szikszói Szakképző Iskola és Szakgimnázium",
+          "other": "Szikszó"
+        },
+        {
+          "id": 200232,
+          "name": "Bethlen Gábor Gimnázium, Általános Iskola, Óvoda és Alapfokú Művészeti Iskola",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 200290,
+          "name": "Pannon Oktatási Központ Gimnázium, Szakgimnázium, Technikum, Szakképző Iskola és Általános Iskola",
+          "other": "Dunaújváros"
+        },
+        {
+          "id": 200300,
+          "name": "Fehérlófia Waldorf Óvoda, Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Nemesvámos"
+        },
+        {
+          "id": 200304,
+          "name": "Facultas Humán Gimnázium",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 200324,
+          "name": "Alexandra Általános Iskola és Gimnázium",
+          "other": "Baktalórántháza"
+        },
+        {
+          "id": 200328,
+          "name": "Uzoni Péter Gimnázium és Általános Iskola",
+          "other": "Salgótarján"
+        },
+        {
+          "id": 200329,
+          "name": "Huszár Gál Gimnázium, Általános Iskola, Alapfokú Művészeti Iskola és Óvoda",
+          "other": "Debrecen"
+        },
+        {
+          "id": 200345,
+          "name": "Kölcsey Ferenc Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 200346,
+          "name": "Csanádi Árpád Sportiskola, Általános Iskola és Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 200406,
+          "name": "KOCH VALÉRIA GIMNÁZIUM, ÁLTALÁNOS ISKOLA, ÓVODA, KOLLÉGIUM ÉS PEDAGÓGIAI INTÉZET",
+          "other": "Pécs"
+        },
+        {
+          "id": 200407,
+          "name": "Deák Ferenc Általános Iskola és Gimnázium",
+          "other": "Zalaszentgrót"
+        },
+        {
+          "id": 200410,
+          "name": "Friedrich Schiller Gimnázium és Kollégium",
+          "other": "Pilisvörösvár"
+        },
+        {
+          "id": 200415,
+          "name": "Benkő István Református Általános Iskola és Gimnázium",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 200426,
+          "name": "Szépség- Kultúra Gimnázium és Óvoda",
+          "other": "Győr"
+        },
+        {
+          "id": 200444,
+          "name": "Magyar-Kínai Két Tanítási Nyelvű Általános Iskola és Gimnázium",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 200446,
+          "name": "Dankó Pista Óvoda, Általános Iskola, Gimnázium, Szakgimnázium, Technikum, Szakképző Iskola és Kollégium - KATICA Bölcsőde",
+          "other": "Biri"
+        },
+        {
+          "id": 200447,
+          "name": "Forrás Felnőttoktatási Gimnázium",
+          "other": "Szeged"
+        },
+        {
+          "id": 200475,
+          "name": "A Tan Kapuja Buddhista Gimnázium és Általános Iskola",
+          "other": "Pécs"
+        },
+        {
+          "id": 200483,
+          "name": "Wesley János Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest X. kerület"
+        },
+        {
+          "id": 200489,
+          "name": "Beregi Általános Iskola, Gimnázium és Technikum",
+          "other": "Vásárosnamény"
+        },
+        {
+          "id": 200509,
+          "name": "Magiszter Óvoda, Általános Iskola, Középiskola, Szakképző Iskola és Alapfokú Művészeti Iskola",
+          "other": "Debrecen"
+        },
+        {
+          "id": 200518,
+          "name": "Budapesti Montessori Általános Iskola és Gimnázium",
+          "other": "Budapest XX. kerület"
+        },
+        {
+          "id": 200584,
+          "name": "Gróf Batthyány Lajos Alapítványi Gimnázium, Technikum és Felnőttek Általános Iskolája",
+          "other": "Hatvan"
+        },
+        {
+          "id": 200585,
+          "name": "Magyarországi Japán Nagykövetséghez tartozó Budapesti Japán Iskola",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 200598,
+          "name": "Encsi Váci Mihály Gimnázium és Kollégium",
+          "other": "Encs"
+        },
+        {
+          "id": 200599,
+          "name": "Ózdi József Attila Gimnázium és Kollégium",
+          "other": "Ózd"
+        },
+        {
+          "id": 200607,
+          "name": "Szlovák Gimnázium, Általános Iskola, Óvoda és Kollégium",
+          "other": "Békéscsaba"
+        },
+        {
+          "id": 200627,
+          "name": "Szent Gotthárd Általános Iskola és Gimnázium",
+          "other": "Szentgotthárd"
+        },
+        {
+          "id": 200667,
+          "name": "Tüskevár Általános Iskola és Gimnázium",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 200669,
+          "name": "Bolyai János Gimnázium és Általános Iskola",
+          "other": "Tiszakóród"
+        },
+        {
+          "id": 200679,
+          "name": "Eszterházy Károly Egyetem Gyakorló Általános, Közép-, Alapfokú Művészeti Iskola és Pedagógiai Intézet",
+          "other": "Eger"
+        },
+        {
+          "id": 200680,
+          "name": "Báthori István Gimnázium",
+          "other": "Nyírlugos"
+        },
+        {
+          "id": 200696,
+          "name": "Testnevelési Egyetem Gyakorló Sportiskolai Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 200708,
+          "name": "Halásztelki Hunyadi Mátyás Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Halásztelek"
+        },
+        {
+          "id": 200777,
+          "name": "Sirius Gimnázium és Szakgimnázium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 200779,
+          "name": "Leonardo Média Akadémia Gimnázium, Szakgimnázium és Általános Iskola",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 200783,
+          "name": "Orchidea Magyar-Angol Két Tanítási Nyelvű Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 200838,
+          "name": "Gorsium Gimnázium, Szakgimnázium és Technikum",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 200842,
+          "name": "SZAK-MA Általános Iskola és Gimnázium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 200858,
+          "name": "Oroszországi Föderáció Magyarországi Nagykövetség Mellett Működő Általános Iskola és Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 200868,
+          "name": "Fehér Miklós Labdarúgó Akadémia Gimnáziuma és Kollégiuma",
+          "other": "Győr"
+        },
+        {
+          "id": 200885,
+          "name": "II. Rákóczi Ferenc Általános Iskola és Gimnázium",
+          "other": "Szécsény"
+        },
+        {
+          "id": 200886,
+          "name": "Bocskai István Katolikus Gimnázium és Technikum",
+          "other": "Szerencs"
+        },
+        {
+          "id": 200893,
+          "name": "Németh László Gimnázium, Általános Iskola",
+          "other": "Hódmezővásárhely"
+        },
+        {
+          "id": 200899,
+          "name": "Bessenyei György Gimnázium",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 200908,
+          "name": "Barcsi Széchényi Ferenc Gimnázium és Kollégium",
+          "other": "Barcs"
+        },
+        {
+          "id": 200909,
+          "name": "Szeged és Térsége Eötvös József Gimnázium, Általános Iskola",
+          "other": "Szeged"
+        },
+        {
+          "id": 200917,
+          "name": "Szegedi Baptista Gimnázium és Technikum",
+          "other": "Szeged"
+        },
+        {
+          "id": 200923,
+          "name": "Kecskeméti Kodály Zoltán Ének-zenei Általános Iskola, Gimnázium, Szakgimnázium és Alapfokú Művészeti Iskola",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 200938,
+          "name": "Fekete István - Vörösmarty Mihály Általános Iskola és Gimnázium",
+          "other": "Ajka"
+        },
+        {
+          "id": 200958,
+          "name": "Csongrádi Batsányi János Gimnázium és Kollégium",
+          "other": "Csongrád"
+        },
+        {
+          "id": 200963,
+          "name": "Atilla Király Gimnázium és Általános Iskola",
+          "other": "Aba"
+        },
+        {
+          "id": 201021,
+          "name": "Baross Imre Artistaképző Intézet Előadó-művészeti Szakgimnázium, Gimnázium, Technikum és Alapfokú Táncművészeti Iskola",
+          "other": "Budapest VII. kerület"
+        },
+        {
+          "id": 201033,
+          "name": "Leonardo Gimnázium",
+          "other": "Budapest XX. kerület"
+        },
+        {
+          "id": 201035,
+          "name": "Dr. Ámbédkar Gimnázium, Technikum, Szakképző Iskola, Általános Iskola és Martin Luther King Középiskolai Kollégium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 201041,
+          "name": "Wesley Kincsei Általános Iskola és Gimnázium",
+          "other": "Budapest XVIII. kerület"
+        },
+        {
+          "id": 201154,
+          "name": "Al Wahda Arab Iskola",
+          "other": "Budapest XV. kerület"
+        },
+        {
+          "id": 201173,
+          "name": "Eötvös József Gimnázium és Kollégium",
+          "other": "Tata"
+        },
+        {
+          "id": 201188,
+          "name": "Balázs Győző Református Gimnázium, Egységes Művészeti Szakgimnázium és Magyar - Angol Két Tanítási Nyelvű Művészeti Általános Iskola, Alapfokú Művészetoktatási Iskola",
+          "other": "Miskolc"
+        },
+        {
+          "id": 201189,
+          "name": "MIOK József Nádor Általános Iskola, Középiskola, Szakiskola, Technikum és Szakképző Iskola",
+          "other": "Miskolc"
+        },
+        {
+          "id": 201190,
+          "name": "Pécsi József Nádor Általános Iskola, Gimnázium, Szakiskola, Technikum és Szakképző Iskola",
+          "other": "Pécs"
+        },
+        {
+          "id": 201200,
+          "name": "Tiszavasvári Váci Mihály Gimnázium",
+          "other": "Tiszavasvári"
+        },
+        {
+          "id": 201202,
+          "name": "Batthyány Fülöp Gimnázium és Általános Iskola",
+          "other": "Enying"
+        },
+        {
+          "id": 201217,
+          "name": "Tatai Református Gimnázium",
+          "other": "Tata"
+        },
+        {
+          "id": 201238,
+          "name": "Qualitas Gimnázium",
+          "other": "Budapest XXIII. kerület"
+        },
+        {
+          "id": 201251,
+          "name": "Miskolci Magister Gimnázium",
+          "other": "Miskolc"
+        },
+        {
+          "id": 201260,
+          "name": "Wesley János Óvoda, Általános Iskola és Gimnázium",
+          "other": "Szeged"
+        },
+        {
+          "id": 201279,
+          "name": "Wesley János Óvoda, Általános Iskola, Gimnázium, Alapfokú Művészeti Iskola",
+          "other": "Gyüre"
+        },
+        {
+          "id": 201286,
+          "name": "Kökönyösi Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Komló"
+        },
+        {
+          "id": 201326,
+          "name": "Tiszaparti Római Katolikus Általános Iskola és Gimnázium",
+          "other": "Szolnok"
+        },
+        {
+          "id": 201348,
+          "name": "Karcagi Nagykun Református Gimnázium",
+          "other": "Karcag"
+        },
+        {
+          "id": 201359,
+          "name": "Hajdú-Bihar Megyei Általános Iskola, Gimnázium, Szakgimnázium, Technikum és Kollégium",
+          "other": "Debrecen"
+        },
+        {
+          "id": 201362,
+          "name": "Brázay Kálmán Általános Iskola, Gimnázium, Szakiskola, Szakgimnázium, Technikum és Szakképző Iskola",
+          "other": "Magyarhertelend"
+        },
+        {
+          "id": 201400,
+          "name": "Fókusz Gimnázium és Szakképző Intézmény, Általános Iskola és Felnőttképző Intézmény",
+          "other": "Miskolc"
+        },
+        {
+          "id": 201418,
+          "name": "Felnőtt Oktatási Központ és Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 201477,
+          "name": "Hatvani Bajza József Gimnázium",
+          "other": "Hatvan"
+        },
+        {
+          "id": 201492,
+          "name": "Szalézi Szent Ferenc Gimnázium",
+          "other": "Kazincbarcika"
+        },
+        {
+          "id": 201505,
+          "name": "Sztehlo Gábor Evangélikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Budapest XVIII. kerület"
+        },
+        {
+          "id": 201550,
+          "name": "Szent János Görögkatolikus Gimnázium, Szakgimnázium, Technikum és Kollégium",
+          "other": "Edelény"
+        },
+        {
+          "id": 201573,
+          "name": "Bercsényi Miklós Katolikus Gimnázium és Kollégium, Általános Iskola, Óvoda",
+          "other": "Törökszentmiklós"
+        },
+        {
+          "id": 201575,
+          "name": "Kiskőrösi Petőfi Sándor Evangélikus Óvoda, Általános Iskola, Gimnázium és Technikum",
+          "other": "Kiskőrös"
+        },
+        {
+          "id": 201600,
+          "name": "Pannon Gimnázium és Általános Iskola",
+          "other": "Vác"
+        },
+        {
+          "id": 201601,
+          "name": "Mikes Kelemen Katolikus Gimnázium és Technikum, Általános Iskola és Óvoda",
+          "other": "Battonya"
+        },
+        {
+          "id": 201625,
+          "name": "Tudásfa Felnőttoktatási Gimnázium és Általános Iskola",
+          "other": "Szigetszentmiklós"
+        },
+        {
+          "id": 201656,
+          "name": "AUDI Hungaria Általános Művelődési Központ",
+          "other": "Győr"
+        },
+        {
+          "id": 201676,
+          "name": "Vajda Péter Evangélikus Gimnázium",
+          "other": "Szarvas"
+        },
+        {
+          "id": 201698,
+          "name": "Bernáth Kálmán Református Gimnázium, Kereskedelmi és Vendéglátóipari Technikum és Szakképző Iskola",
+          "other": "Vác"
+        },
+        {
+          "id": 201704,
+          "name": "Móricz Zsigmond Református Kollégium, Gimnázium, Technikum, Általános Iskola és Óvoda",
+          "other": "Kisújszállás"
+        },
+        {
+          "id": 201724,
+          "name": "Eötvös József Református Oktatási Központ - Óvoda, Általános Iskola, Gimnázium, Technikum, Szakképző Iskola és Alapfokú Művészeti Iskola",
+          "other": "Heves"
+        },
+        {
+          "id": 201731,
+          "name": "Nagykun Baptista Oktatási Központ Általános Iskola, Gimnázium, Technikum, Szakképző Iskola és Kollégium",
+          "other": "Kisújszállás"
+        },
+        {
+          "id": 201733,
+          "name": "Zöldliget Magyar-Angol Két Tanítási Nyelvű Baptista Általános Iskola és Gimnázium",
+          "other": "Velence"
+        },
+        {
+          "id": 201734,
+          "name": "Csuha Antal Baptista Általános Iskola, Gimnázium, Technikum és Szakképző Iskola",
+          "other": "Nagyhalász"
+        },
+        {
+          "id": 201756,
+          "name": "KOSZISZ Szent István Gimnázium és Technikum",
+          "other": "Újfehértó"
+        },
+        {
+          "id": 201791,
+          "name": "Petőfi Sándor Római Katolikus Általános Iskola és Gimnázium",
+          "other": "Vecsés"
+        },
+        {
+          "id": 201793,
+          "name": "KarrierSuli Esti Gimnázium",
+          "other": "Budapest XIV. kerület"
+        },
+        {
+          "id": 201799,
+          "name": "Avicenna International College Magyar-Angol Két Tanítási Nyelvű Gimnázium",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 201836,
+          "name": "QSI Nemzetközi Iskola Magyarország",
+          "other": "Pápa"
+        },
+        {
+          "id": 202699,
+          "name": "Tiszta Forrás Waldorf Általános Iskola,Gimnázium, Alapfokú Művészeti Iskola és Óvoda",
+          "other": "Kiskunfélegyháza"
+        },
+        {
+          "id": 202717,
+          "name": "Csillagberek Waldorf Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 202722,
+          "name": "Páter Bárkányi János Katolikus Óvoda, Általános Iskola és Gimnázium",
+          "other": "Szécsény"
+        },
+        {
+          "id": 202755,
+          "name": "Báró Wesselényi Miklós Alapítványi Általános Iskola,Gimnázium, Technikum és Alapfokú Művészeti Iskola",
+          "other": "Balatonfűzfő"
+        },
+        {
+          "id": 202785,
+          "name": "Gomba Levente Gimnázium",
+          "other": "Putnok"
+        },
+        {
+          "id": 202801,
+          "name": "Árpád Fejedelem Katolikus Gimnázium és Technikum",
+          "other": "Kistelek"
+        },
+        {
+          "id": 202830,
+          "name": "Göllner Mária Regionális Waldorf Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest IV. kerület"
+        },
+        {
+          "id": 202924,
+          "name": "Kálvin János Református Gimnázium, és Általános Iskola",
+          "other": "Dunaújváros"
+        },
+        {
+          "id": 203098,
+          "name": "Fehér Vár Waldorf Óvoda, Általános Iskola, Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Székesfehérvár"
+        },
+        {
+          "id": 203102,
+          "name": "Tamási Béri Balogh Ádám Katolikus Gimnázium, Kollégium, Általános Iskola és Óvoda",
+          "other": "Tamási"
+        },
+        {
+          "id": 203112,
+          "name": "TANDEM Gimnázium",
+          "other": "Budapest I. kerület"
+        },
+        {
+          "id": 203117,
+          "name": "Kőrösi Csoma Sándor Református Gimnázium",
+          "other": "Hajdúnánás"
+        },
+        {
+          "id": 203162,
+          "name": "Diákszempont Általános Iskola és Gimnázium",
+          "other": "Budapest VI. kerület"
+        },
+        {
+          "id": 203168,
+          "name": "Tomori Pál Katolikus Gimnázium, Technikum és Kollégium",
+          "other": "Kiskunmajsa"
+        },
+        {
+          "id": 203175,
+          "name": "Szent Márton Katolikus Gimnázium és Általános Iskola",
+          "other": "Szikszó"
+        },
+        {
+          "id": 203177,
+          "name": "Alternatíva Életfa Általános Iskola, Gimnázium, Művészeti Szakgimnázium és Alapfokú Művészeti Iskola",
+          "other": "Miskolc"
+        },
+        {
+          "id": 203195,
+          "name": "Bátaszéki II. Géza Gimnázium",
+          "other": "Bátaszék"
+        },
+        {
+          "id": 203196,
+          "name": "Nyíregyházi RIDENS Gimnázium, Szakgimnázium, Szakiskola és Kollégium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 203204,
+          "name": "Pécsi Árpád Fejedelem Gimnázium és Általános Iskola",
+          "other": "Pécs"
+        },
+        {
+          "id": 203217,
+          "name": "Veresegyházi Katolikus Gimnázium",
+          "other": "Veresegyház"
+        },
+        {
+          "id": 203236,
+          "name": "Maimonidész Zsidó Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 203259,
+          "name": "Cserepka János Magyar-Angol Két Tanítási Nyelvű Baptista Sportiskola, Általános Iskola, Gimnázium és Technikum",
+          "other": "Pécs"
+        },
+        {
+          "id": 203260,
+          "name": "Budapest British International School Angol Általános Iskola és Gimnázium",
+          "other": "Budapest XII. kerület"
+        },
+        {
+          "id": 203312,
+          "name": "Szabad Waldorf Gimnázium és Alapfokú Művészeti Iskola",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 203329,
+          "name": "Ibrányi Református Óvoda, Általános Iskola, Gimnázium és Kollégium",
+          "other": "Ibrány"
+        },
+        {
+          "id": 203367,
+          "name": "Balatonfüredi Szent Benedek Gimnázium, Technikum, Szakképző Iskola és Kollégium",
+          "other": "Balatonfüred"
+        },
+        {
+          "id": 203369,
+          "name": "Debreceni Nemzetközi Iskola",
+          "other": "Debrecen"
+        },
+        {
+          "id": 203374,
+          "name": "Veritas Collegiate Academy Budapest Gimnázium",
+          "other": "Budapest III. kerület"
+        },
+        {
+          "id": 203375,
+          "name": "Tanház Gimnázium és Technikum",
+          "other": "Békéscsaba"
+        },
+        {
+          "id": 203384,
+          "name": "Kölcsey Ferenc Baptista Általános Iskola, Gimnázium, Technikum, Szakképző Iskola és Kollégium",
+          "other": "Nyíradony"
+        },
+        {
+          "id": 203397,
+          "name": "Maarif Magyar-Angol Két Tanítási Nyelvű Általános Iskola és Gimnázium",
+          "other": "Budapest IX. kerület"
+        },
+        {
+          "id": 203405,
+          "name": "Kecskeméti Németh László Gimnázium",
+          "other": "Kecskemét"
+        },
+        {
+          "id": 203408,
+          "name": "Dunaföldvári Magyar László Gimnázium",
+          "other": "Dunaföldvár"
+        },
+        {
+          "id": 203423,
+          "name": "Matúra Gimnázium",
+          "other": "Budapest VI. kerület"
+        },
+        {
+          "id": 203430,
+          "name": "Szent Miklós Görögkatolikus Gimnázium és Kollégium",
+          "other": "Nyíregyháza"
+        },
+        {
+          "id": 203431,
+          "name": "Adventum Iskola",
+          "other": "Budapest XI. kerület"
+        },
+        {
+          "id": 203450,
+          "name": "Tempus Felnőttek Általános Iskolája és Gimnáziuma",
+          "other": "Ecser"
+        },
+        {
+          "id": 203452,
+          "name": "Budapest School Általános Iskola és Gimnázium",
+          "other": "Budapest XIII. kerület"
+        },
+        {
+          "id": 203455,
+          "name": "CREASCOLA Nyolcosztályos Gimnázium",
+          "other": "Budaörs"
+        },
+        {
+          "id": 203481,
+          "name": "Illés Labdarúgó Akadémia Gimnáziuma és Kollégiuma",
+          "other": "Szombathely"
+        },
+        {
+          "id": 203489,
+          "name": "Szent Ágoston Keresztény Általános Iskola és Gimnázium",
+          "other": "Fót"
+        },
+        {
+          "id": 203492,
+          "name": "Szent Benedek Gimnázium és Technikum",
+          "other": "Budapest VIII. kerület"
+        },
+        {
+          "id": 203527,
+          "name": "Gyermekek Háza Alternatív Általános Iskola és Gimnázium",
+          "other": "Budapest II. kerület"
+        },
+        {
+          "id": 203539,
+          "name": "Jászapáti Gróf Széchenyi István Katolikus Gimnázium",
+          "other": "Jászapáti"
+        }
+      ]
+}

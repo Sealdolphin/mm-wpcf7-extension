@@ -1,0 +1,329 @@
+{
+    "values" : [
+        {
+          "id": "FI63573",
+          "name": "Adventista Teológiai Főiskola",
+          "other": "ATF"
+        },
+        {
+          "id": "FI21261",
+          "name": "Állatorvostudományi Egyetem",
+          "other": "ATE"
+        },
+        {
+          "id": "FI65852",
+          "name": "Andrássy Gyula Budapesti Német Nyelvű Egyetem",
+          "other": "ANNYE"
+        },
+        {
+          "id": "FI21962",
+          "name": "Apor Vilmos Katolikus Főiskola",
+          "other": "AVKF"
+        },
+        {
+          "id": "FI62370",
+          "name": "A Tan Kapuja Buddhista Főiskola",
+          "other": "TKBF"
+        },
+        {
+          "id": "FI46994",
+          "name": "Baptista Teológiai Akadémia",
+          "other": "BTA"
+        },
+        {
+          "id": "FI21010",
+          "name": "Bhaktivedanta Hittudományi Főiskola",
+          "other": "BHF"
+        },
+        {
+          "id": "FI83335",
+          "name": "Brenner János Hittudományi Főiskola",
+          "other": "BJHF"
+        },
+        {
+          "id": "FI43814",
+          "name": "Budapesti Corvinus Egyetem",
+          "other": "CORVINUS"
+        },
+        {
+          "id": "FI82314",
+          "name": "Budapesti Gazdasági Egyetem",
+          "other": "BGE"
+        },
+        {
+          "id": "FI33842",
+          "name": "Budapesti Metropolitan Egyetem",
+          "other": "METU"
+        },
+        {
+          "id": "FI23344",
+          "name": "Budapesti Műszaki és Gazdaságtudományi Egyetem",
+          "other": "BME"
+        },
+        {
+          "id": "FI73150",
+          "name": "Budapest Kortárstánc Főiskola",
+          "other": "BKTF"
+        },
+        {
+          "id": "FI17198",
+          "name": "Debreceni Egyetem",
+          "other": "DE"
+        },
+        {
+          "id": "FI12746",
+          "name": "Debreceni Református Hittudományi Egyetem",
+          "other": "DRHE"
+        },
+        {
+          "id": "FI60345",
+          "name": "Dunaújvárosi Egyetem",
+          "other": "DUE"
+        },
+        {
+          "id": "FI83139",
+          "name": "Edutus Egyetem",
+          "other": "EDUTUS"
+        },
+        {
+          "id": "FI88165",
+          "name": "Egri Hittudományi Főiskola",
+          "other": "EGHF"
+        },
+        {
+          "id": "FI51105",
+          "name": "Eötvös József Főiskola",
+          "other": "EJF"
+        },
+        {
+          "id": "FI80798",
+          "name": "Eötvös Loránd Tudományegyetem",
+          "other": "ELTE"
+        },
+        {
+          "id": "FI23234",
+          "name": "Esztergomi Hittudományi Főiskola",
+          "other": "ESZHF"
+        },
+        {
+          "id": "FI10955",
+          "name": "Eszterházy Károly Katolikus Egyetem",
+          "other": "EKKE"
+        },
+        {
+          "id": "FI83342",
+          "name": "Evangélikus Hittudományi Egyetem",
+          "other": "EHE"
+        },
+        {
+          "id": "FI54333",
+          "name": "Gábor Dénes Főiskola",
+          "other": "GDF"
+        },
+        {
+          "id": "FI18580",
+          "name": "Gál Ferenc Egyetem",
+          "other": "GFE"
+        },
+        {
+          "id": "FI35200",
+          "name": "IBS Nemzetközi Üzleti Főiskola",
+          "other": "IBS"
+        },
+        {
+          "id": "FI52652",
+          "name": "Innovációs Társadalomtudományi Felsőoktatási Intézmény \"állami elismerése folyamatban",
+          "other": "ITF"
+        },
+        {
+          "id": "FI44189",
+          "name": "Károli Gáspár Református Egyetem",
+          "other": "KRE"
+        },
+        {
+          "id": "FI29432",
+          "name": "Kodolányi János Egyetem",
+          "other": "KJE"
+        },
+        {
+          "id": "FI27861",
+          "name": "Közép-európai Egyetem",
+          "other": "KEE"
+        },
+        {
+          "id": "FI26840",
+          "name": "Liszt Ferenc Zeneművészeti Egyetem",
+          "other": "LFZE"
+        },
+        {
+          "id": "FI51129",
+          "name": "Magyar Agrár- és Élettudományi Egyetem",
+          "other": "MATE"
+        },
+        {
+          "id": "FI27524",
+          "name": "Magyar Képzőművészeti Egyetem",
+          "other": "MKE"
+        },
+        {
+          "id": "FI41559",
+          "name": "Magyar Táncművészeti Egyetem",
+          "other": "MTE"
+        },
+        {
+          "id": "FI89399",
+          "name": "Magyar Testnevelési és Sporttudományi Egyetem",
+          "other": "MTSE"
+        },
+        {
+          "id": "FI83995",
+          "name": "Milton Friedman Egyetem",
+          "other": "MILTON"
+        },
+        {
+          "id": "FI87515",
+          "name": "Miskolci Egyetem",
+          "other": "ME"
+        },
+        {
+          "id": "FI73435",
+          "name": "Moholy-Nagy Művészeti Egyetem",
+          "other": "MOME"
+        },
+        {
+          "id": "FI99859",
+          "name": "Nemzeti Közszolgálati Egyetem",
+          "other": "NKE"
+        },
+        {
+          "id": "FI96377",
+          "name": "Neumann János Egyetem",
+          "other": "NJE"
+        },
+        {
+          "id": "FI74250",
+          "name": "Nyíregyházi Egyetem",
+          "other": "NYE"
+        },
+        {
+          "id": "FI12904",
+          "name": "Óbudai Egyetem",
+          "other": "OE"
+        },
+        {
+          "id": "FI17624",
+          "name": "Országos Rabbiképző - Zsidó Egyetem",
+          "other": "OR-ZSE"
+        },
+        {
+          "id": "FI80554",
+          "name": "Pannon Egyetem",
+          "other": "PE"
+        },
+        {
+          "id": "FI27751",
+          "name": "Pápai Református Teológiai Akadémia",
+          "other": "PRTA"
+        },
+        {
+          "id": "FI79633",
+          "name": "Pázmány Péter Katolikus Egyetem",
+          "other": "PPKE"
+        },
+        {
+          "id": "FI63810",
+          "name": "Pécsi Püspöki Hittudományi Főiskola",
+          "other": "PPHF"
+        },
+        {
+          "id": "FI58544",
+          "name": "Pécsi Tudományegyetem",
+          "other": "PTE"
+        },
+        {
+          "id": "FI22732",
+          "name": "Pünkösdi Teológiai Főiskola",
+          "other": "PTF"
+        },
+        {
+          "id": "FI47939",
+          "name": "Sapientia Szerzetesi Hittudományi Főiskola",
+          "other": "SSZHF"
+        },
+        {
+          "id": "FI32388",
+          "name": "Sárospataki Református Teológiai Akadémia",
+          "other": "SRTA"
+        },
+        {
+          "id": "FI62576",
+          "name": "Semmelweis Egyetem",
+          "other": "SE"
+        },
+        {
+          "id": "FI70788",
+          "name": "Sola Scriptura Teológiai Főiskola",
+          "other": "SSTF"
+        },
+        {
+          "id": "FI21120",
+          "name": "Soproni Egyetem",
+          "other": "SOE"
+        },
+        {
+          "id": "FI38696",
+          "name": "Széchenyi István Egyetem",
+          "other": "SZE"
+        },
+        {
+          "id": "FI62198",
+          "name": "Szegedi Tudományegyetem",
+          "other": "SZTE"
+        },
+        {
+          "id": "FI35925",
+          "name": "Szent Atanáz Görögkatolikus Hittudományi Főiskola",
+          "other": "SZAGKHF"
+        },
+        {
+          "id": "FI35860",
+          "name": "Szent Bernát Hittudományi Főiskola",
+          "other": "SZBHF"
+        },
+        {
+          "id": "FI67069",
+          "name": "Szent Pál Akadémia",
+          "other": "SZPA"
+        },
+        {
+          "id": "FI54876",
+          "name": "Színház- és Filmművészeti Egyetem",
+          "other": "SZFE"
+        },
+        {
+          "id": "FI30164",
+          "name": "Tokaj-Hegyalja Egyetem",
+          "other": "THE"
+        },
+        {
+          "id": "FI44196",
+          "name": "Tomori Pál Főiskola",
+          "other": "TPF"
+        },
+        {
+          "id": "FI34533",
+          "name": "Veszprémi Érseki Főiskola",
+          "other": "VÉF"
+        },
+        {
+          "id": "FI50782",
+          "name": "Wekerle Sándor Üzleti Főiskola",
+          "other": "WSUF"
+        },
+        {
+          "id": "FI62930",
+          "name": "Wesley János Lelkészképző Főiskola",
+          "other": "WJLF"
+        }
+      ]
+}
