@@ -36,7 +36,7 @@ class Custom_Select_Block {
 	 */
 	public function render_object( $tag ) {
 		if ( empty( $tag->name ) ) {
-			return sprintf( 'Invalid name: %s', $tag->name );
+			return '';
 		}
 
 		$validation_error = wpcf7_get_validation_error( $tag->name );
@@ -49,8 +49,8 @@ class Custom_Select_Block {
 
 		// The attributes of the HTML tag.
 		$atts   = $this->setup_attributes( $tag, $class, $validation_error );
-		$values = $tag->values;
-		$labels = $tag->labels;
+		$values = array( '35229', '35279', '200052' ); // $tag->values;
+		$labels = array( 'ELTE Apáczai Csere János Gyakorló Gimnázium és Kollégium', 'ELTE Trefort Ágoston Gyakorló Gimnázium', 'Balassi Bálint Gimnázium' ); // $tag->labels;
 
 		return $this->create_html( $atts, $values, $labels );
 	}
@@ -96,7 +96,7 @@ class Custom_Select_Block {
 		}
 
 		$atts        = wpcf7_format_atts( $atts );
-		$search_html = $this->create_search_html( $atts['id'], $atts['name'], 'Gimnázium', $options_html );
+		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $atts['description'], $options_html );
 
 		return $search_html;
 	}
@@ -114,7 +114,7 @@ class Custom_Select_Block {
 		<span class="wpcf7-form-control-wrap">
 			<label for="$id">$description</label>
 			<div>
-				<input id="$id" name="$name" type="text" style="width: 100%;">
+				<input id="$id" name="$name" type="text">
 			</div>
 			<div class="custom-select-wrapper">
 				<div class="custom-select-list">
@@ -161,7 +161,7 @@ class Custom_Select_Block {
 	public function render_admin( $contact_form, $args = '' ) {
 		$args = wp_parse_args( $args, array() );
 
-		$description = __( 'Generate something something. Bla bla.' );
+		$description = __( 'This is a custom select box, where you can import bigger option table.' );
 		?>
 		<div class="control-box">
 			<fieldset>
@@ -180,6 +180,15 @@ class Custom_Select_Block {
 						<tr> <!--Name header-->
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-name' ); ?>"><?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?></label></th>
 							<td><input type="text" name="name" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-name' ); ?>"/></td>
+						</tr>
+						<tr> <!--Options-->
+							<th scope="row"><?php echo esc_html( __( 'Options', 'contact-form-7' ) ); ?></th>
+							<td>
+								<fieldset>
+									<legend class="screen-reader-text"><?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?></legend>
+									<td><input type="text" name="label" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-description' ); ?>"/></td>
+								</fieldset>
+							</td>
 						</tr>
 					</tbody>
 				</table>
