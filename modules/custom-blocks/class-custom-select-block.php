@@ -22,11 +22,9 @@ class Custom_Select_Block {
 	 * Adds this block to the WPCF7 roster.
 	 */
 	public function add_to_wpcf7() {
-		// Check first if block exist.
 		wpcf7_add_form_tag(
-			array( 'custom-select', 'custom-select*' ),
-			array( $this, 'render_object' ),
-			array( 'name-attr' => true )
+			array( 'custom_select', 'custom_select*' ),
+			array( $this, 'render_object' )
 		);
 	}
 
@@ -37,7 +35,7 @@ class Custom_Select_Block {
 	 */
 	public function render_object( $tag ) {
 		if ( empty( $tag->name ) ) {
-			return '<p>Invalid Name</p>';
+			return '';
 		}
 
 		$validation_error = wpcf7_get_validation_error( $tag->name );
@@ -147,7 +145,7 @@ class Custom_Select_Block {
 	public function add_tag_generator_menu() {
 		$tag_generator = WPCF7_TagGenerator::get_instance();
 		$tag_generator->add(
-			'custom-select',
+			'custom_select',
 			__( 'custom drop-down menu' ),
 			array( $this, 'render_admin' )
 		);
@@ -187,12 +185,12 @@ class Custom_Select_Block {
 			</fieldset>
 		</div>
 		<div class="insert-box">
-			<input type="text" name="custom-select" class="tag code" readonly="readonly" onfocus="this.select()" />
+			<input type="text" name="custom_select" class="tag code" readonly="readonly" onfocus="this.select()" />
 			<div class="submitbox">
 				<input type="button" class="button button-primary insert-tag" value="<?php echo esc_html( __( 'Insert Tag', 'contact-form-7' ) ); ?>"/>
 			</div>
 			<br class="clear"/>
-			<p class="description mail-tag">Hello.</p>
+			<p class="description mail-tag">Hello mail tag description.</p>
 		</div>
 		<?php
 	}
