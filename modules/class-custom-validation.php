@@ -25,6 +25,7 @@ class Custom_Validation {
 		if ( class_exists( 'WPCF7_Validation' ) ) {
 			add_filter( 'wpcf7_validate_tel*', array( $this, 'apply_phone_validation' ), 20, 2 );
 			add_filter( 'wpcf7_validate_custom_list*', array( $this, 'apply_custom_list_validation' ), 20, 2 );
+			// Add custom-select filter.
 		}
 	}
 

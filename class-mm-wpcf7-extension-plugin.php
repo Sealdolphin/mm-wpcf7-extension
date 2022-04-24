@@ -21,6 +21,7 @@
 require_once dirname( __FILE__ ) . '/modules/class-optimization-module.php';
 require_once dirname( __FILE__ ) . '/modules/class-flamingo-rest-module.php';
 require_once dirname( __FILE__ ) . '/modules/class-custom-validation.php';
+require_once dirname( __FILE__ ) . '/modules/custom-blocks/class-custom-select-block.php';
 
 if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 	/**
@@ -70,6 +71,13 @@ if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 			$this->opt        = new Optimization_Module();
 			$this->rest       = new Flamingo_REST_Module();
 			$this->validation = new Custom_Validation();
+		}
+
+		/**
+		 * Loads the necessary modules.
+		 */
+		public function load_modules() {
+			$this->custom_select = new Custom_Select_Block();
 		}
 
 		/**

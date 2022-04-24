@@ -1,0 +1,17 @@
+.custom-select-wrapper {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.custom-select-list ul {
+    margin: 0;
+    padding: 0px;
+    list-style-type: none;
+}
+.custom-select-list li {
+    cursor: default;
+    padding: 2px;
+}
+.custom-select-list-selection {
+    background: rgb(228,228,228);
+}
