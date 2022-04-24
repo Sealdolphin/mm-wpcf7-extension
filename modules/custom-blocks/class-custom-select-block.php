@@ -15,7 +15,7 @@ class Custom_Select_Block {
 	 */
 	public function __construct() {
 		add_action( 'wpcf7_init', array( $this, 'add_to_wpcf7' ), 10, 0 );
-		add_action( 'wpcf7_admin_init', array( $this, 'add_tag_generator_menu' ), 10, 0 );
+		add_action( 'wpcf7_admin_init', array( $this, 'add_tag_generator_menu' ), 25, 0 );
 	}
 
 	/**
@@ -24,7 +24,7 @@ class Custom_Select_Block {
 	public function add_to_wpcf7() {
 		// Check first if block exist.
 		wpcf7_add_form_tag(
-			'custom_select',
+			array( 'custom-select', 'custom-select*' ),
 			array( $this, 'render_object' ),
 			array(
 				'name-attr' => true, // TODO: check this.
@@ -52,7 +52,7 @@ class Custom_Select_Block {
 		}
 
 		// The attributes of the HTML tag.
-		$atts   = setup_attributes();
+		$atts   = $this->setup_attributes();
 		$values = $tag->values;
 		$labels = $tag->labels;
 
@@ -155,8 +155,8 @@ class Custom_Select_Block {
 	public function add_tag_generator_menu() {
 		$tag_generator = WPCF7_TagGenerator::get_instance();
 		$tag_generator->add(
-			'menu',
-			__( 'custom_drop_down_menu', 'contact-form-7' ),
+			'custom-menu',
+			__( 'custom drop-down menu' ),
 			array( $this, 'render_menu' )
 		);
 	}
@@ -180,7 +180,7 @@ class Custom_Select_Block {
 						<tr>
 							<th scope="row"><?php echo esc_html( __( 'Field type', 'contact-form-7' ) ); ?></th>
 							<td>
-
+								Hello td.
 							</td>
 						</tr>
 					</tbody>
