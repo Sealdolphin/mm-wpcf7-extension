@@ -181,14 +181,13 @@ class Custom_Select_Block {
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-name' ); ?>"><?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?></label></th>
 							<td><input type="text" name="name" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-name' ); ?>"/></td>
 						</tr>
-						<tr> <!--Options-->
-							<th scope="row"><?php echo esc_html( __( 'Options', 'contact-form-7' ) ); ?></th>
-							<td>
-								<fieldset>
-									<legend class="screen-reader-text"><?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?></legend>
-									<td><input type="text" name="label" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-description' ); ?>"/></td>
-								</fieldset>
-							</td>
+						<tr>
+							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-description' ); ?>"><?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?></label></th>
+							<td><input type="text" name="description" class="descriptionvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-description' ); ?>" /></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-id' ); ?>"><?php echo esc_html( __( 'Id attribute', 'contact-form-7' ) ); ?></label></th>
+							<td><input type="text" name="id" class="idvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-id' ); ?>" /></td>
 						</tr>
 					</tbody>
 				</table>
