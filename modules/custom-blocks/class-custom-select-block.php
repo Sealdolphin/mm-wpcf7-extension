@@ -16,6 +16,20 @@ class Custom_Select_Block {
 	public function __construct() {
 		add_action( 'wpcf7_init', array( $this, 'add_to_wpcf7' ), 10, 0 );
 		add_action( 'wpcf7_admin_init', array( $this, 'add_tag_generator_menu' ), 25, 0 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'prepare_scripts' ) );
+	}
+
+	/**
+	 * Registers the CSS and JS addons for the frontend.
+	 */
+	public function prepare_scripts() {
+		wp_register_style(
+			'custom-select-block-css',
+			plugin_dir_url( __FILE__ ) . 'custom-blocks/scripts/custom-select.css',
+			array(),
+			MM_WPCF7_Extension_Plugin::get_version()
+		);
+		wp_enqueue_style( 'custom-select-block-css' );
 	}
 
 	/**
@@ -67,7 +81,8 @@ class Custom_Select_Block {
 
 		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
-		$description   = $tag->get_option( 'description', __( 'Select', 'contact-form-7' ) );
+		$atts['name']  = $tag->name;
+		$atts['desc']  = $tag->get_option( 'description', 'id', true );
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -91,13 +106,13 @@ class Custom_Select_Block {
 	 * @param array $labels the option labels.
 	 */
 	public function create_html( $atts, $values, $labels ) {
-		$options_html = array();
+		$options_html = '';
 		foreach ( $values as $key => $value ) {
-			$options_html[] = $this->create_option( $value, $labels[ $key ] );
+			$options_html .= $this->create_option( $value, $labels[ $key ] );
 		}
 
 		$atts        = wpcf7_format_atts( $atts );
-		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $description, $options_html );
+		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $atts['desc'], $options_html );
 
 		return $search_html;
 	}
