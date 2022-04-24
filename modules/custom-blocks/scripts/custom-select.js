@@ -1,48 +1,74 @@
+class InteractiveSearch {
+
+    NO_RESULTS = "Nincs ilyen nevű találat";
+    SELECT_ELEMENT = "wpcf7-custom-select-list";
+    INPUT_ELEMENT = "wpcf7-custom-select-input";
+    SELECTED = "wpcf7-custom-select-list-selection";
+    LIST_ITEM = "li";
+    LIST_TAG = "ul";
+
+    constructor() {
+        this.selectElement = document.getElementsByClassName(this.SELECT_ELEMENT)[0];
+        this.inputElement = document.getElementsByClassName(this.INPUT_ELEMENT)[0];
+        this.listElement = null;
+        this.list = list;
+    }
+
+    load() {
+        this.inputElement.onkeyup = this.searchAsYouType;
+        this.refreshOptions(this.list);
+    }
+
+    searchAsYouType( event )  {
+        let filter = event.target.value;
+        this.refreshOptions( this.filterList( filter ) );
+    }
+
+    filterList( filter ) {
+        if(!filter) return this.list;
+        return this.list.filter( value => value.toLowerCase().includes( search.toLowerCase() ) );
+    }
+
+    refreshOptions( options ) {
+        // Delete all options.
+        while(this.selectElement.hasChildNodes()) {
+            this.selectElement.removeChild( root.firstChild );
+        }
+        // Recreate the deleted List tag.
+        let newList = document.createElement( this.LIST_TAG );
+        this.listElement = newList;
+
+        options.forEach( option => appendOption( option, newList ) );
+        if ( options.length == 0 ) {
+            appendOption( this.NO_RESULTS, newList, false );
+        }
+        this.selectElement.appendChild( newList );
+    }
+
+    appendOption( name, element, canClick = true ) {
+        let option = document.createElement( this.LIST_ITEM );
+        option.innerHTML = name;
+        if( canClick ) {
+            option.onclick = this.onSelect;
+        }
+
+        element.appendChild( option );
+    }
+
+    onSelect( event ) {
+        for ( let item of this.listElement.childNodes ) {
+            item.classList.remove(this.SELECTED)
+        }
+        event.target.classList.add( this.SELECTED );
+        this.inputElement.value = event.target.innerHTML;
+    }
+
+}
+
+
 window.onload = () => {
-    console.log("Load")
-    let select = document.getElementsByClassName("wpcf7-custom-select-list")[0];
-    refreshOptions(list, select);
-    let input = document.getElementsByClassName("wpcf7-custom-select-input")[0];
-    input.onkeyup = typeRefresh;
+    new InteractiveSearch().load();
 };
-
-function typeRefresh(event) {
-    let select = document.getElementsByClassName("wpcf7-custom-select-list")[0];
-    let search = event.target.value;
-    refreshOptions(filterList(search), select)
-}
-
-function refreshOptions(optionList, root) {
-    while(root.hasChildNodes()) {
-        root.removeChild(root.firstChild);
-    }
-    let ul = document.createElement("ul");
-    optionList.forEach(opt => appendOption(opt, ul));
-    if (optionList.length == 0) appendOption("Nincs ilyen nevű találat", ul, true);
-    root.appendChild(ul);
-}
-
-function appendOption(name, root, skip) {
-    let option = document.createElement("li");
-    option.innerHTML = name;
-    if(!skip) option.onclick = selectElement;
-    root.appendChild(option);
-}
-
-function filterList(search) {
-    if(!search) return list;
-    return list.filter(value => value.toLowerCase().includes(search.toLowerCase()));
-}
-
-function selectElement(event) {
-    //TODO: do it locally!!!!
-    for (let item of document.getElementsByTagName("li")) {
-        item.classList.remove("wpcf7-custom-select-list-selection")
-    }
-    event.target.classList.add("wpcf7-custom-select-list-selection");
-    let input = document.getElementsByClassName("wpcf7-custom-select-input")[0];
-    input.value = event.target.innerHTML;
-}
 
 const list = ["Szent Mór Katolikus Óvoda, Általános Iskola, Alapfokú Művészeti Iskola és Gimnázium - Pécs",
 "Ciszterci Rend Nagy Lajos Gimnáziuma és Kollégiuma - Pécs",
