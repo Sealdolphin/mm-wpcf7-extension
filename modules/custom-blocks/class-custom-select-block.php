@@ -30,6 +30,15 @@ class Custom_Select_Block {
 			MM_WPCF7_Extension_Plugin::get_css_version()
 		);
 		wp_enqueue_style( 'custom-select-block-css' );
+
+		wp_register_script(
+			'custom-select-block-js',
+			plugin_dir_url( __FILE__ ) . 'scripts/custom-select.js',
+			array(),
+			MM_WPCF7_Extension_Plugin::get_css_version(),
+			true
+		);
+		wp_enqueue_script( 'custom-select-block-js' );
 	}
 
 	/**
@@ -82,7 +91,7 @@ class Custom_Select_Block {
 		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
 		$atts['name']  = $tag->name;
-		$atts['desc']  = $tag->get_option( 'description', '', true );
+		$atts['desc']  = $tag->get_option( 'description', '.+', true );
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -130,6 +139,7 @@ class Custom_Select_Block {
 	 * @param string $options_html the html body of the options.
 	 */
 	public function create_search_html( $id, $name, $description, $options_html ) {
+		// TODO: why won't render this in one paragraph?
 
 		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul>%s</ul></span></div>', $options_html );
 		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s" name="%s" type="text"/></div>', $id, $name );
