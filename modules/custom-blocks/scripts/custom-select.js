@@ -14,11 +14,12 @@ function typeRefresh(event) {
 
 function refreshOptions(optionList, root) {
     while(root.hasChildNodes()) {
-        if (root.firstChild.className.includes("ul")) continue;
         root.removeChild(root.firstChild);
     }
-    optionList.forEach(opt => appendOption(opt, root));
-    if (optionList.length == 0) appendOption("Nincs ilyen nevű találat", root, true);
+    let ul = document.createElement("ul");
+    optionList.forEach(opt => appendOption(opt, ul));
+    if (optionList.length == 0) appendOption("Nincs ilyen nevű találat", ul, true);
+    root.appendChild(ul);
 }
 
 function appendOption(name, root, skip) {
@@ -34,6 +35,7 @@ function filterList(search) {
 }
 
 function selectElement(event) {
+    //TODO: do it locally!!!!
     for (let item of document.getElementsByTagName("li")) {
         item.classList.remove("wpcf7-custom-select-list-selection")
     }
