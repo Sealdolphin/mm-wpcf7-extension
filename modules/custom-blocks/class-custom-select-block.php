@@ -25,7 +25,7 @@ class Custom_Select_Block {
 	public function prepare_scripts() {
 		wp_register_style(
 			'custom-select-block-css',
-			plugin_dir_url( __FILE__ ) . 'custom-blocks/scripts/custom-select.css',
+			plugin_dir_url( __FILE__ ) . 'scripts/custom-select.css',
 			array(),
 			MM_WPCF7_Extension_Plugin::get_css_version()
 		);
@@ -82,7 +82,7 @@ class Custom_Select_Block {
 		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
 		$atts['name']  = $tag->name;
-		$atts['desc']  = $tag->get_option( 'description', 'id', true );
+		$atts['desc']  = $tag->get_option( 'description', '', true );
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -111,8 +111,12 @@ class Custom_Select_Block {
 			$options_html .= $this->create_option( $value, $labels[ $key ] );
 		}
 
-		$atts        = wpcf7_format_atts( $atts );
-		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $atts['desc'], $options_html );
+		$search_html = $this->create_search_html(
+			esc_html( $atts['id'] ),
+			esc_html( $atts['name'] ),
+			esc_html( $atts['desc'] ),
+			$options_html
+		);
 
 		return $search_html;
 	}
@@ -126,19 +130,16 @@ class Custom_Select_Block {
 	 * @param string $options_html the html body of the options.
 	 */
 	public function create_search_html( $id, $name, $description, $options_html ) {
-		$html_body = <<<EOD
-		<span class="wpcf7-form-control-wrap">
-			<label for="$id">$description</label>
-			<div>
-				<input id="$id" name="$name" type="text">
-			</div>
-			<div class="custom-select-wrapper">
-				<div class="custom-select-list">
-					<ul>$options_html</ul>
-				</div>
-			</div>
-		</span>
-		EOD;
+
+		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul>%s</ul></span></div>', $options_html );
+		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s" name="%s" type="text"/></div>', $id, $name );
+		$label          = sprintf( '<label for="%s">%s</label>', $id, $description );
+
+		$html_body = '<span class="wpcf7-form-control-wrap custom-select">'
+			. $label
+			. $select_input
+			. $select_wrapper
+			. '</span>';
 
 		return $html_body;
 	}

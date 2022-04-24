@@ -1,17 +1,24 @@
-.custom-select-wrapper {
-    height: 200px;
+/*
+    Custom CSS for the Custom Select Block
+    Version: 1.2
+*/
+.wpcf7-custom-select-wrapper {
+    height: 7em;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.custom-select-list ul {
+.wpcf7-custom-select-input {
+    width: 100%;
+}
+.wpcf7-custom-select-list ul {
     margin: 0;
     padding: 0px;
     list-style-type: none;
 }
-.custom-select-list li {
+.wpcf7-custom-select-list li {
     cursor: default;
     padding: 2px;
 }
-.custom-select-list-selection {
+.wpcf7-custom-select-list-selection {
     background: rgb(228,228,228);
 }
