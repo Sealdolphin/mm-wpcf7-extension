@@ -15,6 +15,7 @@ class Custom_Select_Block {
 	 */
 	public function __construct() {
 		add_action( 'wpcf7_init', array( $this, 'add_to_wpcf7' ), 10, 0 );
+		$this->add_tag_generator_menu();
 	}
 
 	/**
@@ -77,7 +78,7 @@ class Custom_Select_Block {
 		}
 
 		if ( $validation_error ) {
-			$atts['aria-invalid'] = 'true';
+			$atts['aria-invalid']     = 'true';
 			$atts['aria-describedby'] = wpcf7_get_validation_error_reference(
 				$tag->name
 			);
@@ -146,5 +147,51 @@ class Custom_Select_Block {
 		return <<<EOD
 		<li value="$value">$e_label</li>
 		EOD;
+	}
+
+	/**
+	 * Adds this tag to the generator.
+	 */
+	public function add_tag_generator_menu() {
+		$tag_generator = WPCF7_TagGenerator::get_instance();
+		$tag_generator->add(
+			'menu',
+			__( 'custom_drop_down_menu', 'contact-form-7' ),
+			array( $this, 'render_menu' )
+		);
+	}
+
+	/**
+	 * Renders the menu in the form generator.
+	 *
+	 * @param object $contact_form is the form itself.
+	 * @param array  $args is the arguments.
+	 */
+	public function render_menu( $contact_form, $args = '' ) {
+		$args = wp_parse_args( $args, array() );
+
+		$description = __( 'Generate something something. Bla bla.' );
+		?>
+		<div class="control-box">
+			<fieldset>
+				<legend><?php echo esc_html( $description ); ?></legend>
+				<table class="form-table">
+					<tbody>
+						<tr>
+							<th scope="row"><?php echo esc_html( __( 'Field type', 'contact-form-7' ) ); ?></th>
+							<td>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</div>
+		<div class="insert-box">
+			<div class="submitbox">
+				<input type="button" class="button button-primary insert-tag" value="<?php echo esc_html( __( 'Insert Tag', 'contact-form-7' ) ); ?>">
+			</div>
+		</div>
+		<?php
 	}
 }
