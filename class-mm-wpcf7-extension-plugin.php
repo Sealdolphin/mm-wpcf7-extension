@@ -64,8 +64,8 @@ if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 		/**
 		 * Returns the plugin version.
 		 */
-		public static function get_version() {
-			return get_plugin_data( __FILE__ )['Version'];
+		public static function get_css_version() {
+			return '1.0';
 		}
 
 		/**

@@ -27,7 +27,7 @@ class Custom_Select_Block {
 			'custom-select-block-css',
 			plugin_dir_url( __FILE__ ) . 'custom-blocks/scripts/custom-select.css',
 			array(),
-			MM_WPCF7_Extension_Plugin::get_version()
+			MM_WPCF7_Extension_Plugin::get_css_version()
 		);
 		wp_enqueue_style( 'custom-select-block-css' );
 	}
