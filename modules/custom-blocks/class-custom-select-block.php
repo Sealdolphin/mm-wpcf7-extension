@@ -43,8 +43,7 @@ class Custom_Select_Block {
 		}
 
 		$validation_error = wpcf7_get_validation_error( $tag->name );
-
-		$class = wpcf7_form_controls_class( $tag->type );
+		$class            = wpcf7_form_controls_class( $tag->type );
 
 		// If validation fails place a validation class.
 		if ( $validation_error ) {
@@ -79,9 +78,7 @@ class Custom_Select_Block {
 
 		if ( $validation_error ) {
 			$atts['aria-invalid']     = 'true';
-			$atts['aria-describedby'] = wpcf7_get_validation_error_reference(
-				$tag->name
-			);
+			$atts['aria-describedby'] = wpcf7_get_validation_error_reference( $tag->name );
 		} else {
 			$atts['aria-invalid'] = 'false';
 		}
@@ -120,17 +117,17 @@ class Custom_Select_Block {
 	 */
 	public function create_search_html( $id, $name, $description, $options_html ) {
 		$html_body = <<<EOD
-		<div class="custom-select-block-wpcf7">
+		<span class="wpcf7-form-control-wrap">
 			<label for="$id">$description</label>
 			<div>
 				<input id="$id" name="$name" type="text" style="width: 100%;">
 			</div>
-			<div class="custom-select-wrapper>
+			<div class="custom-select-wrapper">
 				<div class="custom-select-list">
 					<ul>$options_html</ul>
 				</div>
 			</div>
-		</div>
+		</span>
 		EOD;
 
 		return $html_body;
@@ -177,22 +174,29 @@ class Custom_Select_Block {
 				<legend><?php echo esc_html( $description ); ?></legend>
 				<table class="form-table">
 					<tbody>
-						<tr>
+						<tr> <!--Field type header-->
 							<th scope="row"><?php echo esc_html( __( 'Field type', 'contact-form-7' ) ); ?></th>
 							<td>
-								Hello td.
+								<fieldset>
+									<legend class="screen-reader-text"><?php echo esc_html( __( 'Field type', 'contact-form-7' ) ); ?></legend>
+									<label><input type="checkbox" name="required"/><?php echo esc_html( __( 'Required field', 'contact-form-7' ) ); ?></label>
+								</fieldset>
 							</td>
+						</tr>
+						<tr> <!--Name header-->
+							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-name' ); ?>"><?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?></label></th>
+							<td><input type="text" name="name" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-name' ); ?>"/></td>
 						</tr>
 					</tbody>
 				</table>
 			</fieldset>
 		</div>
 		<div class="insert-box">
-			<input type="text" name="select" class="tag code" readonly="readonly" onfocus="this.select()" />
+			<input type="text" name="custom-select" class="tag code" readonly="readonly" onfocus="this.select()" />
 			<div class="submitbox">
-				<input type="button" class="button button-primary insert-tag" value="<?php echo esc_html( __( 'Insert Tag', 'contact-form-7' ) ); ?>">
+				<input type="button" class="button button-primary insert-tag" value="<?php echo esc_html( __( 'Insert Tag', 'contact-form-7' ) ); ?>"/>
 			</div>
-			<br class="clear">
+			<br class="clear"/>
 			<p class="description mail-tag">Hello.</p>
 		</div>
 		<?php
