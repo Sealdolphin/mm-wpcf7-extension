@@ -67,6 +67,7 @@ class Custom_Select_Block {
 
 		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
+		$description   = $tag->get_option( 'description', __( 'Select', 'contact-form-7' ) );
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -96,7 +97,7 @@ class Custom_Select_Block {
 		}
 
 		$atts        = wpcf7_format_atts( $atts );
-		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $atts['description'], $options_html );
+		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $description, $options_html );
 
 		return $search_html;
 	}
