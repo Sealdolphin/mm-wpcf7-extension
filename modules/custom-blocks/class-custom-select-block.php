@@ -92,6 +92,7 @@ class Custom_Select_Block {
 		$atts['id']    = $tag->get_id_option();
 		$atts['name']  = $tag->name;
 		$atts['desc']  = $tag->get_option( 'description', '.+', true );
+		$atts['file']  = $tag->get_option( 'file', '.+', true );
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -124,6 +125,7 @@ class Custom_Select_Block {
 			esc_html( $atts['id'] ),
 			esc_html( $atts['name'] ),
 			esc_html( $atts['desc'] ),
+			esc_html( $atts['file'] ),
 			$options_html
 		);
 
@@ -136,14 +138,20 @@ class Custom_Select_Block {
 	 * @param string $id the id of the search tag.
 	 * @param string $name the name of the tag.
 	 * @param string $description a small description of the search box.
+	 * @param string $file the list file.
 	 * @param string $options_html the html body of the options.
 	 */
-	public function create_search_html( $id, $name, $description, $options_html ) {
+	public function create_search_html( $id, $name, $description, $file, $options_html ) {
 		// TODO: why won't render this in one paragraph?
 
-		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul>%s</ul></span></div>', $options_html );
-		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s" name="%s" type="text"/></div>', $id, $name );
-		$label          = sprintf( '<label for="%s">%s</label>', $id, $description );
+		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul id="%s-list"></ul></span></div>', $id );
+		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="text"/></div>', $id, $name );
+		$label          = sprintf( '<label for="%s-input">%s</label>', $id, $description );
+		// Create a new instance in the script.
+		wp_add_inline_script(
+			'custom-select-block-js',
+			sprintf( 'new InteractiveSearch(%s, %s).load(%s);', $id, __( 'Nincs ilyen nevű találat' ), $file )
+		);
 
 		$html_body = '<span class="wpcf7-form-control-wrap custom-select">'
 			. $label
@@ -213,8 +221,12 @@ class Custom_Select_Block {
 							<td><input type="text" name="description" class="descriptionvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-description' ); ?>" /></td>
 						</tr>
 						<tr>
+							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-file' ); ?>"><?php echo esc_html( __( 'File', 'contact-form-7' ) ); ?></label></th>
+							<td><input type="text" name="file" class="filevalue oneline option" id="<?php echo esc_attr( $args['content'] . '-file' ); ?>" required /></td>
+						</tr>
+						<tr>
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-id' ); ?>"><?php echo esc_html( __( 'Id attribute', 'contact-form-7' ) ); ?></label></th>
-							<td><input type="text" name="id" class="idvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-id' ); ?>" /></td>
+							<td><input type="text" name="id" class="idvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-id' ); ?>" required /></td>
 						</tr>
 					</tbody>
 				</table>
