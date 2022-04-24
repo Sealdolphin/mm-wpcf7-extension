@@ -15,7 +15,7 @@ class Custom_Select_Block {
 	 */
 	public function __construct() {
 		add_action( 'wpcf7_init', array( $this, 'add_to_wpcf7' ), 10, 0 );
-		$this->add_tag_generator_menu();
+		add_action( 'wpcf7_admin_init', array( $this, 'add_tag_generator_menu' ), 10, 0 );
 	}
 
 	/**
@@ -188,9 +188,12 @@ class Custom_Select_Block {
 			</fieldset>
 		</div>
 		<div class="insert-box">
+			<input type="text" name="select" class="tag code" readonly="readonly" onfocus="this.select()" />
 			<div class="submitbox">
 				<input type="button" class="button button-primary insert-tag" value="<?php echo esc_html( __( 'Insert Tag', 'contact-form-7' ) ); ?>">
 			</div>
+			<br class="clear">
+			<p class="description mail-tag">Hello.</p>
 		</div>
 		<?php
 	}
