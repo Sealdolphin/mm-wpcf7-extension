@@ -72,8 +72,8 @@ class Custom_Select_Block {
 
 		// The attributes of the HTML tag.
 		$atts   = $this->setup_attributes( $tag, $class, $validation_error );
-		$values = array( '35229', '35279', '200052' ); // $tag->values;
-		$labels = array( 'ELTE Apáczai Csere János Gyakorló Gimnázium és Kollégium', 'ELTE Trefort Ágoston Gyakorló Gimnázium', 'Balassi Bálint Gimnázium' ); // $tag->labels;
+		$values = $tag->values;
+		$labels = $tag->labels;
 
 		return $this->create_html( $atts, $values, $labels );
 	}

@@ -14,6 +14,7 @@ function typeRefresh(event) {
 
 function refreshOptions(optionList, root) {
     while(root.hasChildNodes()) {
+        if (root.firstChild.className.includes("ul")) continue;
         root.removeChild(root.firstChild);
     }
     optionList.forEach(opt => appendOption(opt, root));
@@ -37,11 +38,9 @@ function selectElement(event) {
         item.classList.remove("wpcf7-custom-select-list-selection")
     }
     event.target.classList.add("wpcf7-custom-select-list-selection");
-    let input = document.getElementsByName("search")[0];
+    let input = document.getElementsByClassName("wpcf7-custom-select-input")[0];
     input.value = event.target.innerHTML;
 }
-
-//const list2 = ["a", "asdf", "tiger", "melon"].sort();
 
 const list = ["Szent Mór Katolikus Óvoda, Általános Iskola, Alapfokú Művészeti Iskola és Gimnázium - Pécs",
 "Ciszterci Rend Nagy Lajos Gimnáziuma és Kollégiuma - Pécs",
