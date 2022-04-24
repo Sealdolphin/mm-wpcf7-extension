@@ -26,9 +26,7 @@ class Custom_Select_Block {
 		wpcf7_add_form_tag(
 			array( 'custom-select', 'custom-select*' ),
 			array( $this, 'render_object' ),
-			array(
-				'name-attr' => true, // TODO: check this.
-			)
+			array( 'name-attr' => true )
 		);
 	}
 
@@ -39,7 +37,7 @@ class Custom_Select_Block {
 	 */
 	public function render_object( $tag ) {
 		if ( empty( $tag->name ) ) {
-			return '';
+			return '<p>Invalid Name</p>';
 		}
 
 		$validation_error = wpcf7_get_validation_error( $tag->name );
@@ -68,9 +66,8 @@ class Custom_Select_Block {
 	public function setup_attributes( $tag, $class, $validation_error ) {
 		$atts = array();
 
-		$atts['class']    = $tag->getclass_option( $class );
-		$atts['id']       = $tag->get_id_option();
-		$atts['tabindex'] = $tag->get_option( 'tabindex', 'signed_int', true );
+		$atts['class'] = $tag->getclass_option( $class );
+		$atts['id']    = $tag->get_id_option();
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -94,17 +91,15 @@ class Custom_Select_Block {
 	 * @param array $labels the option labels.
 	 */
 	public function create_html( $atts, $values, $labels ) {
-		$html = '';
-
 		$options_html = array();
 		foreach ( $values as $key => $value ) {
 			$options_html[] = $this->create_option( $value, $labels[ $key ] );
 		}
 
 		$atts        = wpcf7_format_atts( $atts );
-		$search_html = $this->create_search_html( $atts['id'], $atts['name'], $atts['?'], $options_html );
+		$search_html = $this->create_search_html( $atts['id'], $atts['name'], 'Gimnázium', $options_html );
 
-		return $html;
+		return $search_html;
 	}
 
 	/**
@@ -152,9 +147,9 @@ class Custom_Select_Block {
 	public function add_tag_generator_menu() {
 		$tag_generator = WPCF7_TagGenerator::get_instance();
 		$tag_generator->add(
-			'custom-menu',
+			'custom-select',
 			__( 'custom drop-down menu' ),
-			array( $this, 'render_menu' )
+			array( $this, 'render_admin' )
 		);
 	}
 
@@ -164,7 +159,7 @@ class Custom_Select_Block {
 	 * @param object $contact_form is the form itself.
 	 * @param array  $args is the arguments.
 	 */
-	public function render_menu( $contact_form, $args = '' ) {
+	public function render_admin( $contact_form, $args = '' ) {
 		$args = wp_parse_args( $args, array() );
 
 		$description = __( 'Generate something something. Bla bla.' );
