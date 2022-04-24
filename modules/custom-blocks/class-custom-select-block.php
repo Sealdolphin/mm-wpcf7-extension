@@ -24,7 +24,8 @@ class Custom_Select_Block {
 	public function add_to_wpcf7() {
 		wpcf7_add_form_tag(
 			array( 'custom_select', 'custom_select*' ),
-			array( $this, 'render_object' )
+			array( $this, 'render_object' ),
+			array( 'name-attr' => true )
 		);
 	}
 
@@ -35,7 +36,7 @@ class Custom_Select_Block {
 	 */
 	public function render_object( $tag ) {
 		if ( empty( $tag->name ) ) {
-			return '';
+			return sprintf( 'Invalid name: %s', $tag->name );
 		}
 
 		$validation_error = wpcf7_get_validation_error( $tag->name );
@@ -47,7 +48,7 @@ class Custom_Select_Block {
 		}
 
 		// The attributes of the HTML tag.
-		$atts   = $this->setup_attributes();
+		$atts   = $this->setup_attributes( $tag, $class, $validation_error );
 		$values = $tag->values;
 		$labels = $tag->labels;
 
@@ -64,7 +65,7 @@ class Custom_Select_Block {
 	public function setup_attributes( $tag, $class, $validation_error ) {
 		$atts = array();
 
-		$atts['class'] = $tag->getclass_option( $class );
+		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
 
 		if ( $tag->is_required() ) {
