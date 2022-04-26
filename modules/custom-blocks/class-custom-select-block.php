@@ -147,11 +147,6 @@ class Custom_Select_Block {
 		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul id="%s-list"></ul></span></div>', $id );
 		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="text"/></div>', $id, $name );
 		$label          = sprintf( '<label for="%s-input">%s</label>', $id, $description );
-		// Create a new instance in the script.
-		wp_add_inline_script(
-			'custom-select-block-js',
-			sprintf( 'new InteractiveSearch(%s, %s).load(%s);', $id, __( 'Nincs ilyen nevű találat' ), $file )
-		);
 
 		$html_body = '<span class="wpcf7-form-control-wrap custom-select">'
 			. $label

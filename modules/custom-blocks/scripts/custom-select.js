@@ -64,3 +64,6 @@ class InteractiveSearch {
         this.inputElement.value = event.target.innerHTML;
     }
 }
+
+new InteractiveSearch("high-school", "Nincs ilyen nevű találat!").load("/wp-content/plugins/mm-wpcf7-extension/modules/custom-blocks/scripts/schools.json");
+//new InteractiveSearch("university", "Nincs ilyen nevű találat!").load("/wp-content/plugins/mm-wpcf7-extension/modules/custom-blocks/scripts/universities.json");
