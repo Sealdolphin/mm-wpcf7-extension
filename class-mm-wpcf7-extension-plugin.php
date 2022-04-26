@@ -11,14 +11,17 @@
  * Description: Plugin created to boost Contact Form 7. It can boost JS and CSS loads and it also expands CF7 to WordPress REST API. This plugin is not made by the creator of CF7. It requires Contact Form 7 and Flamingo for the full features.
  * Author: Mihalovits Márk
  * Author URI: https://github.com/Sealdolphin
- * Version: 2.0.0-pre9-debug10
+ * Version: 2.0.0-pre10-debug1
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path: /Languages
  * Text Domain: wpcf7-extension
  */
 
-require_once dirname( __FILE__ ) . '/modules/class-optimization-module.php';
+require_once dirname( __FILE__ ) . '/modules/admin/class-admin.php';
+require_once dirname( __FILE__ ) . '/modules/admin/class-optimization-module.php';
+require_once dirname( __FILE__ ) . '/modules/admin/class-database-module.php';
+require_once dirname( __FILE__ ) . '/modules/admin/interface-settings.php';
 require_once dirname( __FILE__ ) . '/modules/class-flamingo-rest-module.php';
 require_once dirname( __FILE__ ) . '/modules/class-custom-validation.php';
 require_once dirname( __FILE__ ) . '/modules/custom-blocks/class-custom-select-block.php';
@@ -75,7 +78,6 @@ if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 			add_action( 'update_option_active_plugins', 'MM_WPCF7_Extension_Plugin::check_required_plugins_silent' );
 			add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 
-			$this->opt        = new Optimization_Module();
 			$this->rest       = new Flamingo_REST_Module();
 			$this->validation = new Custom_Validation();
 			$this->load_modules();
@@ -85,6 +87,7 @@ if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 		 * Loads the necessary modules.
 		 */
 		public function load_modules() {
+			Admin::init_admin();
 			$this->custom_select = new Custom_Select_Block();
 		}
 

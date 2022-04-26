@@ -2,14 +2,14 @@
 /**
  * CSS and JavaScript Optimization
  *
- * @package modules
+ * @package modules/admin
  */
 
 /**
  * Enables or disables JavaScript and CSS loading on your pages.
  * This way you can make your website load faster.
  */
-class Optimization_Module {
+class Optimization_Module extends Admin implements Settings {
 
 	/**
 	 * All settings about script optimization
@@ -17,13 +17,6 @@ class Optimization_Module {
 	 * @var string $option_group name of the setting group.
 	 */
 	private static $option_group = 'ext4wpcf7_ext_scripts';
-
-	/**
-	 * Name of the options page
-	 *
-	 * @var string $option_page_name name of the options page.
-	 */
-	private static $option_page_name = 'ext4wpcf7_script_optimization';
 	/**
 	 * Turns the JavaScript features on and off
 	 *
@@ -48,10 +41,9 @@ class Optimization_Module {
 	 */
 	public function __construct() {
 		// Init actions and filters for settings API.
-		add_action( 'admin_init', array( $this, 'create_settings' ) );
-		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'init', array( $this, 'regulate_script_load' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enable_scripts' ) );
+		$this->create_settings();
 	}
 
 	/**
@@ -78,14 +70,14 @@ class Optimization_Module {
 			$section_enable_all,
 			__( 'Enable JavaScript and CSS scripts on all pages' ),
 			'',
-			self::$option_page_name
+			$this->$menu_slug,
 		);
 
 		add_settings_field(
 			self::$setting_enable_js,
 			__( 'Javascript is enabled in all pages' ),
 			array( $this, 'render_checkbox' ),
-			self::$option_page_name,
+			$this->menu_slug,
 			$section_enable_all,
 			array(
 				'label' => __( 'Javascript is enabled' ),
@@ -97,7 +89,7 @@ class Optimization_Module {
 			self::$setting_enable_css,
 			__( 'CSS is enabled in all pages' ),
 			array( $this, 'render_checkbox' ),
-			self::$option_page_name,
+			$this->menu_slug,
 			$section_enable_all,
 			array(
 				'label' => __( 'CSS is enabled' ),
@@ -109,14 +101,14 @@ class Optimization_Module {
 			$section_enabled_pages,
 			__( 'Enable JavaScript and CSS scripts on chosen pages' ),
 			'',
-			self::$option_page_name
+			$this->menu_slug
 		);
 
 		add_settings_field(
 			self::$setting_enable_css,
 			__( 'Select pages to enable JS and CSS' ),
 			array( $this, 'render_enabled_pages' ),
-			self::$option_page_name,
+			$this->menu_slug,
 			$section_enabled_pages
 		);
 
@@ -158,7 +150,7 @@ class Optimization_Module {
 	/**
 	 * Creates an options page in the WordPress Control Panel
 	 */
-	public function create_options_page() {
+	public function render_admin_page() {
 
 		?>
 		<div class='wrap'>
@@ -166,27 +158,13 @@ class Optimization_Module {
 			<form method='post' action='options.php'>
 		<?php
 		settings_fields( self::$option_group );
-		do_settings_sections( self::$option_page_name );
+		do_settings_sections( $this->menu_slug );
 
 		submit_button();
 		?>
 			</form>
 		</div>
 		<?php
-	}
-
-	/**
-	 * Creates the admin menu layout
-	 */
-	public function admin_menu() {
-		add_submenu_page(
-			'wpcf7',
-			'Optimize JS and CSS scripts',
-			'Script optimization',
-			'manage_options',
-			self::$option_page_name,
-			array( $this, 'create_options_page' )
-		);
 	}
 
 	/**
