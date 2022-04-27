@@ -9,7 +9,7 @@
  * Enables or disables JavaScript and CSS loading on your pages.
  * This way you can make your website load faster.
  */
-class Optimization_Module extends Admin implements Settings {
+class Optimization_Module extends MM_WPCF7_Admin implements Settings {
 
 	/**
 	 * All settings about script optimization
@@ -38,12 +38,19 @@ class Optimization_Module extends Admin implements Settings {
 
 	/**
 	 * Constructor
+	 *
+	 * @param string $parent_slug the slug.
+	 * @param string $page_title the title.
+	 * @param string $menu_title the menu title.
+	 * @param string $capability the capability.
+	 * @param string $menu_slug the unique menu slug.
 	 */
-	public function __construct() {
+	public function __construct( $parent_slug, $page_title, $menu_title, $capability, $menu_slug ) {
+		parent::__construct( $parent_slug, $page_title, $menu_title, $capability, $menu_slug );
 		// Init actions and filters for settings API.
+		add_action( 'admin_init', array( $this, 'create_settings' ) );
 		add_action( 'init', array( $this, 'regulate_script_load' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enable_scripts' ) );
-		$this->create_settings();
 	}
 
 	/**
@@ -117,7 +124,7 @@ class Optimization_Module extends Admin implements Settings {
 	/**
 	 * Registers the plugin settings
 	 */
-	private function register_settings() {
+	public function register_settings() {
 		register_setting(
 			self::$option_group,
 			self::$setting_enable_js,

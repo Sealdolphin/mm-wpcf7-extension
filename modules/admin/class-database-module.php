@@ -8,7 +8,7 @@
 /**
  * Handles database options.
  */
-class Database_Module extends Admin {
+class Database_Module extends MM_WPCF7_Admin {
 
 	/**
 	 * Creates an options page in the WordPress Control Panel

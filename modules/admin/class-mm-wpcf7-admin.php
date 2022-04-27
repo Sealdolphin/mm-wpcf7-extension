@@ -8,7 +8,7 @@
 /**
  * Options class for admin page
  */
-abstract class Admin {
+abstract class MM_WPCF7_Admin {
 
 	/**
 	 * The slug name for the parent menu (or the file name of a standard WordPress admin page).
@@ -55,17 +55,19 @@ abstract class Admin {
 	 * @param string $menu_slug the unique menu slug.
 	 */
 	public function __construct( $parent_slug, $page_title, $menu_title, $capability, $menu_slug ) {
-		$this->$parent_slug = $parent_slug;
-		$this->create_admin_menu();
+		// Init actions and filters for settings API.
+		$this->parent_slug = $parent_slug;
+		$this->page_title  = $page_title;
+		$this->menu_title  = $menu_title;
+		$this->capability  = $capability;
+		$this->menu_slug   = $menu_slug;
+		add_action( 'admin_menu', array( $this, 'create_admin_menu' ) );
 	}
 
 	/**
 	 * Initializes admin functions.
 	 */
 	public static function init_admin() {
-		// Init actions and filters for settings API.
-		add_action( 'admin_init', array( $this, 'create_all_settings' ) );
-		add_action( 'admin_menu', array( $this, 'admin_menus' ) );
 		$opt = new Optimization_Module(
 			'wpcf7',
 			'Optimize JS and CSS scripts',
@@ -90,13 +92,13 @@ abstract class Admin {
 	/**
 	 * Creates admin menu
 	 */
-	private function create_admin_menu() {
+	final public function create_admin_menu() {
 		add_submenu_page(
-			$this->$parent_slug,
-			$this->$page_title,
-			$this->$menu_title,
-			$this->$capability,
-			$this->$menu_slug,
+			$this->parent_slug,
+			$this->page_title,
+			$this->menu_title,
+			$this->capability,
+			$this->menu_slug,
 			array( $this, 'render_admin_page' )
 		);
 	}
