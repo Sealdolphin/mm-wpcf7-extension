@@ -11,7 +11,7 @@
  * Description: Plugin created to boost Contact Form 7. It can boost JS and CSS loads and it also expands CF7 to WordPress REST API. This plugin is not made by the creator of CF7. It requires Contact Form 7 and Flamingo for the full features.
  * Author: Mihalovits Márk
  * Author URI: https://github.com/Sealdolphin
- * Version: 2.0.0-pre10-debug9
+ * Version: 2.0.0-pre12-debug1
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path: /Languages
@@ -24,6 +24,7 @@ require_once dirname( __FILE__ ) . '/modules/admin/class-optimization-module.php
 require_once dirname( __FILE__ ) . '/modules/admin/class-database-module.php';
 require_once dirname( __FILE__ ) . '/modules/class-flamingo-rest-module.php';
 require_once dirname( __FILE__ ) . '/modules/class-custom-validation.php';
+require_once dirname( __FILE__ ) . '/modules/class-database.php';
 require_once dirname( __FILE__ ) . '/modules/custom-blocks/class-custom-select-block.php';
 
 if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
@@ -88,6 +89,7 @@ if ( ! class_exists( 'MM_WPCF7_Extension_Plugin' ) ) {
 		 */
 		public function load_modules() {
 			MM_WPCF7_Admin::init_admin();
+			Database::init_db();
 			$this->custom_select = new Custom_Select_Block();
 		}
 
