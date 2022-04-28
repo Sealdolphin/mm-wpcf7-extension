@@ -5,6 +5,8 @@
  * @package modules/admin
  */
 
+namespace mm_wpcf7;
+
 /**
  * Settings interface
  */

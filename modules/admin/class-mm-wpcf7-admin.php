@@ -5,6 +5,8 @@
  * @package modules/admin
  */
 
+namespace mm_wpcf7;
+
 /**
  * Options class for admin page
  */

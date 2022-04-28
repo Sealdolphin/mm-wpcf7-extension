@@ -5,6 +5,8 @@
  * @package modules
  */
 
+namespace mm_wpcf7;
+
 /**
  * Enables custom validation rules. Currently available:
  * - phone number

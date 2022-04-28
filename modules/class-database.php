@@ -5,6 +5,8 @@
  * @package modules
  */
 
+namespace mm_wpcf7;
+
 /**
  * Class that represents uploaded database in MySQL
  */
@@ -60,6 +62,23 @@ class Database {
 			);
 			wp_cache_set( $query_cache_id, $query );
 		}
+	}
+
+	/**
+	 * Lists all registered databases
+	 */
+	public static function list_databases() {
+		global $wpdb;
+
+		$query_cache_id = 'mm_wpcf7_db_list';
+		$query          = wp_cache_get( $query_cache_id );
+
+		if ( false === $query ) {
+			$query = $wpdb->query( 'SELECT * FROM `wordpress`.`mm_wpcf7_meta`;' );
+			wp_cache_set( $query_cache_id, $query );
+		}
+
+		return $query;
 	}
 
 	/**

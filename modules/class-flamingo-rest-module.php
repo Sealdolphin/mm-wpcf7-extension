@@ -5,6 +5,8 @@
  * @package modules
  */
 
+namespace mm_wpcf7;
+
 /**
  * This class is responsible for the implementation of the WordPress REST API
  */

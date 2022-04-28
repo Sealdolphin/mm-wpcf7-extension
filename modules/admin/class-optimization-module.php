@@ -5,6 +5,8 @@
  * @package modules/admin
  */
 
+namespace mm_wpcf7;
+
 /**
  * Enables or disables JavaScript and CSS loading on your pages.
  * This way you can make your website load faster.
