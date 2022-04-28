@@ -20,6 +20,13 @@ class Database {
 	private static string $db_prefix = 'mm_wpcf7_db_';
 
 	/**
+	 * Prefix for meta db
+	 *
+	 * @var string $db_prefix the prefix of all db-s
+	 */
+	private static string $meta_db = 'mm_wpcf7_meta';
+
+	/**
 	 * Short name
 	 *
 	 * @var string $name the name of the database
@@ -48,17 +55,18 @@ class Database {
 
 		$query_cache_id = 'mm_wpcf7_meta_db_create';
 		$query          = wp_cache_get( $query_cache_id );
+		$table_name     = self::$meta_db;
 
 		if ( false === $query ) {
 			$query = $wpdb->query(
-				'CREATE TABLE IF NOT EXISTS `wordpress`.`mm_wpcf7_meta` (
+				"CREATE TABLE IF NOT EXISTS `wordpress`.`$table_name` (
 					`id` INT NOT NULL AUTO_INCREMENT,
 					`db_id` VARCHAR(45) NOT NULL,
 					`db_description` VARCHAR(45) NULL,
 					PRIMARY KEY (`id`),
 					UNIQUE INDEX `db_id_UNIQUE` (`db_id` ASC),
 					UNIQUE INDEX `id_UNIQUE` (`id` ASC));
-				'
+				"
 			);
 			wp_cache_set( $query_cache_id, $query );
 		}
@@ -71,14 +79,23 @@ class Database {
 		global $wpdb;
 
 		$query_cache_id = 'mm_wpcf7_db_list';
-		$query          = wp_cache_get( $query_cache_id );
+		$database_list  = wp_cache_get( $query_cache_id );
+		$table_name     = self::$meta_db;
 
-		if ( false === $query ) {
-			$query = $wpdb->query( 'SELECT * FROM `wordpress`.`mm_wpcf7_meta`;' );
-			wp_cache_set( $query_cache_id, $query );
+		if ( false === $database_list ) {
+			$database_list = array();
+			$databases     = $wpdb->get_results( "SELECT * FROM `wordpress`.`$table_name`;" );
+
+			foreach ( $databases as $database ) {
+				$database_list[] = new Database(
+					$database->db_id,
+					$database->db_description
+				);
+			}
+			wp_cache_set( $query_cache_id, $database_list );
 		}
 
-		return $query;
+		return $database_list;
 	}
 
 	/**
@@ -86,16 +103,59 @@ class Database {
 	 */
 	public static function db_destroy() {
 		global $wpdb;
+		$table_name = self::$meta_db;
 
-		$wpdb->query( 'DROP TABLE IF EXISTS `wordpress`.`mm_wpcf7_meta`;' );
+		$wpdb->query( "DROP TABLE IF EXISTS `wordpress`.`$table_name`;" );
 	}
 
 	/**
 	 * Constructor
 	 *
 	 * @param string $id the id of the database.
+	 * @param string $description the description of the database.
 	 */
-	public function __construct( $id ) {
+	public function __construct( $id, $description ) {
+		$this->name        = $id;
+		$this->description = $description;
+		$this->records     = 0;
+	}
 
+	/**
+	 * Updates the record value of the db class
+	 */
+	public function update_details() {
+		global $wpdb;
+
+		$query_cache_id = 'mm_wpcf7_db_records' . $this->name;
+		$records        = wp_cache_get( $query_cache_id );
+		$table_name     = self::$db_prefix . $this->name;
+
+		if ( false === $records ) {
+			$records = $wpdb->get_var( "SELECT COUNT(*) as `records` FROM `wordpress`.`$table_name`;" );
+			wp_cache_set( $query_cache_id, $records );
+		}
+
+		$this->records = $records;
+	}
+
+	/**
+	 * Returns the name of the DB
+	 */
+	public function get_name() {
+		return $this->name;
+	}
+
+	/**
+	 * Returns the records of the DB
+	 */
+	public function get_records() {
+		return $this->records;
+	}
+
+	/**
+	 * Returns the description of the DB
+	 */
+	public function get_description() {
+		return $this->description;
 	}
 }

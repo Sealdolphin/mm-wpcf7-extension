@@ -5,6 +5,8 @@
  * @package modules/custom_blocks
  */
 
+namespace mm_wpcf7;
+
 /**
  * Custom select block instead of normal block
  */
@@ -174,7 +176,7 @@ class Custom_Select_Block {
 	 * Adds this tag to the generator.
 	 */
 	public function add_tag_generator_menu() {
-		$tag_generator = WPCF7_TagGenerator::get_instance();
+		$tag_generator = \WPCF7_TagGenerator::get_instance();
 		$tag_generator->add(
 			'custom_select',
 			__( 'custom drop-down menu' ),

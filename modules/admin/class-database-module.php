@@ -16,6 +16,7 @@ class Database_Module extends MM_WPCF7_Admin {
 	 * Creates an options page in the WordPress Control Panel
 	 */
 	public function render_admin_page() {
+		$databases = Database::list_databases();
 
 		?>
 		<div class='wrap'>
@@ -33,28 +34,35 @@ class Database_Module extends MM_WPCF7_Admin {
 					</tr>
 				</thead>
 				<tbody id="the-list">
-				<tr id="db-id" class="iedit">
-					<th scope="row" class="check-column">
-						<input type="checkbox" id="cb-select-db-n" name="db[]" value="n"/>
-					</th>
-					<td class="column-name column-primary" data-colname="<?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?>">
-						<strong>Universities</strong>
-						<div class="row-actions">
-							<span class="edit">
-								<button type="button" class="button-link"><?php echo esc_html( __( 'Edit', 'contact-form-7' ) ); ?></button>  | 
-							</span>
-							<span class="trash">
-								<button type="button" class="button-link submitdelete" style="color: #b32d2e"><?php echo esc_html( __( 'Trash', 'contact-form-7' ) ); ?></button>
-							</span>
-						</div>
-					</td>
-					<td class="column-description" data-colname="<?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?>">
-						This database holds all the universities of Hungary. 
-					</td>
-					<td class="column-records" data-colname="<?php echo esc_html( __( 'Records', 'contact-form-7' ) ); ?>">
-						56 rows
-					</td>
-				</tr>
+				<?php
+				foreach ( $databases as $database ) {
+					$database->update_details();
+					?>
+					<tr id="db-id" class="iedit">
+						<th scope="row" class="check-column">
+							<input type="checkbox" id="cb-select-db-n" name="db[]" value="n"/>
+						</th>
+						<td class="column-name column-primary" data-colname="<?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?>">
+							<strong><?php echo esc_html( $database->get_name() ); ?></strong>
+							<div class="row-actions">
+								<span class="edit">
+									<button type="button" class="button-link"><?php echo esc_html( __( 'Edit', 'contact-form-7' ) ); ?></button>  | 
+								</span>
+								<span class="trash">
+									<button type="button" class="button-link submitdelete" style="color: #b32d2e"><?php echo esc_html( __( 'Trash', 'contact-form-7' ) ); ?></button>
+								</span>
+							</div>
+						</td>
+						<td class="column-description" data-colname="<?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?>">
+							<?php echo esc_html( $database->get_description() ); ?>
+						</td>
+						<td class="column-records" data-colname="<?php echo esc_html( __( 'Records', 'contact-form-7' ) ); ?>">
+							<?php echo esc_html( $database->get_records() ); ?> rows
+						</td>
+					</tr>
+					<?php
+				}
+				?>
 				</tbody>
 			</table>
 			<h1><?php esc_attr_e( 'Import new databases from CSV' ); ?></h1>
