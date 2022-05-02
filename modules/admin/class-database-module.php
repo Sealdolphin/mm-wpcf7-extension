@@ -31,8 +31,6 @@ class Database_Module extends MM_WPCF7_Admin {
 	 * Prepare necessary scripts
 	 */
 	public function prepare_scripts() {
-		$nonce = wp_create_nonce( 'csv-upload' );
-
 		wp_register_script(
 			'csv-upload-js',
 			plugin_dir_url( __FILE__ ) . 'scripts/csv-upload.js',
@@ -41,27 +39,25 @@ class Database_Module extends MM_WPCF7_Admin {
 			true
 		);
 		wp_enqueue_script( 'csv-upload-js' );
-
-		wp_add_inline_script(
-			'csv-upload-js',
-			sprintf(
-				'const WP_NONCE = %s',
-				$nonce
-			),
-			'before'
-		);
 	}
 
 	/**
 	 * Handles the AJAX request from submitted form in settings
 	 */
 	public function upload_csv() {
-		var_dump( 'CSV has arrived!' );
-		if ( isset( $_POST['form_data'], $_POST['form_data_nonce'] ) && wp_verify_nonce( 'csv-upload' ) ) {
-			$form_data = sanitize_text_field( wp_unslash( $_POST['form_data'] ) );
-
-			var_dump( $form_data );
+		$request_body = file_get_contents( 'php://input' );
+		$data         = json_decode( $request_body, true );
+		$name         = esc_sql( $data['table_name'] );
+		$ext          = substr( $name, -4 );
+		if ( '.csv' !== $ext ) {
+			wp_die();
 		}
+		$table_name = substr( $name, 0, -4 );
+
+		echo 'create table ' . esc_html( $table_name ) . ' from ' . esc_html( $data['form_data'] );
+
+		$db = new Database( $table_name, 'New database' );
+		$db->upload( $data['form_data'] );
 
 		wp_die();
 	}

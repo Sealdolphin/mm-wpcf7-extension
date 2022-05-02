@@ -1,4 +1,3 @@
-
 class CSVUploader {
 
     constructor() {
@@ -13,7 +12,7 @@ class CSVUploader {
         event.preventDefault();
 
         const file = this.fileInput.files[0];
-        //const action = this.form.getAttribute("data-action");
+        const filename = file.name;
         const url = this.form.getAttribute("data-url");
         let data, body;
 
@@ -21,7 +20,7 @@ class CSVUploader {
             data = text.split("\n");
             body = {
                 form_data: data,
-                _ajax_nonce: WP_NONCE
+                table_name: filename
             }
         }).then( _ => {
             fetch(
@@ -35,9 +34,7 @@ class CSVUploader {
                     body: JSON.stringify(body)
                 }
             ).then( response => {
-                if (response.ok) {
-                    console.log("CSV arrived!");
-                } else {
+                if (!response.ok) {
                     console.error(response.text());
                 }
             });

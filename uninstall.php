@@ -14,4 +14,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit();
 }
 
-Database::db_destroy();
+mm_wpcf7\Database::db_destroy();

@@ -121,6 +121,61 @@ class Database {
 	}
 
 	/**
+	 * Uploads a database to the SQL
+	 *
+	 * @param array $data the data to upload.
+	 */
+	public function upload( $data ) {
+		global $wpdb;
+		$table_name = self::$db_prefix . $this->name;
+		$meta_table = self::$meta_db;
+
+		$query = $wpdb->query(
+			"CREATE TABLE IF NOT EXISTS `wordpress`.`$table_name` (
+				`id` VARCHAR(45) NOT NULL,
+				`name` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
+				`other` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
+				PRIMARY KEY (`id`),
+				UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+			"
+		);
+
+		$wpdb->query(
+			$wpdb->prepare(
+				"INSERT INTO `wordpress`.`$meta_table` (`db_id`, `db_description`)
+				VALUES (%s, %s);",
+				$this->name,
+				$this->description
+			)
+		);
+
+		foreach ( $data as $row ) {
+			$this->upload_row( $row );
+		}
+	}
+
+	/**
+	 * Uploads a row to the database
+	 *
+	 * @param string $row a row in the data.
+	 */
+	private function upload_row( $row ) {
+		global $wpdb;
+		$data       = explode( ';', $row, 3 );
+		$table_name = self::$db_prefix . $this->name;
+
+		$wpdb->query(
+			$wpdb->prepare(
+				"INSERT INTO `wordpress`.`$table_name` (`id`, `name`, `other`)
+				VALUES (%s, %s, %s);",
+				$data[0],
+				$data[1],
+				$data[2]
+			)
+		);
+	}
+
+	/**
 	 * Updates the record value of the db class
 	 */
 	public function update_details() {
