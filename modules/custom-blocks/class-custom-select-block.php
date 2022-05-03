@@ -154,7 +154,7 @@ class Custom_Select_Block {
 	 * @param string $options_html the html body of the options.
 	 */
 	public function create_search_html( $id, $name, $description, $options_html ) {
-		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul id="%s-list">%s</ul></span></div>', $id, $options_html );
+		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><div class="wpcf7-custom-select-list"><ul id="%s-list">%s</ul></div></div>', $id, $options_html );
 		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="text"/></div>', $id, $name );
 		$label          = sprintf( '<label for="%s-input">%s</label>', $id, $description );
 

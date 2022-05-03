@@ -36,6 +36,8 @@ class CSVUploader {
             ).then( response => {
                 if (!response.ok) {
                     console.error(response.text());
+                } else {
+                    location.reload();
                 }
             });
         }).catch(error => {

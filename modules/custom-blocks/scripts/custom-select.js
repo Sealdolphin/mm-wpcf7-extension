@@ -5,29 +5,35 @@ class InteractiveSearch {
     LIST_ITEM = "li";
 
     constructor( id, noResultsText ) {
-        this.NO_RESULTS = noResultsText;
-        console.log(`creating ${id}`);
+        this.NO_RESULTS = {
+            name: noResultsText
+        }
+        
         this.inputElement = document.getElementById( `${id}-input` );
         this.listElement = document.getElementById( `${id}-list` );
     }
 
     load() {
         this.db = [];
-        for (const option in this.listElement.children) {
+        const options = this.listElement.children;
+        for (let index = 0; index < options.length; index++) {
+            const element = options[index];
             this.db.push(
                 {
-                    name: option.innerHTML,
-                    value: option.value
+                    name: element.innerHTML,
+                    value: element.getAttribute("value")
                 }
-            )
+            );
         }
+        this.db = this.db.sort(this.compareOptions);
 
         this.refreshOptions( this.filterList() );
         this.inputElement.onkeyup = this.searchAsYouType;
     }
 
     filterList( filter ) {
-        const list = this.db.sort(this.compareOptions);
+        const list = this.db;
+
         if( !filter ) {
             return list;
         } else {
@@ -41,17 +47,18 @@ class InteractiveSearch {
             this.listElement.removeChild( this.listElement.firstChild );
         }
 
-        options.forEach( option => this.appendOption( option, this.listElement ) );
         if ( options.length == 0 ) {
             this.appendOption( this.NO_RESULTS, this.listElement, false );
+        } else {
+            options.forEach( option => this.appendOption( option, this.listElement ) );
         }
     }
 
     appendOption( optionObject, element, canClick = true ) {
         let option = document.createElement( this.LIST_ITEM );
         option.innerHTML = optionObject.name;
-        option.value = optionObject.value;
         if( canClick ) {
+            option.setAttribute("value", optionObject.value);
             option.onclick = this.onSelect;
         }
 
@@ -82,6 +89,8 @@ class InteractiveSearch {
     }
 }
 
-for (const element in document.getElementsByClassName(InteractiveSearch.CLASS)) {
-    new InteractiveSearch(element.id, 'Nincs ilyen nevű találat!').load();
+const collection = document.getElementsByClassName(InteractiveSearch.CLASS);
+for (let index = 0; index < collection.length; index++) {
+    const element = collection[index];
+    new InteractiveSearch(element.id, "Nincs ilyen nevű találat!").load();
 }
