@@ -74,10 +74,9 @@ class Custom_Select_Block {
 
 		// The attributes of the HTML tag.
 		$atts   = $this->setup_attributes( $tag, $class, $validation_error );
-		$values = $tag->values;
-		$labels = $tag->labels;
+		$values = $this->create_values( $atts['db'] );
 
-		return $this->create_html( $atts, $values, $labels );
+		return $this->create_html( $atts, $values );
 	}
 
 	/**
@@ -94,7 +93,7 @@ class Custom_Select_Block {
 		$atts['id']    = $tag->get_id_option();
 		$atts['name']  = $tag->name;
 		$atts['desc']  = $tag->get_option( 'description', '.+', true );
-		$atts['file']  = $tag->get_option( 'file', '.+', true );
+		$atts['db']    = $tag->get_option( 'db', '.+', true );
 
 		if ( $tag->is_required() ) {
 			$atts['aria-required'] = 'true';
@@ -111,23 +110,35 @@ class Custom_Select_Block {
 	}
 
 	/**
+	 * Imports values from the database
+	 *
+	 * @param string $table_id the id of the table to import from.
+	 */
+	public function create_values( $table_id ) {
+		$db = new Database( $table_id );
+		if ( $db->exists() ) {
+			return $db->create_options_array();
+		} else {
+			return array();
+		}
+	}
+
+	/**
 	 * Sets up the HTML block
 	 *
 	 * @param array $atts the HTML attributes.
 	 * @param array $values the option values.
-	 * @param array $labels the option labels.
 	 */
-	public function create_html( $atts, $values, $labels ) {
+	public function create_html( $atts, $values ) {
 		$options_html = '';
-		foreach ( $values as $key => $value ) {
-			$options_html .= $this->create_option( $value, $labels[ $key ] );
+		foreach ( $values as $id => $name ) {
+			$options_html .= $this->create_option( $id, $name );
 		}
 
 		$search_html = $this->create_search_html(
 			esc_html( $atts['id'] ),
 			esc_html( $atts['name'] ),
 			esc_html( $atts['desc'] ),
-			esc_html( $atts['file'] ),
 			$options_html
 		);
 
@@ -140,21 +151,18 @@ class Custom_Select_Block {
 	 * @param string $id the id of the search tag.
 	 * @param string $name the name of the tag.
 	 * @param string $description a small description of the search box.
-	 * @param string $file the list file.
 	 * @param string $options_html the html body of the options.
 	 */
-	public function create_search_html( $id, $name, $description, $file, $options_html ) {
-		// TODO: why won't render this in one paragraph?
-
-		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul id="%s-list"></ul></span></div>', $id );
+	public function create_search_html( $id, $name, $description, $options_html ) {
+		$select_wrapper = sprintf( '<div class="wpcf7-custom-select-wrapper"><span class="wpcf7-custom-select-list"><ul id="%s-list">%s</ul></span></div>', $id, $options_html );
 		$select_input   = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="text"/></div>', $id, $name );
 		$label          = sprintf( '<label for="%s-input">%s</label>', $id, $description );
 
-		$html_body = '<span class="wpcf7-form-control-wrap custom-select">'
+		$html_body = sprintf( '<div class="wpcf7-form-control-wrap wpcf7-custom-select" id="%s">', $id )
 			. $label
 			. $select_input
 			. $select_wrapper
-			. '</span>';
+			. '</div>';
 
 		return $html_body;
 	}
@@ -166,10 +174,7 @@ class Custom_Select_Block {
 	 * @param string $label is the label of the option.
 	 */
 	public function create_option( $value, $label ) {
-		$e_label = esc_html( $label );
-		return <<<EOD
-		<li value="$value">$e_label</li>
-		EOD;
+		return sprintf( '<li value=%s>%s</li>', esc_html( $value ), esc_html( $label ) );
 	}
 
 	/**
@@ -209,19 +214,19 @@ class Custom_Select_Block {
 								</fieldset>
 							</td>
 						</tr>
-						<tr> <!--Name header-->
+						<tr> <!--Name-->
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-name' ); ?>"><?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?></label></th>
 							<td><input type="text" name="name" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-name' ); ?>"/></td>
 						</tr>
-						<tr>
+						<tr> <!--Description-->
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-description' ); ?>"><?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?></label></th>
 							<td><input type="text" name="description" class="descriptionvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-description' ); ?>" /></td>
 						</tr>
-						<tr>
-							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-file' ); ?>"><?php echo esc_html( __( 'File', 'contact-form-7' ) ); ?></label></th>
-							<td><input type="text" name="file" class="filevalue oneline option" id="<?php echo esc_attr( $args['content'] . '-file' ); ?>" required /></td>
+						<tr> <!--Database name-->
+							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-db' ); ?>"><?php echo esc_html( __( 'Database', 'contact-form-7' ) ); ?></label></th>
+							<td><input type="text" name="db" class="dbvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-db' ); ?>" required /></td>
 						</tr>
-						<tr>
+						<tr> <!--ID-->
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-id' ); ?>"><?php echo esc_html( __( 'Id attribute', 'contact-form-7' ) ); ?></label></th>
 							<td><input type="text" name="id" class="idvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-id' ); ?>" required /></td>
 						</tr>

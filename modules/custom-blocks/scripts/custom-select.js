@@ -1,31 +1,37 @@
 class InteractiveSearch {
 
+    static CLASS = "wpcf7-custom-select";
     SELECTED = "wpcf7-custom-select-list-selection";
     LIST_ITEM = "li";
 
     constructor( id, noResultsText ) {
         this.NO_RESULTS = noResultsText;
-        
+        console.log(`creating ${id}`);
         this.inputElement = document.getElementById( `${id}-input` );
         this.listElement = document.getElementById( `${id}-list` );
     }
 
-    async load( url ) {
-        this.db = await fetch(url).then( response => response.json() ).then( data => {
-            return data.values;
-        }).catch( error => {
-            console.warn(error);
-        });
+    load() {
+        this.db = [];
+        for (const option in this.listElement.children) {
+            this.db.push(
+                {
+                    name: option.innerHTML,
+                    value: option.value
+                }
+            )
+        }
+
         this.refreshOptions( this.filterList() );
         this.inputElement.onkeyup = this.searchAsYouType;
     }
 
     filterList( filter ) {
-        const list = this.db.map( entry => `${entry.name} - ${entry.other}` ).sort();
+        const list = this.db.sort(this.compareOptions);
         if( !filter ) {
             return list;
         } else {
-            return list.filter( value => value.toLowerCase().includes( filter.toLowerCase() ) );
+            return list.filter( option => option.name.toLowerCase().includes( filter.toLowerCase() ) );
         }
     }
 
@@ -41,9 +47,10 @@ class InteractiveSearch {
         }
     }
 
-    appendOption( name, element, canClick = true ) {
+    appendOption( optionObject, element, canClick = true ) {
         let option = document.createElement( this.LIST_ITEM );
-        option.innerHTML = name;
+        option.innerHTML = optionObject.name;
+        option.value = optionObject.value;
         if( canClick ) {
             option.onclick = this.onSelect;
         }
@@ -63,7 +70,18 @@ class InteractiveSearch {
         event.target.classList.add( this.SELECTED );
         this.inputElement.value = event.target.innerHTML;
     }
+
+    compareOptions( o1, o2 ) {
+        if ( o1.name < o2.name ) {
+            return -1;
+        }
+        if ( o1.name > o2.name ) {
+            return 1;
+        }
+        return 0;
+    }
 }
 
-new InteractiveSearch("high-school", "Nincs ilyen nevű találat!").load("/wp-content/plugins/mm-wpcf7-extension/modules/custom-blocks/scripts/schools.json");
-//new InteractiveSearch("university", "Nincs ilyen nevű találat!").load("/wp-content/plugins/mm-wpcf7-extension/modules/custom-blocks/scripts/universities.json");
+for (const element in document.getElementsByClassName(InteractiveSearch.CLASS)) {
+    new InteractiveSearch(element.id, 'Nincs ilyen nevű találat!').load();
+}

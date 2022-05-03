@@ -103,9 +103,14 @@ class Database {
 	 */
 	public static function db_destroy() {
 		global $wpdb;
-		$table_name = self::$meta_db;
+		$meta_table = self::$meta_db;
+		$databases  = self::list_databases();
 
-		$wpdb->query( "DROP TABLE IF EXISTS `wordpress`.`$table_name`;" );
+		foreach ( $databases as $database ) {
+			$database->destroy();
+		}
+
+		$wpdb->query( "DROP TABLE IF EXISTS `wordpress`.`$meta_table`;" );
 	}
 
 	/**
@@ -114,7 +119,7 @@ class Database {
 	 * @param string $id the id of the database.
 	 * @param string $description the description of the database.
 	 */
-	public function __construct( $id, $description ) {
+	public function __construct( $id, $description = '' ) {
 		$this->name        = $id;
 		$this->description = $description;
 		$this->records     = 0;
@@ -194,6 +199,16 @@ class Database {
 	}
 
 	/**
+	 * Deletes this from the SQL database.
+	 */
+	public function destroy() {
+		global $wpdb;
+		$table_name = self::$db_prefix . $this->name;
+
+		$wpdb->query( "DROP TABLE IF EXISTS `wordpress`.`$table_name`;" );
+	}
+
+	/**
 	 * Returns the name of the DB
 	 */
 	public function get_name() {
@@ -212,5 +227,52 @@ class Database {
 	 */
 	public function get_description() {
 		return $this->description;
+	}
+
+	/**
+	 * Determines if this database exists.
+	 */
+	public function exists(): bool {
+		global $wpdb;
+
+		$query_cache_id = 'mm_wpcf7_db_exists';
+		$exists         = wp_cache_get( $query_cache_id );
+		$table_name     = self::$db_prefix . $this->name;
+
+		if ( false === $exists ) {
+			$tables = $wpdb->query(
+				$wpdb->prepare(
+					'SHOW TABLES LIKE %s;',
+					$table_name
+				)
+			);
+			$exists = $tables > 0;
+			wp_cache_set( $query_cache_id, $exists );
+		}
+
+		return $exists;
+	}
+
+	/**
+	 * Create options from the record rows.
+	 */
+	public function create_options_array() {
+		global $wpdb;
+
+		$query_cache_id = 'mm_wpcf7_db_get';
+		$record_array   = wp_cache_get( $query_cache_id );
+		$table_name     = self::$db_prefix . $this->name;
+
+		if ( false === $record_array ) {
+			$record_array = array();
+			$records      = $wpdb->get_results( "SELECT * FROM `wordpress`.`$table_name`;" );
+
+			foreach ( $records as $record ) {
+				$record_array[ $record->id ] = $record->name . ' - ' . $record->other;
+			}
+			wp_cache_set( $query_cache_id, $record_array );
+		}
+
+		return $record_array;
 	}
 }
