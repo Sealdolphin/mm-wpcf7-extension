@@ -9,8 +9,9 @@ class InteractiveSearch {
             name: noResultsText
         }
         
-        this.inputElement = document.getElementById( `${id}-input` );
-        this.listElement = document.getElementById( `${id}-list` );
+        this.helperElement = document.getElementById( `${id}-input-helper` );
+        this.inputElement  = document.getElementById( `${id}-input` );
+        this.listElement   = document.getElementById( `${id}-list` );
     }
 
     load() {
@@ -28,7 +29,7 @@ class InteractiveSearch {
         this.db = this.db.sort(this.compareOptions);
 
         this.refreshOptions( this.filterList() );
-        this.inputElement.onkeyup = this.searchAsYouType;
+        this.helperElement.onkeyup = this.searchAsYouType;
     }
 
     filterList( filter ) {
@@ -75,7 +76,9 @@ class InteractiveSearch {
             item.classList.remove(this.SELECTED)
         }
         event.target.classList.add( this.SELECTED );
-        this.inputElement.value = event.target.innerHTML;
+        this.helperElement.value = event.target.innerHTML;
+        const selectedValue = event.target.getAttribute("value");
+        this.inputElement.value = selectedValue ? selectedValue : event.target.innerHTML;
     }
 
     compareOptions( o1, o2 ) {

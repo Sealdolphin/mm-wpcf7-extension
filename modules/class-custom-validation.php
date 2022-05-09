@@ -26,8 +26,7 @@ class Custom_Validation {
 	public function __construct() {
 		if ( class_exists( 'WPCF7_Validation' ) ) {
 			add_filter( 'wpcf7_validate_tel*', array( $this, 'apply_phone_validation' ), 20, 2 );
-			add_filter( 'wpcf7_validate_custom_list*', array( $this, 'apply_custom_list_validation' ), 20, 2 );
-			// Add custom-select filter.
+			add_filter( 'wpcf7_validate_custom_select*', array( $this, 'apply_custom_select_validation' ), 20, 2 );
 		}
 	}
 
@@ -47,6 +46,18 @@ class Custom_Validation {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Validates a custom select block.
+	 *
+	 * @param object $result the result being checked.
+	 * @param array  $tag any applied tags.
+	 */
+	public function apply_custom_select_validation( $result, $tag ) {
+		wp_verify_nonce( $_REQUEST );
+
+		// $id = isset( $_POST[ $tag->name ] ) ? trim( sanitize_text_field( wp_unslash( $_POST[ $tag->name ] ) ) ) : '';
 	}
 
 }
