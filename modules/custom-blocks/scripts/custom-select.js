@@ -2,7 +2,7 @@ class InteractiveSearch {
 
     static CLASS = "wpcf7-custom-select";
     SELECTED = "wpcf7-custom-select-list-selection";
-    LIST_ITEM = "li";
+    LIST_ITEM = "span";
 
     constructor( id, noResultsText ) {
         this.NO_RESULTS = {
@@ -56,7 +56,7 @@ class InteractiveSearch {
     }
 
     appendOption( optionObject, element, canClick = true ) {
-        let option = document.createElement( this.LIST_ITEM );
+        let option = this.createOption();
         option.innerHTML = optionObject.name;
         if( canClick ) {
             option.setAttribute("value", optionObject.value);
@@ -66,7 +66,14 @@ class InteractiveSearch {
         element.appendChild( option );
     }
 
+    createOption() {
+        const option = document.createElement( this.LIST_ITEM );
+        option.classList.add("wpcf7-custom-select-option");
+        return option;
+    }
+
     searchAsYouType = event =>  {
+        this.inputElement.value = "";
         let filter = event.target.value;
         this.refreshOptions( this.filterList( filter ) );
     }

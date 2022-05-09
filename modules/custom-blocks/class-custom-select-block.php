@@ -68,18 +68,12 @@ class Custom_Select_Block {
 		}
 
 		$validation_error = wpcf7_get_validation_error( $tag->name );
-		$class            = wpcf7_form_controls_class( $tag->type );
-
-		// If validation fails place a validation class.
-		if ( $validation_error ) {
-			$class .= ' wpcf7-not-valid';
-		}
 
 		// The attributes of the HTML tag.
 		$atts   = $this->setup_attributes( $tag, $class, $validation_error );
 		$values = $this->create_values( $atts['db'] );
 
-		return $this->create_html( $atts, $values );
+		return $this->create_html( $atts, $values, $validation_error );
 	}
 
 	/**
@@ -90,7 +84,13 @@ class Custom_Select_Block {
 	 * @param boolean $validation_error true if the object is invalid.
 	 */
 	public function setup_attributes( $tag, $class, $validation_error ) {
-		$atts = array();
+		$atts  = array();
+		$class = wpcf7_form_controls_class( $tag->type );
+
+		// If validation fails place a validation class.
+		if ( $validation_error ) {
+			$class .= ' wpcf7-not-valid';
+		}
 
 		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
@@ -129,20 +129,20 @@ class Custom_Select_Block {
 	/**
 	 * Sets up the HTML block
 	 *
-	 * @param array $atts the HTML attributes.
-	 * @param array $values the option values.
+	 * @param array  $atts the HTML attributes.
+	 * @param array  $values the option values.
+	 * @param string $validation_error the validation error HTML.
 	 */
-	public function create_html( $atts, $values ) {
+	public function create_html( $atts, $values, $validation_error ) {
 		$options_html = '';
 		foreach ( $values as $id => $name ) {
 			$options_html .= $this->create_option( $id, $name );
 		}
 
 		$search_html = $this->create_search_html(
-			esc_html( $atts['id'] ),
-			esc_html( $atts['name'] ),
-			esc_html( $atts['desc'] ),
-			$options_html
+			$atts,
+			$options_html,
+			$validation_error
 		);
 
 		return $search_html;
@@ -151,23 +151,28 @@ class Custom_Select_Block {
 	/**
 	 * Creates the HTML element of the search
 	 *
-	 * @param string $id the id of the search tag.
-	 * @param string $name the name of the tag.
-	 * @param string $description a small description of the search box.
+	 * @param array  $atts the attribute array.
 	 * @param string $options_html the html body of the options.
+	 * @param string $validation_error the validation error HTML.
 	 */
-	public function create_search_html( $id, $name, $description, $options_html ) {
-		$select_wrapper      = sprintf( '<div class="wpcf7-custom-select-wrapper"><div class="wpcf7-custom-select-list"><ul id="%s-list">%s</ul></div></div>', $id, $options_html );
-		$select_input_helper = sprintf( '<div><input class="wpcf7-custom-select-input-helper" id="%s-input-helper" name="%s" type="text"/></div>', $id, $name );
-		$hidden_input        = sprintf( '<div><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="hidden"></div>', $id, $name );
+	public function create_search_html( $atts, $options_html, $validation_error ) {
+		$id          = esc_html( $atts['id'] );
+		$name        = esc_html( $atts['name'] );
+		$description = esc_html( $atts['desc'] );
+		$atts        = wpcf7_format_atts( $atts );
+
+		$select_wrapper      = sprintf( '<span class="wpcf7-custom-select-list" id="%s-list">%s</span>', $id, $options_html );
+		$select_input_helper = sprintf( '<span><input class="wpcf7-custom-select-input-helper" id="%s-input-helper" name="%s" type="text" %s/></span>', $id, $name, $atts );
+		$hidden_input        = sprintf( '<span><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="hidden" %s/></span>', $id, $name, $atts );
 		$label               = sprintf( '<label for="%s-input">%s</label>', $id, $description );
 
-		$html_body = sprintf( '<div class="wpcf7-form-control-wrap wpcf7-custom-select" id="%s">', $id )
+		$html_body = sprintf( '<span class="wpcf7-form-control-wrap wpcf7-custom-select" id="%s">', $id )
 			. $label
 			. $select_input_helper
 			. $hidden_input
 			. $select_wrapper
-			. '</div>';
+			. $validation_error
+			. '</span>';
 
 		return $html_body;
 	}
@@ -179,7 +184,7 @@ class Custom_Select_Block {
 	 * @param string $label is the label of the option.
 	 */
 	public function create_option( $value, $label ) {
-		return sprintf( '<li value=%s>%s</li>', esc_html( $value ), esc_html( $label ) );
+		return sprintf( '<span class="wpcf7-custom-select-option" value=%s>%s</span>', esc_html( $value ), esc_html( $label ) );
 	}
 
 	/**

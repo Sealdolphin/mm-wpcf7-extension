@@ -2,23 +2,22 @@
     Custom CSS for the Custom Select Block
     Version: 1.2
 */
-.wpcf7-custom-select-wrapper {
-    height: 7em;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-.wpcf7-custom-select-input-helper {
-    width: 100%;
-}
-.wpcf7-custom-select-list ul {
+.wpcf7-custom-select-list {
+    display: block;
     margin: 0;
     padding: 0px;
-    list-style-type: none;
+    height: 7em;
+    overflow: auto;
 }
-.wpcf7-custom-select-list li {
-    cursor: default;
+.wpcf7-custom-select-option {
+    display: block;
     padding: 2px;
 }
+
+.wpcf7-custom-select-input-helper {
+    width: -webkit-fill-available;
+}
+
 .wpcf7-custom-select-list-selection {
     background: rgb(228,228,228);
 }

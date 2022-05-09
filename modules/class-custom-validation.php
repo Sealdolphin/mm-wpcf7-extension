@@ -57,7 +57,15 @@ class Custom_Validation {
 	public function apply_custom_select_validation( $result, $tag ) {
 		wp_verify_nonce( $_REQUEST );
 
-		// $id = isset( $_POST[ $tag->name ] ) ? trim( sanitize_text_field( wp_unslash( $_POST[ $tag->name ] ) ) ) : '';
+		$custom_select_value = isset( $_POST[ $tag->name ] ) ? trim( sanitize_text_field( wp_unslash( $_POST[ $tag->name ] ) ) ) : '';
+
+		$invalid_value = '' === $custom_select_value || 'undefined' === $custom_select_value;
+
+		if ( $tag->is_required() && $invalid_value ) {
+			$result->invalidate( $tag, wpcf7_get_message( 'invalid_required' ) );
+		}
+
+		return $result;
 	}
 
 }
