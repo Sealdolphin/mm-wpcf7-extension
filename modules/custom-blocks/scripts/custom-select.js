@@ -10,8 +10,8 @@ class InteractiveSearch {
         }
         
         this.helperElement = document.getElementById( `${id}-input-helper` );
-        this.inputElement  = document.getElementById( `${id}-input` );
         this.listElement   = document.getElementById( `${id}-list` );
+        this.inputElement  = document.getElementById( id );
     }
 
     load() {

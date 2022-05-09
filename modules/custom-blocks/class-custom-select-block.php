@@ -157,20 +157,20 @@ class Custom_Select_Block {
 	 */
 	public function create_search_html( $atts, $options_html, $validation_error ) {
 		$id          = esc_html( $atts['id'] );
-		$name        = esc_html( $atts['name'] );
+		$name        = sanitize_html_class( $atts['name'] );
 		$description = esc_html( $atts['desc'] );
 		$atts        = wpcf7_format_atts( $atts );
 
-		$select_wrapper      = sprintf( '<span class="wpcf7-custom-select-list" id="%s-list">%s</span>', $id, $options_html );
-		$select_input_helper = sprintf( '<span><input class="wpcf7-custom-select-input-helper" id="%s-input-helper" name="%s" type="text" %s/></span>', $id, $name, $atts );
-		$hidden_input        = sprintf( '<span><input class="wpcf7-custom-select-input" id="%s-input" name="%s" type="hidden" %s/></span>', $id, $name, $atts );
-		$label               = sprintf( '<label for="%s-input">%s</label>', $id, $description );
+		$options_wrapper = sprintf( '<span class="wpcf7-custom-select-list" id="%s-list">%s</span>', $id, $options_html );
+		$select_input    = sprintf( '<input type="text" class="wpcf7-custom-select-input-helper" id="%s-input-helper" name="%s" %s/>', $id, $name, $atts );
+		$main            = sprintf( '<input type="hidden" class="wpcf7-custom-select wpcf7-form-control" id="%s" %s/>', $id, $atts );
+		$label           = sprintf( '<label for="%s-input">%s</label>', $id, $description );
 
-		$html_body = sprintf( '<span class="wpcf7-form-control-wrap wpcf7-custom-select" id="%s">', $id )
+		$html_body = sprintf( '<span class="wpcf7-form-control-wrap %s">', $name )
+			. $main
 			. $label
-			. $select_input_helper
-			. $hidden_input
-			. $select_wrapper
+			. $select_input
+			. $options_wrapper
 			. $validation_error
 			. '</span>';
 
