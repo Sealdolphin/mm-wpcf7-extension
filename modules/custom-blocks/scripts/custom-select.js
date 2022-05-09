@@ -73,7 +73,7 @@ class InteractiveSearch {
     }
 
     searchAsYouType = event =>  {
-        this.inputElement.value = "";
+        this.inputElement.value = undefined;
         let filter = event.target.value;
         this.refreshOptions( this.filterList( filter ) );
     }

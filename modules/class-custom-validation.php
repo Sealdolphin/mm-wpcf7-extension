@@ -61,7 +61,7 @@ class Custom_Validation {
 
 		$invalid_value = '' === $custom_select_value || 'undefined' === $custom_select_value;
 
-		if ( $tag->is_required() && $invalid_value ) {
+		if ( $invalid_value ) {
 			$result->invalidate( $tag, wpcf7_get_message( 'invalid_required' ) );
 		}
 
