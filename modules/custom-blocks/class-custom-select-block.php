@@ -95,7 +95,6 @@ class Custom_Select_Block {
 		$atts['class'] = $tag->get_class_option( $class );
 		$atts['id']    = $tag->get_id_option();
 		$atts['name']  = $tag->name;
-		$atts['desc']  = $tag->get_option( 'description', '.+', true );
 		$atts['db']    = $tag->get_option( 'db', '.+', true );
 
 		if ( $tag->is_required() ) {
@@ -158,17 +157,14 @@ class Custom_Select_Block {
 	public function create_search_html( $atts, $options_html, $validation_error ) {
 		$id          = esc_html( $atts['id'] );
 		$name        = sanitize_html_class( $atts['name'] );
-		$description = esc_html( $atts['desc'] );
 		$atts        = wpcf7_format_atts( $atts );
 
 		$options_wrapper = sprintf( '<span class="wpcf7-custom-select-list" id="%s-list">%s</span>', $id, $options_html );
 		$select_input    = sprintf( '<input type="text" class="wpcf7-custom-select-input-helper" id="%s-input-helper" name="%s" %s/>', $id, $name, $atts );
 		$main            = sprintf( '<input type="hidden" class="wpcf7-custom-select wpcf7-form-control" id="%s" %s/>', $id, $atts );
-		$label           = sprintf( '<label for="%s-input">%s</label>', $id, $description );
 
 		$html_body = sprintf( '<span class="wpcf7-form-control-wrap %s">', $name )
 			. $main
-			. $label
 			. $select_input
 			. $options_wrapper
 			. $validation_error
@@ -227,10 +223,6 @@ class Custom_Select_Block {
 						<tr> <!--Name-->
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-name' ); ?>"><?php echo esc_html( __( 'Name', 'contact-form-7' ) ); ?></label></th>
 							<td><input type="text" name="name" class="tg-name oneline" id="<?php echo esc_attr( $args['content'] . '-name' ); ?>"/></td>
-						</tr>
-						<tr> <!--Description-->
-							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-description' ); ?>"><?php echo esc_html( __( 'Description', 'contact-form-7' ) ); ?></label></th>
-							<td><input type="text" name="description" class="descriptionvalue oneline option" id="<?php echo esc_attr( $args['content'] . '-description' ); ?>" /></td>
 						</tr>
 						<tr> <!--Database name-->
 							<th scope="row"><label for="<?php echo esc_attr( $args['content'] . '-db' ); ?>"><?php echo esc_html( __( 'Database', 'contact-form-7' ) ); ?></label></th>

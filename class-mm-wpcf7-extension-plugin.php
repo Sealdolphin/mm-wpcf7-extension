@@ -13,7 +13,7 @@ namespace mm_wpcf7;
  * Description: Plugin created to boost Contact Form 7. It can boost JS and CSS loads and it also expands CF7 to WordPress REST API. This plugin is not made by the creator of CF7. It requires Contact Form 7 and Flamingo for the full features.
  * Author: Mihalovits Márk
  * Author URI: https://github.com/Sealdolphin
- * Version: 2.0.0-beta3-pre2
+ * Version: 2.0.0-beta4-pre1
  * Requires at least: 4.5
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -72,7 +72,7 @@ if ( ! class_exists( 'mm_wpcf7\MM_WPCF7_Extension_Plugin' ) ) {
 		 * Returns the plugin version.
 		 */
 		public static function get_css_version() {
-			return '1.3.18';
+			return '1.4';
 		}
 
 		/**
