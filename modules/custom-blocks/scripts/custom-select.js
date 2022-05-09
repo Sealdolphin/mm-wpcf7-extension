@@ -4,9 +4,10 @@ class InteractiveSearch {
     SELECTED = "wpcf7-custom-select-list-selection";
     LIST_ITEM = "span";
 
-    constructor( id, noResultsText ) {
+    constructor( id, noResultsText, noResultsValue ) {
         this.NO_RESULTS = {
-            name: noResultsText
+            name: noResultsText,
+            value: noResultsValue
         }
         
         this.helperElement = document.getElementById( `${id}-input-helper` );
@@ -49,19 +50,17 @@ class InteractiveSearch {
         }
 
         if ( options.length == 0 ) {
-            this.appendOption( this.NO_RESULTS, this.listElement, false );
+            this.appendOption( this.NO_RESULTS, this.listElement );
         } else {
             options.forEach( option => this.appendOption( option, this.listElement ) );
         }
     }
 
-    appendOption( optionObject, element, canClick = true ) {
+    appendOption( optionObject, element ) {
         let option = this.createOption();
+        option.onclick = this.onSelect;
         option.innerHTML = optionObject.name;
-        if( canClick ) {
-            option.setAttribute("value", optionObject.value);
-            option.onclick = this.onSelect;
-        }
+        option.setAttribute("value", optionObject.value);
 
         element.appendChild( option );
     }
@@ -84,8 +83,7 @@ class InteractiveSearch {
         }
         event.target.classList.add( this.SELECTED );
         this.helperElement.value = event.target.innerHTML;
-        const selectedValue = event.target.getAttribute("value");
-        this.inputElement.value = selectedValue ? selectedValue : event.target.innerHTML;
+        this.inputElement.value = event.target.getAttribute("value");
     }
 
     compareOptions( o1, o2 ) {
@@ -102,5 +100,5 @@ class InteractiveSearch {
 const collection = document.getElementsByClassName(InteractiveSearch.CLASS);
 for (let index = 0; index < collection.length; index++) {
     const element = collection[index];
-    new InteractiveSearch(element.id, "Nincs ilyen nevű találat!").load();
+    new InteractiveSearch(element.id, "Nincs ilyen nevű találat!", null).load();
 }

@@ -155,13 +155,13 @@ class Custom_Select_Block {
 	 * @param string $validation_error the validation error HTML.
 	 */
 	public function create_search_html( $atts, $options_html, $validation_error ) {
-		$id          = esc_html( $atts['id'] );
-		$name        = sanitize_html_class( $atts['name'] );
-		$atts        = wpcf7_format_atts( $atts );
+		$id   = esc_html( $atts['id'] );
+		$name = sanitize_html_class( $atts['name'] );
+		$atts = wpcf7_format_atts( $atts );
 
 		$options_wrapper = sprintf( '<span class="wpcf7-custom-select-list" id="%s-list">%s</span>', $id, $options_html );
-		$select_input    = sprintf( '<input type="text" class="wpcf7-custom-select-input-helper" id="%s-input-helper" name="%s" %s/>', $id, $name, $atts );
-		$main            = sprintf( '<input type="hidden" class="wpcf7-custom-select wpcf7-form-control" id="%s" %s/>', $id, $atts );
+		$select_input    = sprintf( '<input type="text" class="wpcf7-custom-select-input-helper" id="%s-input-helper"/>', $id );
+		$main            = sprintf( '<input type="hidden" class="wpcf7-custom-select wpcf7-form-control" id="%s" name="%s"/>', $id, $name );
 
 		$html_body = sprintf( '<span class="wpcf7-form-control-wrap %s">', $name )
 			. $main

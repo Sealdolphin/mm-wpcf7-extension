@@ -59,10 +59,10 @@ class Custom_Validation {
 
 		$custom_select_value = isset( $_POST[ $tag->name ] ) ? trim( sanitize_text_field( wp_unslash( $_POST[ $tag->name ] ) ) ) : '';
 
-		$invalid_value = '' === $custom_select_value || 'undefined' === $custom_select_value;
-
-		if ( $invalid_value ) {
+		if ( '' === $custom_select_value ) {
 			$result->invalidate( $tag, wpcf7_get_message( 'invalid_required' ) );
+		} elseif ( 'undefined' === $custom_select_value ) {
+			$result->invalidate( $tag, 'Kérlek válassz a lehetőségek közül!' );
 		}
 
 		return $result;
