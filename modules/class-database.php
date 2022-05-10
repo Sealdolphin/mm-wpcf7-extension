@@ -17,35 +17,35 @@ class Database {
 	 *
 	 * @var string $db_prefix the prefix of all db-s
 	 */
-	private static string $db_prefix = 'mm_wpcf7_db_';
+	private static $db_prefix = 'mm_wpcf7_db_';
 
 	/**
 	 * Prefix for meta db
 	 *
 	 * @var string $db_prefix the prefix of all db-s
 	 */
-	private static string $meta_db = 'mm_wpcf7_meta';
+	private static $meta_db = 'mm_wpcf7_meta';
 
 	/**
 	 * Short name
 	 *
 	 * @var string $name the name of the database
 	 */
-	private string $name;
+	private $name;
 
 	/**
 	 * Short description
 	 *
 	 * @var string $description the name of the database
 	 */
-	private string $description;
+	private $description;
 
 	/**
 	 * Number of records
 	 *
 	 * @var int $records the number of records in the database
 	 */
-	private int $records;
+	private $records;
 
 	/**
 	 * Prepares the necessary databases
@@ -59,7 +59,7 @@ class Database {
 
 		if ( false === $query ) {
 			$query = $wpdb->query(
-				"CREATE TABLE IF NOT EXISTS `wordpress`.`$table_name` (
+				"CREATE TABLE IF NOT EXISTS `$table_name` (
 					`id` INT NOT NULL AUTO_INCREMENT,
 					`db_id` VARCHAR(45) NOT NULL,
 					`db_description` VARCHAR(45) NULL,
@@ -84,7 +84,7 @@ class Database {
 
 		if ( false === $database_list ) {
 			$database_list = array();
-			$databases     = $wpdb->get_results( "SELECT * FROM `wordpress`.`$table_name`;" );
+			$databases     = $wpdb->get_results( "SELECT * FROM `$table_name`;" );
 
 			foreach ( $databases as $database ) {
 				$database_list[] = new Database(
@@ -110,7 +110,7 @@ class Database {
 			$database->destroy();
 		}
 
-		$wpdb->query( "DROP TABLE IF EXISTS `wordpress`.`$meta_table`;" );
+		$wpdb->query( "DROP TABLE IF EXISTS `$meta_table`;" );
 	}
 
 	/**
@@ -136,7 +136,7 @@ class Database {
 		$meta_table = self::$meta_db;
 
 		$query = $wpdb->query(
-			"CREATE TABLE IF NOT EXISTS `wordpress`.`$table_name` (
+			"CREATE TABLE IF NOT EXISTS `$table_name` (
 				`id` VARCHAR(45) NOT NULL,
 				`name` VARCHAR(128) CHARACTER SET 'utf8' NOT NULL,
 				`other` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
@@ -147,7 +147,7 @@ class Database {
 
 		$wpdb->query(
 			$wpdb->prepare(
-				"INSERT INTO `wordpress`.`$meta_table` (`db_id`, `db_description`)
+				"INSERT INTO `$meta_table` (`db_id`, `db_description`)
 				VALUES (%s, %s);",
 				$this->name,
 				$this->description
@@ -171,7 +171,7 @@ class Database {
 
 		$wpdb->query(
 			$wpdb->prepare(
-				"INSERT INTO `wordpress`.`$table_name` (`id`, `name`, `other`)
+				"INSERT INTO `$table_name` (`id`, `name`, `other`)
 				VALUES (%s, %s, %s);",
 				$data[0],
 				$data[1],
@@ -191,7 +191,7 @@ class Database {
 		$table_name     = self::$db_prefix . $this->name;
 
 		if ( false === $records ) {
-			$records = $wpdb->get_var( "SELECT COUNT(*) as `records` FROM `wordpress`.`$table_name`;" );
+			$records = $wpdb->get_var( "SELECT COUNT(*) as `records` FROM `$table_name`;" );
 			wp_cache_set( $query_cache_id, $records );
 		}
 
@@ -205,7 +205,7 @@ class Database {
 		global $wpdb;
 		$table_name = self::$db_prefix . $this->name;
 
-		$wpdb->query( "DROP TABLE IF EXISTS `wordpress`.`$table_name`;" );
+		$wpdb->query( "DROP TABLE IF EXISTS `$table_name`;" );
 	}
 
 	/**
@@ -265,7 +265,7 @@ class Database {
 
 		if ( false === $record_array ) {
 			$record_array = array();
-			$records      = $wpdb->get_results( "SELECT * FROM `wordpress`.`$table_name`;" );
+			$records      = $wpdb->get_results( "SELECT * FROM `$table_name`;" );
 
 			foreach ( $records as $record ) {
 				$record_array[ $record->id ] = $record->name . ' - ' . $record->other;
