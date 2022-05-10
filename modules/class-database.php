@@ -186,7 +186,7 @@ class Database {
 	public function update_details() {
 		global $wpdb;
 
-		$query_cache_id = 'mm_wpcf7_db_records' . $this->name;
+		$query_cache_id = 'mm_wpcf7_db_records_' . $this->name;
 		$records        = wp_cache_get( $query_cache_id );
 		$table_name     = self::$db_prefix . $this->name;
 
@@ -235,7 +235,7 @@ class Database {
 	public function exists(): bool {
 		global $wpdb;
 
-		$query_cache_id = 'mm_wpcf7_db_exists';
+		$query_cache_id = 'mm_wpcf7_db_exists_' . $this->name;
 		$exists         = wp_cache_get( $query_cache_id );
 		$table_name     = self::$db_prefix . $this->name;
 
@@ -259,7 +259,7 @@ class Database {
 	public function create_options_array() {
 		global $wpdb;
 
-		$query_cache_id = 'mm_wpcf7_db_get';
+		$query_cache_id = 'mm_wpcf7_db_get_' . $this->name;
 		$record_array   = wp_cache_get( $query_cache_id );
 		$table_name     = self::$db_prefix . $this->name;
 
