@@ -138,7 +138,7 @@ class Database {
 		$query = $wpdb->query(
 			"CREATE TABLE IF NOT EXISTS `$table_name` (
 				`id` VARCHAR(45) NOT NULL,
-				`name` VARCHAR(128) CHARACTER SET 'utf8' NOT NULL,
+				`name` VARCHAR(512) CHARACTER SET 'utf8' NOT NULL,
 				`other` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
 				PRIMARY KEY (`id`),
 				UNIQUE INDEX `id_UNIQUE` (`id` ASC));

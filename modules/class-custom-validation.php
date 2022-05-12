@@ -18,7 +18,7 @@ class Custom_Validation {
 	 *
 	 * @var phone_regex_hun
 	 */
-	private static $phone_regex_hun = '/\\+36-\\d{2}-\\d{3}-\\d{4}\$/';
+	private static $phone_regex_hun = '/\\+36-\\d{2}-\\d{3}-\\d{4}/';
 
 	/**
 	 * Registering special validation fields
